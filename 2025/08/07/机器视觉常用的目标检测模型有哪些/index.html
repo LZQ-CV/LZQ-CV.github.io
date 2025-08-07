@@ -1,0 +1,569 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Learning-Sharing-Recording" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Learning-Sharing-Recording" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="Learning-Sharing-Recording" href="http://example.com/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="机器视觉，目标检测模型" />
+
+
+<link rel="canonical" href="http://example.com/2025/08/07/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%E5%B8%B8%E7%94%A8%E7%9A%84%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E6%A8%A1%E5%9E%8B%E6%9C%89%E5%93%AA%E4%BA%9B/">
+
+
+
+  <title>
+机器视觉常用的目标检测模型有哪些 |
+LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the question</title>
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">机器视觉常用的目标检测模型有哪些
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="Created: 2025-08-07 14:46:44">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">Posted on</span>
+    <time itemprop="dateCreated datePublished" datetime="2025-08-07T14:46:44+08:00">2025-08-07</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="Toggle navigation bar">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">LZQ's Blog</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://img.131213.xyz/tfile/BQACAgUAAx0Eflp52gAC_KdolCQ0QKWBzpvez-6Tn63Z4HjetAACNxkAAg0LoVRVJ5WcQSCVVDYE"></li>
+          <li class="item" data-background-image="https://img.131213.xyz/tfile/BQACAgUAAx0Eflp52gAC_KtolCQ9jidJyByLZjksCGZqdM68mAACOxkAAg0LoVRmUOY6TnRkJTYE"></li>
+          <li class="item" data-background-image="https://img.131213.xyz/tfile/BQACAgUAAx0Eflp52gAC_KRolCQvmvtOu5NB5fTNGOdM9ZCamgACNBkAAg0LoVTCo4ALxrWRizYE"></li>
+          <li class="item" data-background-image="https://img.131213.xyz/tfile/BQACAgUAAx0Eflp52gAC_LBolCRHTeQtIkKfpb2F2G8lHmAO2QACQBkAAg0LoVSQzilVspmY_TYE"></li>
+          <li class="item" data-background-image="https://img.131213.xyz/tfile/BQACAgUAAx0Eflp52gAC_KholCQ10V3zrY3O4954TU0e8gcEhgACOBkAAg0LoVQeaNZLbtVJ0zYE"></li>
+          <li class="item" data-background-image="https://img.131213.xyz/tfile/BQACAgUAAx0Eflp52gAC_JBolAxXcwruJTcZ9rtFUmJABa37FwAC3hgAAg0LoVTC0IzsRfBozzYE"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">Home</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2025/08/07/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%E5%B8%B8%E7%94%A8%E7%9A%84%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E6%A8%A1%E5%9E%8B%E6%9C%89%E5%93%AA%E4%BA%9B/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="LZQ">
+    <meta itemprop="description" content="To be,or not to be,that is the question, CV Engineer">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Learning-Sharing-Recording">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <p>工业质检机器视觉领域的目标检测模型需兼顾精度、速度和鲁棒性，尤其在复杂工业环境中（如反光、遮挡、小目标缺陷）。以下是当前主流及前沿模型分类：</p>
+<hr>
+<h3 id="一-yolo系列及其工业优化变种"><a class="markdownIt-Anchor" href="#一-yolo系列及其工业优化变种">#</a> 一、<strong>YOLO 系列及其工业优化变种</strong></h3>
+<p>YOLO（You Only Look Once）因实时性与精度平衡成为工业质检首选，近年持续迭代优化：</p>
+<ol>
+<li><strong>YOLOv5/v8/v11</strong>
+<ul>
+<li><strong>基础特性</strong>：单阶段检测架构，支持端到端训练，适合高吞吐产线。YOLOv8 引入 Anchor-Free 检测头，提升小目标敏感度；YOLOv11 整合 SPPF（空间金字塔池化快速版）增强多尺度特征融合。</li>
+<li><strong>工业改进</strong>：
+<ul>
+<li><strong>注意力机制融合</strong>：加入 SE、CBAM 等模块，强化缺陷特征提取。例：CBAM 引入 YOLOv5s，在钢材缺陷检测中提升小目标召回率。</li>
+<li><strong>轻量化主干</strong>：MobileNetV3 替换原主干网络（如 YOLOv5s-CM），参数量减少 70%，在边缘设备（Jetson Nano）达 102FPS，满足实时质检。</li>
+<li><strong>先验框优化</strong>：K-means++ 聚类适配缺陷尺寸，提升定位精度。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Transformer 增强版 YOLO</strong>
+<ul>
+<li>引入 Transformer Encoder Block 替代部分卷积层，增强全局上下文建模能力，适用于纹理复杂缺陷（如布料疵点、电子元件裂痕）。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="二-两阶段检测模型高精度场景首选"><a class="markdownIt-Anchor" href="#二-两阶段检测模型高精度场景首选">#</a> 二、<strong>两阶段检测模型：高精度场景首选</strong></h3>
+<p>适用于缺陷分类复杂、需精准分割的场景：</p>
+<ol>
+<li><strong>Faster R-CNN</strong>
+<ul>
+<li>通过 RPN（区域建议网络）生成候选框，结合 ROI Pooling 分类与回归，在金属表面缺陷检测中 mAP 达 0.783，但推理延迟较高（124ms）。</li>
+<li><strong>工业改进</strong>：多尺度特征融合（如 FPN）与在线难例挖掘，提升小缺陷检出率。</li>
+</ul>
+</li>
+<li><strong>Mask R-CNN</strong>
+<ul>
+<li>扩展 Faster R-CNN，增加掩码分支实现像素级分割。适用于需精确缺陷轮廓的场景（如焊点裂纹、划痕长度测量）。</li>
+<li>改进方向：K-means II 聚类优化先验框，加速推理。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="三-多模态融合模型"><a class="markdownIt-Anchor" href="#三-多模态融合模型">#</a> 三、<strong>多模态融合模型</strong></h3>
+<p>应对光照变化、反光、遮挡等复杂工况：</p>
+<ol>
+<li><strong>陌讯多模态架构（MX-Vision）</strong>
+<ul>
+<li><strong>三阶框架</strong>：
+<ul>
+<li>环境感知层：融合 RGB 与深度信息，自适应滤波消除金属反光。</li>
+<li>特征融合层：跨模态注意力（CMA）加权纹理与空间特征。</li>
+<li>动态决策层：根据置信度调整阈值，适配高低速流水线。</li>
+</ul>
+</li>
+<li><strong>性能</strong>：在工业测试集上 mAP@0.5 达 0.897，较 YOLOv8 推理速度提升 38%。</li>
+</ul>
+</li>
+<li><strong>UniNet（Anomalib 库）</strong>
+<ul>
+<li>对比学习引导的统一框架，支持 RGB / 热成像 / 3D 点云多源数据融合，在 MVTec AD 数据集上实现 SOTA。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="四-轻量化边缘模型"><a class="markdownIt-Anchor" href="#四-轻量化边缘模型">#</a> 四、<strong>轻量化边缘模型</strong></h3>
+<p>面向嵌入式设备（如 Jetson 系列、RK3588）部署：</p>
+<ol>
+<li><strong>MX-LWNet v3.2</strong>
+<ul>
+<li>动态决策引擎 + 多尺度特征聚合，在服装分拣场景中：
+<ul>
+<li>误检率↓76%（同色系干扰缓解）</li>
+<li>延迟仅 46ms（Jetson Nano）。</li>
+</ul>
+</li>
+<li>支持 INT8 量化，功耗再降 40%。</li>
+</ul>
+</li>
+<li><strong>Dinomaly（Anomalib v2.1）</strong>
+<ul>
+<li>基于预训练模型的轻量编解码器，适用于少样本异常检测，在 Valeo Anomaly Dataset 上实现实时推理。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="五-少样本异常生成模型"><a class="markdownIt-Anchor" href="#五-少样本异常生成模型">#</a> 五、<strong>少样本异常生成模型</strong></h3>
+<p>解决工业缺陷样本稀缺问题：</p>
+<ol>
+<li><strong>SeaS（ICCV 2025）</strong>
+<ul>
+<li><strong>统一框架</strong>：单模型支持异常生成、正常合成、掩码标注。</li>
+<li><strong>关键技术</strong>：
+<ul>
+<li>非平衡提示（正常词元 + N 异常词元）控制生成多样性。</li>
+<li>解耦对齐损失分离正常 / 异常特征学习。</li>
+</ul>
+</li>
+<li><strong>效果</strong>：生成数据训练下游模型，异常分割 IoU 平均提升 12.79%。</li>
+</ul>
+</li>
+<li><strong>扩散先验增强（布局→缺陷生成）</strong>
+<ul>
+<li>基于 Stable Diffusion 先验，生成类别 - 区域可控缺陷，在 GC10-DET 数据集上布局匹配精度达 91.4%。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="六-模型选型建议与性能对比"><a class="markdownIt-Anchor" href="#六-模型选型建议与性能对比">#</a> 六、<strong>模型选型建议与性能对比</strong></h3>
+<table>
+<thead>
+<tr>
+<th><strong>模型类型</strong></th>
+<th><strong>代表模型</strong></th>
+<th><strong>mAP@0.5</strong></th>
+<th><strong>推理延迟</strong></th>
+<th><strong>适用场景</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>轻量化 YOLO 变种</td>
+<td>YOLOv5s-CM</td>
+<td>0.772</td>
+<td>9.8ms</td>
+<td>边缘端钢材缺陷检测</td>
+</tr>
+<tr>
+<td>多模态融合</td>
+<td>陌讯 v4.0</td>
+<td>0.897</td>
+<td>42ms</td>
+<td>反光 / 遮挡环境（焊接车间）</td>
+</tr>
+<tr>
+<td>两阶段模型</td>
+<td>Faster R-CNN</td>
+<td>0.783</td>
+<td>124ms</td>
+<td>高精度定位需求</td>
+</tr>
+<tr>
+<td>异常生成</td>
+<td>SeaS</td>
+<td>-</td>
+<td>-</td>
+<td>少样本缺陷数据扩充</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="结论"><a class="markdownIt-Anchor" href="#结论">#</a> 结论</h3>
+<p>工业质检需按场景选择模型：</p>
+<ul>
+<li><strong>高速产线</strong> → 轻量化 YOLO 变种（如 YOLOv5s-CM）或 MX-LWNet；</li>
+<li><strong>高精度需求</strong> → 两阶段模型（Mask R-CNN）或多模态融合（陌讯）；</li>
+<li><strong>样本稀缺</strong> → 扩散生成（SeaS） + 检测模型联合优化，Anomalib、MX-SDK 等库提供从训练到边缘部署的全流程支持。</li>
+</ul>
+
+      <div class="tags">
+          <a href="/tags/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%EF%BC%8C%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E6%A8%A1%E5%9E%8B/" rel="tag"><i class="ic i-tag"></i> 机器视觉，目标检测模型</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">Edited on</span>
+    <time title="Modified: 2025-08-07 15:41:21" itemprop="dateModified" datetime="2025-08-07T15:41:21+08:00">2025-08-07</time>
+  </span>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>Post author:  </strong>LZQ <i class="ic i-at"><em>@</em></i>Learning-Sharing-Recording
+  </li>
+  <li class="link">
+    <strong>Post link: </strong>
+    <a href="http://example.com/2025/08/07/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%E5%B8%B8%E7%94%A8%E7%9A%84%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E6%A8%A1%E5%9E%8B%E6%9C%89%E5%93%AA%E4%BA%9B/" title="机器视觉常用的目标检测模型有哪些">http://example.com/2025/08/07/机器视觉常用的目标检测模型有哪些/</a>
+  </li>
+  <li class="license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2025/08/07/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%E7%A1%AC%E4%BB%B6%E5%A6%82%E4%BD%95%E9%80%89%E5%9E%8B/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;img.131213.xyz&#x2F;tfile&#x2F;BQACAgUAAx0Eflp52gAC_H9olAwfewMrzCXimj813qpbVctE1AACzRgAAg0LoVTQJ6ughhFfRjYE" title="机器视觉硬件如何选型">
+  <span class="type">Previous Post</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>机器视觉硬件如何选型</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2025/08/07/PyTorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;img.131213.xyz&#x2F;tfile&#x2F;BQACAgUAAx0Eflp52gAC_KFolCQqnFXFJiw2etI5FjbHOsehqgACMRkAAg0LoVT_16xNa7ztGDYE" title="PyTorch深度学习环境搭建">
+  <span class="type">Next Post</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>PyTorch深度学习环境搭建</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80-yolo%E7%B3%BB%E5%88%97%E5%8F%8A%E5%85%B6%E5%B7%A5%E4%B8%9A%E4%BC%98%E5%8C%96%E5%8F%98%E7%A7%8D"><span class="toc-number">1.</span> <span class="toc-text"> 一、YOLO 系列及其工业优化变种</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C-%E4%B8%A4%E9%98%B6%E6%AE%B5%E6%A3%80%E6%B5%8B%E6%A8%A1%E5%9E%8B%E9%AB%98%E7%B2%BE%E5%BA%A6%E5%9C%BA%E6%99%AF%E9%A6%96%E9%80%89"><span class="toc-number">2.</span> <span class="toc-text"> 二、两阶段检测模型：高精度场景首选</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89-%E5%A4%9A%E6%A8%A1%E6%80%81%E8%9E%8D%E5%90%88%E6%A8%A1%E5%9E%8B"><span class="toc-number">3.</span> <span class="toc-text"> 三、多模态融合模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B-%E8%BD%BB%E9%87%8F%E5%8C%96%E8%BE%B9%E7%BC%98%E6%A8%A1%E5%9E%8B"><span class="toc-number">4.</span> <span class="toc-text"> 四、轻量化边缘模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94-%E5%B0%91%E6%A0%B7%E6%9C%AC%E5%BC%82%E5%B8%B8%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B"><span class="toc-number">5.</span> <span class="toc-text"> 五、少样本异常生成模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD-%E6%A8%A1%E5%9E%8B%E9%80%89%E5%9E%8B%E5%BB%BA%E8%AE%AE%E4%B8%8E%E6%80%A7%E8%83%BD%E5%AF%B9%E6%AF%94"><span class="toc-number">6.</span> <span class="toc-text"> 六、模型选型建议与性能对比</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E8%AE%BA"><span class="toc-number">7.</span> <span class="toc-text"> 结论</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="Related">
+      </div>
+      <div class="overview panel" data-title="Overview">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="LZQ"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">LZQ</p>
+  <div class="description" itemprop="description">CV Engineer</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">3</span>
+        <span class="name">posts</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">3</span>
+        <span class="name">tags</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL0xaUS1DVg==" title="https:&#x2F;&#x2F;github.com&#x2F;LZQ-CV"><i class="ic i-github"></i></span>
+      <span class="exturl item bilibili" data-url="aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vODI2ODE4NDY/c3BtX2lkX2Zyb209MzMzLjEwMDcuMC4w" title="https:&#x2F;&#x2F;space.bilibili.com&#x2F;82681846?spm_id_from&#x3D;333.1007.0.0"><i class="ic i-bilibili"></i></span>
+      <span class="exturl item zhihu" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS9tYW8tcWl1LWNoYW5nLWx6cQ==" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;mao-qiu-chang-lzq"><i class="ic i-zhihu"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>Posts</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>Archives</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>Categories</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>Tags</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2025/08/07/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%E7%A1%AC%E4%BB%B6%E5%A6%82%E4%BD%95%E9%80%89%E5%9E%8B/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2025/08/07/PyTorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>Random Posts</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2025/08/07/PyTorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" title="PyTorch深度学习环境搭建">PyTorch深度学习环境搭建</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2025/08/07/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%E7%A1%AC%E4%BB%B6%E5%A6%82%E4%BD%95%E9%80%89%E5%9E%8B/" title="机器视觉硬件如何选型">机器视觉硬件如何选型</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2025/08/07/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%E5%B8%B8%E7%94%A8%E7%9A%84%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E6%A8%A1%E5%9E%8B%E6%9C%89%E5%93%AA%E4%BA%9B/" title="机器视觉常用的目标检测模型有哪些">机器视觉常用的目标检测模型有哪些</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>Recent Comments</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2024 – 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">LZQ @ LZQ's Blog</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2025/08/07/机器视觉常用的目标检测模型有哪些/',
+    favicon: {
+      show: "（●´3｀●）Goooood",
+      hide: "(´Д｀)Booooom"
+    },
+    search : {
+      placeholder: "Search for Posts",
+      empty: "We didn't find any results for the search: ${query}",
+      stats: "${hits} results found in ${time} ms"
+    },
+    valine: true,fancybox: true,
+    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

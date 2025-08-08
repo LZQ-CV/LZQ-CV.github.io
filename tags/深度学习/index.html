@@ -24,16 +24,12 @@
 <link rel="stylesheet" href="/css/app.css?v=0.2.5">
 
   
-  <meta name="keywords" content="深度学习" />
 
-
-<link rel="canonical" href="http://example.com/2025/08/07/PyTorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
+<link rel="canonical" href="http://example.com/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
 
 
 
-  <title>
-PyTorch深度学习环境搭建 |
-LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the question</title>
+  <title>Tag: 深度学习 | LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the question</title>
 <meta name="generator" content="Hexo 7.3.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
   <div id="loading">
@@ -60,19 +56,9 @@ LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the questio
         <div id="brand">
           <div class="pjax">
           
-  <h1 itemprop="name headline">PyTorch深度学习环境搭建
+  <h1 itemprop="name headline">
+    Posted with tag "深度学习"
   </h1>
-  
-<div class="meta">
-  <span class="item" title="Created: 2025-08-07 20:47:20">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <span class="text">Posted on</span>
-    <time itemprop="dateCreated datePublished" datetime="2025-08-07T20:47:20+08:00">2025-08-07</time>
-  </span>
-</div>
-
 
           </div>
         </div>
@@ -102,12 +88,12 @@ LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the questio
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://youke1.picui.cn/s1/2025/08/08/68954af959a2c.jpg"></li>
-          <li class="item" data-background-image="https://youke1.picui.cn/s1/2025/08/08/68954c12b0ebb.jpg"></li>
-          <li class="item" data-background-image="https://youke1.picui.cn/s1/2025/08/08/68954be63dd85.jpg"></li>
+          <li class="item" data-background-image="https://youke1.picui.cn/s1/2025/08/08/68954a61cc949.jpg"></li>
           <li class="item" data-background-image="https://youke1.picui.cn/s1/2025/08/08/68954a6cc1ee5.jpg"></li>
-          <li class="item" data-background-image="https://youke1.picui.cn/s1/2025/08/08/68954c11e8658.jpg"></li>
-          <li class="item" data-background-image="https://youke1.picui.cn/s1/2025/08/08/68954b2ff0b70.jpg"></li>
+          <li class="item" data-background-image="https://youke1.picui.cn/s1/2025/08/08/68954a68d77ee.jpg"></li>
+          <li class="item" data-background-image="https://youke1.picui.cn/s1/2025/08/08/68954c12b0ebb.jpg"></li>
+          <li class="item" data-background-image="https://youke1.picui.cn/s1/2025/08/08/68954b747dac8.jpg"></li>
+          <li class="item" data-background-image="https://youke1.picui.cn/s1/2025/08/08/68954c13e6735.jpg"></li>
         </ul>
       </div>
     </header>
@@ -128,105 +114,43 @@ LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the questio
       <div class="inner">
         <div id="main" class="pjax">
           
-  <div class="article wrap">
-    
-<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-<i class="ic i-home"></i>
-<span><a href="/">Home</a></span>
-</div>
+  <div class="collapse wrap">
+    <h2 class="item header">
+      <a href="/tags">All</a>
+      <small>/</small>
+      深度学习
+      <small>Tag</small>
+    </h2>
 
-    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2025/08/07/PyTorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
+        <article class="item normal" itemscope itemtype="http://schema.org/Article">
+          <div class="meta">
+            <time itemprop="dateCreated"
+                  datetime="2025-08-07T20:47:20+08:00"
+                  content="2025-08-07">
+              2025-08-07
+            </time>
+          </div>
 
-  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="image" content="/images/avatar.jpg">
-    <meta itemprop="name" content="LZQ">
-    <meta itemprop="description" content="To be,or not to be,that is the question, CV Engineer">
-  </span>
-
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Learning-Sharing-Recording">
-  </span>
-
-  <div class="body md" itemprop="articleBody">
-    
-
-    <h2 id="python下载"><a class="markdownIt-Anchor" href="#python下载">#</a> python 下载</h2>
-<p>1，到 python 官方网站下载：<span class="exturl" data-url="aHR0cHM6Ly93d3cucHl0aG9uLm9yZy9kb3dubG9hZHMvd2luZG93cy8=">https://www.python.org/downloads/windows/</span></p>
-<p>2，下载好后查看是否安装成功，win+r，cmd 输入命令：</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">python -V #查看已安装的python的版本</span><br></pre></td></tr></table></figure>
-<p>3，</p>
-
-      <div class="tags">
-          <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" rel="tag"><i class="ic i-tag"></i> 深度学习</a>
-      </div>
+          <div class="title">
+              <a href="/2025/08/07/PyTorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" itemprop="url">
+                <span itemprop="name">PyTorch深度学习环境搭建</span>
+              </a>
+          </div>
+        </article>
   </div>
 
-   <footer>
-
-    <div class="meta">
-  <span class="item">
-    <span class="icon">
-      <i class="ic i-calendar-check"></i>
-    </span>
-    <span class="text">Edited on</span>
-    <time title="Modified: 2025-08-08 09:22:55" itemprop="dateModified" datetime="2025-08-08T09:22:55+08:00">2025-08-08</time>
-  </span>
-</div>
-
-      
-
-<div id="copyright">
-<ul>
-  <li class="author">
-    <strong>Post author:  </strong>LZQ <i class="ic i-at"><em>@</em></i>Learning-Sharing-Recording
-  </li>
-  <li class="link">
-    <strong>Post link: </strong>
-    <a href="http://example.com/2025/08/07/PyTorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" title="PyTorch深度学习环境搭建">http://example.com/2025/08/07/PyTorch深度学习环境搭建/</a>
-  </li>
-  <li class="license">
-    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
-  </li>
-</ul>
-</div>
-
-  </footer>
-
-</article>
-
-  </div>
   
 
-<div class="post-nav">
-    <div class="item left">
-      
-
-  <a href="/2025/08/07/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAHEXO%E5%8D%9A%E5%AE%A2/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;youke1.picui.cn&#x2F;s1&#x2F;2025&#x2F;08&#x2F;08&#x2F;68954c12b0ebb.jpg" title="如何快速搭建HEXO博客">
-  <span class="type">Previous Post</span>
-  <span class="category"><i class="ic i-flag"></i> </span>
-  <h3>如何快速搭建HEXO博客</h3>
-  </a>
-
-    </div>
-    <div class="item right">
-    </div>
-</div>
-
-  
-  <div class="wrap" id="comments"></div>
 
 
         </div>
         <div id="sidebar">
           
-
 <div class="inner">
 
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="Contents">
-          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#python%E4%B8%8B%E8%BD%BD"><span class="toc-number">1.</span> <span class="toc-text"> python 下载</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="Related">
       </div>
@@ -305,7 +229,6 @@ LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the questio
   </ul>
 </div>
 
-
         </div>
         <div class="dimmer"></div>
       </div>
@@ -323,7 +246,7 @@ LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the questio
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2025/08/07/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%E5%B8%B8%E7%94%A8%E7%9A%84%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E6%A8%A1%E5%9E%8B%E6%9C%89%E5%93%AA%E4%BA%9B/" title="机器视觉常用的目标检测模型有哪些">机器视觉常用的目标检测模型有哪些</a></span>
+    <span><a href="/2025/08/07/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%E7%A1%AC%E4%BB%B6%E5%A6%82%E4%BD%95%E9%80%89%E5%9E%8B/" title="机器视觉硬件如何选型">机器视觉硬件如何选型</a></span>
   </li>
 
       
@@ -341,7 +264,7 @@ LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the questio
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2025/08/07/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%E7%A1%AC%E4%BB%B6%E5%A6%82%E4%BD%95%E9%80%89%E5%9E%8B/" title="机器视觉硬件如何选型">机器视觉硬件如何选型</a></span>
+    <span><a href="/2025/08/07/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%E5%B8%B8%E7%94%A8%E7%9A%84%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E6%A8%A1%E5%9E%8B%E6%9C%89%E5%93%AA%E4%BA%9B/" title="机器视觉常用的目标检测模型有哪些">机器视觉常用的目标检测模型有哪些</a></span>
   </li>
 
       
@@ -381,7 +304,7 @@ LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the questio
   </div>
 <script data-config type="text/javascript">
   var LOCAL = {
-    path: '2025/08/07/PyTorch深度学习环境搭建/',
+    path: 'tags/深度学习/',
     favicon: {
       show: "（●´3｀●）Goooood",
       hide: "(´Д｀)Booooom"

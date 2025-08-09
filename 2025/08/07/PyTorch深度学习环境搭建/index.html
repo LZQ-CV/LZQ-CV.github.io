@@ -102,12 +102,12 @@ LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the questio
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://youke1.picui.cn/s1/2025/08/08/68954a6979925.jpeg"></li>
-          <li class="item" data-background-image="https://youke1.picui.cn/s1/2025/08/08/6895488e14765.jpg"></li>
-          <li class="item" data-background-image="https://youke1.picui.cn/s1/2025/08/08/68954b2ff0b70.jpg"></li>
-          <li class="item" data-background-image="https://youke1.picui.cn/s1/2025/08/08/68954c13e6735.jpg"></li>
-          <li class="item" data-background-image="https://youke1.picui.cn/s1/2025/08/08/68954884bfd52.jpg"></li>
-          <li class="item" data-background-image="https://youke1.picui.cn/s1/2025/08/08/689548832c281.jpg"></li>
+          <li class="item" data-background-image="https://youke1.picui.cn/s1/2025/08/08/68954b76054fa.jpg"></li>
+          <li class="item" data-background-image="https://youke1.picui.cn/s1/2025/08/08/68954c44bb81a.png -"></li>
+          <li class="item" data-background-image="https://youke1.picui.cn/s1/2025/08/08/68954a68d77ee.jpg"></li>
+          <li class="item" data-background-image="https://youke1.picui.cn/s1/2025/08/08/68954c1458de1.jpg"></li>
+          <li class="item" data-background-image="https://youke1.picui.cn/s1/2025/08/08/689549fb73138.jpg"></li>
+          <li class="item" data-background-image="https://youke1.picui.cn/s1/2025/08/08/68954a6cc1ee5.jpg"></li>
         </ul>
       </div>
     </header>
@@ -151,11 +151,84 @@ LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the questio
   <div class="body md" itemprop="articleBody">
     
 
-    <h2 id="python下载"><a class="markdownIt-Anchor" href="#python下载">#</a> python 下载</h2>
-<p>1，到 python 官方网站下载：<span class="exturl" data-url="aHR0cHM6Ly93d3cucHl0aG9uLm9yZy9kb3dubG9hZHMvd2luZG93cy8=">https://www.python.org/downloads/windows/</span></p>
-<p>2，下载好后查看是否安装成功，win+r，cmd 输入命令：</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">python -V #查看已安装的python的版本</span><br></pre></td></tr></table></figure>
-<p>3，</p>
+    <h2 id="pytorch深度学习环境搭建"><a class="markdownIt-Anchor" href="#pytorch深度学习环境搭建">#</a> PyTorch 深度学习环境搭建</h2>
+<h2 id="pytorch的发展趋势"><a class="markdownIt-Anchor" href="#pytorch的发展趋势">#</a> PyTorch 的发展趋势</h2>
+<p>为什么要学 PyTorch？ 因为 PyTorch 发展迅猛，已经在多方面荣登深度学习框架第一的宝座，学术界绝大多数论文都有 PyTorch 实现，想要紧跟技术，利用新模型进行科学研究，进行项目开发的，不得不跟随学术界的趋势，所以可以看到 PyTorch 席卷各界。</p>
+<p>PyTorch 称王，TensorFlow 答应么？一起来看看几个数据。</p>
+<p>图 1： 各大顶会期刊中，使用 PyTorch 的论文数量占 PyTorch+TensorFlow 的百分比。其实就是 p / (p+t)，这里有一个分界点就是 50%，当达到 50% 时，说明 PyTorch 与 TensorFlow 平分秋色，当大于 50% 时说明 PyTorch 已经超过 TF，而当数据超过 75%，表明 PyTorch 已经是 TF 的两倍。从这个趋势可以发现转折点在 2018-2019 年之间发生，现在已经 2021 年末了，哪个框架是学术界的带头大哥？</p>
+<p><img data-src="https://tingsongyu.github.io/PyTorch-Tutorial-2nd/chapter-1/imgs/pytorch-papers-of-total.jpeg" alt="img"></p>
+<p>图 2：这幅图对比的是 PyTorch 与 TF 的决定数量，可以看到 TF 的份额被 PyTorch 一步步蚕食，实线代表的 PyTorch 持续上扬，TF 的虚线不断下探。</p>
+<p><img data-src="https://tingsongyu.github.io/PyTorch-Tutorial-2nd/chapter-1/imgs/pytorch-solid-vs-tensorf.jpeg" alt="img"></p>
+<p>图片出自：<span class="exturl" data-url="aHR0cHM6Ly9ob3JhY2UuaW8vcHl0b3JjaC12cy10ZW5zb3JmbG93Lw==">https://horace.io/pytorch-vs-tensorflow/</span></p>
+<p>通过学术界的论文情况就可以说明 PyTorch 是未来的大势所趋，虽然说早期 PyTorch 在工业部署上并不如 TensorFlow，但是如今 PyTorch 推出了 libtorch，TorchServe，以及各类优秀的，适配性良好的部署框架层出不穷，如 TensorRT、OpenVINO、ONNX 等，都可以帮助 PyTorch 进行快速部署</p>
+<p>感觉 PyTorch 是在学术界占据主导地位，让科研工作者感到满意，新模型都是 PyTorch 实现的，工业界的开发者总不能不用最新的算法、模型，只能纷纷转向 PyTorch 了。因此，相信大家选择使用 PyTorch 进行深度学习、机器学习模型开发，一定能加速大家的算法模型开发，也印证了 PyTorch 的主旨 ——An open source machine learning framework that accelerates the path from research prototyping to production deployment.”</p>
+<h2 id="pyhton"><a class="markdownIt-Anchor" href="#pyhton">#</a> Pyhton</h2>
+<ol>
+<li>
+<p>官方网站选择合适的版本下载：<span class="exturl" data-url="aHR0cHM6Ly93d3cucHl0aG9uLm9yZy9kb3dubG9hZHMv">Download Python | Python.org</span></p>
+</li>
+<li>
+<p>查看当前已安装的版本</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -V</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="anaconda"><a class="markdownIt-Anchor" href="#anaconda">#</a> Anaconda</h2>
+<p>Anaconda 是为方便使用 Python 而建立的一个软件包，包含常用的 250 多个工具包，多版本 Python 解释器和强大的虚拟环境管理工具，所以 Anaconda 被称为 Python 全家桶。Anaconda 可以使安装、运行和升级环境变得更简单，因此使用它作为 Python 虚拟环境管理工具。</p>
+<ol>
+<li>
+<p>官方网站选择合适的版本下载：<span class="exturl" data-url="aHR0cHM6Ly93d3cuYW5hY29uZGEuY29tL2Rvd25sb2Fk">Download Anaconda Distribution | Anaconda</span></p>
+</li>
+<li>
+<p>查看已安装的版本</p>
+<figure class="highlight plaintext"><figcaption><span>powershell</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda --version</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>创建一个虚拟环境（pytorch 最新版 1.10 是支持 python3.6/3.7/3.9 的）</p>
+<figure class="highlight plaintext"><figcaption><span>powershell</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; conda create -n pytorch-1.10-gpu python=3.9</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>查看已经安装好的虚拟环境路径</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">D:\anaconda\envs\pytorch-1.10-gpu</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p><strong>anaconda 常用命令</strong></p>
+<p>​	创建环境：conda create -n your_env_name python=X.X （X.X 为 python 版本）</p>
+<p>​	eg: conda create -n pytorch_tutorial python=3.7</p>
+<p>​	激活环境：source activate your_env_name</p>
+<p>​	eg: source activate pytorch_tutorial</p>
+<p>​	退出环境：source deactivate</p>
+<p>​	删除环境：conda remove -n your_env_name –all</p>
+<p>​	eg: conda remove -n pytorch_tutorial --all</p>
+<p>​	查看已有虚拟环境：conda env list /conda info -e</p>
+</li>
+</ol>
+<h2 id="cuda-toolkit"><a class="markdownIt-Anchor" href="#cuda-toolkit">#</a> CUDA Toolkit</h2>
+<ol>
+<li>
+<p>查看电脑的 GPU 驱动支持的 CUDA 版本 (安装顺序 GPU 驱动&gt; CUDA&gt;cuDNN)</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvidia-smi</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>官方网站选择合适的版本下载：<span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubnZpZGlhLmNvbS9jdWRhLTExLTgtMC1kb3dubG9hZC1hcmNoaXZlP3RhcmdldF9vcz1XaW5kb3dzJmFtcDt0YXJnZXRfYXJjaD14ODZfNjQmYW1wO3RhcmdldF92ZXJzaW9uPTExJmFtcDt0YXJnZXRfdHlwZT1leGVfbG9jYWw=">CUDA Toolkit 11.8 Downloads | NVIDIA Developer</span></p>
+</li>
+<li>
+<p>查看已安装的版本</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvcc --version</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="cudnn与cuda版本要相对应"><a class="markdownIt-Anchor" href="#cudnn与cuda版本要相对应">#</a> cuDNN（与 CUDA 版本要相对应）</h2>
+<ol>
+<li>
+<p>官方网站选择与 CUDA 对应的版本下载：<span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubnZpZGlhLmNvbS9yZHAvY3Vkbm4tYXJjaGl2ZQ==">cuDNN Archive | NVIDIA Developer</span></p>
+</li>
+<li>
+<p>下载的安装包解压后拖到 CUDA 文件夹中，选择覆盖</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8</span><br></pre></td></tr></table></figure>
+</li>
+<li></li>
+<li></li>
+<li></li>
+</ol>
 
       <div class="tags">
           <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" rel="tag"><i class="ic i-tag"></i> 深度学习</a>
@@ -170,7 +243,7 @@ LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the questio
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2025-08-08 09:22:55" itemprop="dateModified" datetime="2025-08-08T09:22:55+08:00">2025-08-08</time>
+    <time title="Modified: 2025-08-09 19:20:09" itemprop="dateModified" datetime="2025-08-09T19:20:09+08:00">2025-08-09</time>
   </span>
 </div>
 
@@ -202,7 +275,7 @@ LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the questio
     <div class="item left">
       
 
-  <a href="/2025/08/07/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAHEXO%E5%8D%9A%E5%AE%A2/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;youke1.picui.cn&#x2F;s1&#x2F;2025&#x2F;08&#x2F;08&#x2F;68954be585068.jpg" title="如何快速搭建HEXO博客">
+  <a href="/2025/08/07/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAHEXO%E5%8D%9A%E5%AE%A2/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;youke1.picui.cn&#x2F;s1&#x2F;2025&#x2F;08&#x2F;08&#x2F;68954b3027508.jpg" title="如何快速搭建HEXO博客">
   <span class="type">Previous Post</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>如何快速搭建HEXO博客</h3>
@@ -226,7 +299,7 @@ LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the questio
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="Contents">
-          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#python%E4%B8%8B%E8%BD%BD"><span class="toc-number">1.</span> <span class="toc-text"> python 下载</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#pytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-number">1.</span> <span class="toc-text"> PyTorch 深度学习环境搭建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pytorch%E7%9A%84%E5%8F%91%E5%B1%95%E8%B6%8B%E5%8A%BF"><span class="toc-number">2.</span> <span class="toc-text"> PyTorch 的发展趋势</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pyhton"><span class="toc-number">3.</span> <span class="toc-text"> Pyhton</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#anaconda"><span class="toc-number">4.</span> <span class="toc-text"> Anaconda</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cuda-toolkit"><span class="toc-number">5.</span> <span class="toc-text"> CUDA Toolkit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cudnn%E4%B8%8Ecuda%E7%89%88%E6%9C%AC%E8%A6%81%E7%9B%B8%E5%AF%B9%E5%BA%94"><span class="toc-number">6.</span> <span class="toc-text"> cuDNN（与 CUDA 版本要相对应）</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="Related">
       </div>
@@ -332,7 +405,7 @@ LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the questio
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2025/08/07/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAHEXO%E5%8D%9A%E5%AE%A2/" title="如何快速搭建HEXO博客">如何快速搭建HEXO博客</a></span>
+    <span><a href="/2025/08/07/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%E7%A1%AC%E4%BB%B6%E5%A6%82%E4%BD%95%E9%80%89%E5%9E%8B/" title="机器视觉硬件如何选型">机器视觉硬件如何选型</a></span>
   </li>
 
       
@@ -350,7 +423,7 @@ LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the questio
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2025/08/07/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%E7%A1%AC%E4%BB%B6%E5%A6%82%E4%BD%95%E9%80%89%E5%9E%8B/" title="机器视觉硬件如何选型">机器视觉硬件如何选型</a></span>
+    <span><a href="/2025/08/07/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAHEXO%E5%8D%9A%E5%AE%A2/" title="如何快速搭建HEXO博客">如何快速搭建HEXO博客</a></span>
   </li>
 
   </ul>

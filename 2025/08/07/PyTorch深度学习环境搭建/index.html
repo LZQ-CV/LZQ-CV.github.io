@@ -102,12 +102,12 @@ LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the questio
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://youke1.picui.cn/s1/2025/08/08/68954b747dac8.jpg"></li>
-          <li class="item" data-background-image="https://youke1.picui.cn/s1/2025/08/08/68954af97d71e.jpg"></li>
-          <li class="item" data-background-image="https://youke1.picui.cn/s1/2025/08/08/68954be733838.jpg"></li>
+          <li class="item" data-background-image="https://youke1.picui.cn/s1/2025/08/08/689549fa2462a.jpg"></li>
           <li class="item" data-background-image="https://youke1.picui.cn/s1/2025/08/08/68954b76054fa.jpg"></li>
-          <li class="item" data-background-image="https://youke1.picui.cn/s1/2025/08/08/68954be585068.jpg"></li>
-          <li class="item" data-background-image="https://youke1.picui.cn/s1/2025/08/08/68954b2ff0b70.jpg"></li>
+          <li class="item" data-background-image="https://youke1.picui.cn/s1/2025/08/08/68954a61cc949.jpg"></li>
+          <li class="item" data-background-image="https://youke1.picui.cn/s1/2025/08/08/68954a68d77ee.jpg"></li>
+          <li class="item" data-background-image="https://youke1.picui.cn/s1/2025/08/08/68954c44bb81a.png -"></li>
+          <li class="item" data-background-image="https://youke1.picui.cn/s1/2025/08/08/68954884bfd52.jpg"></li>
         </ul>
       </div>
     </header>
@@ -172,6 +172,7 @@ LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the questio
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -V</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
+<p><img data-src="https://img.131213.xyz/tfile/BQACAgUAAx0Eflp52gAC_jtom-h7aUcZ2mX3s3YcIT8ueOeTjgACaxUAAkuk4VS7_zLst8s8XDYE" alt="python.png"></p>
 <h2 id="anaconda"><a class="markdownIt-Anchor" href="#anaconda">#</a> Anaconda</h2>
 <p>Anaconda 是为方便使用 Python 而建立的一个软件包，包含常用的 250 多个工具包，多版本 Python 解释器和强大的虚拟环境管理工具，所以 Anaconda 被称为 Python 全家桶。Anaconda 可以使安装、运行和升级环境变得更简单，因此使用它作为 Python 虚拟环境管理工具。</p>
 <ol>
@@ -183,23 +184,13 @@ LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the questio
 <figure class="highlight plaintext"><figcaption><span>powershell</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">   </span><br><span class="line">conda --version</span><br><span class="line">   </span><br></pre></td></tr></table></figure>
 </li>
 <li>
-<p>创建一个虚拟环境（pytorch 最新版 1.10 是支持 python3.6/3.7/3.9 的）</p>
+<p>创建一个虚拟环境并且激活环境（pytorch 最新版 1.10 是支持 python3.6/3.7/3.9 的）</p>
 <figure class="highlight plaintext"><figcaption><span>powershell</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">   </span><br><span class="line">&gt;&gt;&gt; conda create -n pytorch-1.10-gpu python=3.9</span><br><span class="line">   </span><br></pre></td></tr></table></figure>
+<p><img data-src="https://img.131213.xyz/tfile/BQACAgUAAx0Eflp52gAC_jxom-i0NQ-WYSicg_T8TXmy3eZ2hgACbBUAAkuk4VTA7jh1LhOZRjYE" alt="anaconda.png"></p>
 </li>
 <li>
 <p>查看已经安装好的虚拟环境路径</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">D:\anaconda\envs\pytorch-1.10-gpu</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p><strong>anaconda 常用命令</strong></p>
-<p>​	创建环境：conda create -n your_env_name python=X.X （X.X 为 python 版本）</p>
-<p>​	eg: conda create -n pytorch_tutorial python=3.7</p>
-<p>​	激活环境：source activate your_env_name</p>
-<p>​	eg: source activate pytorch_tutorial</p>
-<p>​	退出环境：source deactivate</p>
-<p>​	删除环境：conda remove -n your_env_name –all</p>
-<p>​	eg: conda remove -n pytorch_tutorial --all</p>
-<p>​	查看已有虚拟环境：conda env list /conda info -e</p>
 </li>
 </ol>
 <h2 id="cuda-toolkit"><a class="markdownIt-Anchor" href="#cuda-toolkit">#</a> CUDA Toolkit</h2>
@@ -207,6 +198,7 @@ LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the questio
 <li>
 <p>查看电脑的 GPU 驱动支持的 CUDA 版本 (安装顺序 GPU 驱动&gt; CUDA&gt;cuDNN)</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">nvidia-smi</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img data-src="https://img.131213.xyz/tfile/BQACAgUAAx0Eflp52gAC_j1om-kN1sXPr8fwWMIFmFMarxvM-QACbxUAAkuk4VSDYUXqESGj7TYE" alt="GPU.png"></p>
 </li>
 <li>
 <p>官方网站选择合适的版本下载：<span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubnZpZGlhLmNvbS9jdWRhLTExLTgtMC1kb3dubG9hZC1hcmNoaXZlP3RhcmdldF9vcz1XaW5kb3dzJmFtcDt0YXJnZXRfYXJjaD14ODZfNjQmYW1wO3RhcmdldF92ZXJzaW9uPTExJmFtcDt0YXJnZXRfdHlwZT1leGVfbG9jYWw=">CUDA Toolkit 11.8 Downloads | NVIDIA Developer</span></p>
@@ -214,6 +206,7 @@ LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the questio
 <li>
 <p>查看已安装的版本</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">nvcc --version</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img data-src="https://img.131213.xyz/tfile/BQACAgUAAx0Eflp52gAC_j5om-kyj1h_R3mKiWhxgsJ1aQomDgACcRUAAkuk4VQ6g-YnCGaBpDYE" alt="CUDA.png"></p>
 </li>
 </ol>
 <h2 id="cudnn与cuda版本要相对应"><a class="markdownIt-Anchor" href="#cudnn与cuda版本要相对应">#</a> cuDNN（与 CUDA 版本要相对应）</h2>
@@ -224,11 +217,29 @@ LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the questio
 <li>
 <p>下载的安装包解压后拖到 CUDA 文件夹中，选择覆盖</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">   </span><br><span class="line">C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.8</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img data-src="https://img.131213.xyz/tfile/BQACAgUAAx0Eflp52gAC_j9om-lj5YI7ncVRqRmHq4rta60gzwACchUAAkuk4VTwMaXlek8VEDYE" alt="cuDNN.png"></p>
 </li>
-<li></li>
-<li></li>
-<li></li>
 </ol>
+<h3 id="pytorch"><a class="markdownIt-Anchor" href="#pytorch">#</a> PyTorch</h3>
+<ol>
+<li>
+<p>官方网站下载：<span class="exturl" data-url="aHR0cHM6Ly9weXRvcmNoLm9yZy9nZXQtc3RhcnRlZC9wcmV2aW91cy12ZXJzaW9ucy8=">Previous PyTorch Versions</span></p>
+</li>
+<li>
+<p>打开 Anaconda 终端，输入激活和安装命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">conda env list</span><br><span class="line">conda activate pytorch-1.10-gpu</span><br><span class="line"></span><br><span class="line">pip install torch==2.7.0 torchvision==0.22.0 torchaudio==2.7.0 --index-url https://download.pytorch.org/whl/cu118</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://img.131213.xyz/tfile/BQACAgUAAx0Eflp52gAC_k9onDnjHaOHh4LslwLG7WAi6DF7YAACwRYAAkuk4VQdcSrcJYfmoTYE" alt="PT.png"></p>
+</li>
+</ol>
+<h3 id="pycharm"><a class="markdownIt-Anchor" href="#pycharm">#</a> Pycharm</h3>
+<ol>
+<li>官方网站下载：<span class="exturl" data-url="aHR0cHM6Ly93d3cuamV0YnJhaW5zLmNvbS96aC1jbi9weWNoYXJtL2Rvd25sb2FkLz9zZWN0aW9uPXdpbmRvd3M=">https://www.jetbrains.com/zh-cn/pycharm/download/?section=windows</span></li>
+<li>PyTorch 配置</li>
+</ol>
+<p><img data-src="https://youke1.picui.cn/s1/2025/08/13/689c4309266b7.png" alt="6.png"></p>
+<p>3. 测试代码</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;PyTorch 版本: <span class="subst">&#123;torch.__version__&#125;</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;CUDA 可用: <span class="subst">&#123;torch.cuda.is_available()&#125;</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;GPU 数量: <span class="subst">&#123;torch.cuda.device_count()&#125;</span>&quot;</span>)</span><br><span class="line"><span class="keyword">if</span> torch.cuda.is_available():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;当前 GPU: <span class="subst">&#123;torch.cuda.get_device_name(<span class="number">0</span>)&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://youke1.picui.cn/s1/2025/08/13/689c4381a595e.png" alt="PyTorchGPU.png"></p>
 
       <div class="tags">
           <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" rel="tag"><i class="ic i-tag"></i> 深度学习</a>
@@ -243,7 +254,7 @@ LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the questio
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2025-08-09 19:59:02" itemprop="dateModified" datetime="2025-08-09T19:59:02+08:00">2025-08-09</time>
+    <time title="Modified: 2025-08-13 16:03:04" itemprop="dateModified" datetime="2025-08-13T16:03:04+08:00">2025-08-13</time>
   </span>
 </div>
 
@@ -275,7 +286,7 @@ LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the questio
     <div class="item left">
       
 
-  <a href="/2025/08/07/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAHEXO%E5%8D%9A%E5%AE%A2/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;youke1.picui.cn&#x2F;s1&#x2F;2025&#x2F;08&#x2F;08&#x2F;689549facb714.jpg" title="如何快速搭建HEXO博客">
+  <a href="/2025/08/07/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAHEXO%E5%8D%9A%E5%AE%A2/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;youke1.picui.cn&#x2F;s1&#x2F;2025&#x2F;08&#x2F;08&#x2F;68954c44bb81a.png -" title="如何快速搭建HEXO博客">
   <span class="type">Previous Post</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>如何快速搭建HEXO博客</h3>
@@ -283,6 +294,14 @@ LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the questio
 
     </div>
     <div class="item right">
+      
+
+  <a href="/2025/08/13/%E5%BF%AB%E9%80%9F%E5%AD%A6%E4%B9%A0MYSQL/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;youke1.picui.cn&#x2F;s1&#x2F;2025&#x2F;08&#x2F;08&#x2F;68954af959a2c.jpg" title="快速学习MYSQL">
+  <span class="type">Next Post</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>快速学习MYSQL</h3>
+  </a>
+
     </div>
 </div>
 
@@ -299,7 +318,7 @@ LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the questio
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="Contents">
-          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#pytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-number">1.</span> <span class="toc-text"> PyTorch 深度学习环境搭建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pytorch%E7%9A%84%E5%8F%91%E5%B1%95%E8%B6%8B%E5%8A%BF"><span class="toc-number">2.</span> <span class="toc-text"> PyTorch 的发展趋势</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pyhton"><span class="toc-number">3.</span> <span class="toc-text"> Pyhton</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#anaconda"><span class="toc-number">4.</span> <span class="toc-text"> Anaconda</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cuda-toolkit"><span class="toc-number">5.</span> <span class="toc-text"> CUDA Toolkit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cudnn%E4%B8%8Ecuda%E7%89%88%E6%9C%AC%E8%A6%81%E7%9B%B8%E5%AF%B9%E5%BA%94"><span class="toc-number">6.</span> <span class="toc-text"> cuDNN（与 CUDA 版本要相对应）</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#pytorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-number">1.</span> <span class="toc-text"> PyTorch 深度学习环境搭建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pytorch%E7%9A%84%E5%8F%91%E5%B1%95%E8%B6%8B%E5%8A%BF"><span class="toc-number">2.</span> <span class="toc-text"> PyTorch 的发展趋势</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pyhton"><span class="toc-number">3.</span> <span class="toc-text"> Pyhton</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#anaconda"><span class="toc-number">4.</span> <span class="toc-text"> Anaconda</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cuda-toolkit"><span class="toc-number">5.</span> <span class="toc-text"> CUDA Toolkit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cudnn%E4%B8%8Ecuda%E7%89%88%E6%9C%AC%E8%A6%81%E7%9B%B8%E5%AF%B9%E5%BA%94"><span class="toc-number">6.</span> <span class="toc-text"> cuDNN（与 CUDA 版本要相对应）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#pytorch"><span class="toc-number">6.1.</span> <span class="toc-text"> PyTorch</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pycharm"><span class="toc-number">6.2.</span> <span class="toc-text"> Pycharm</span></a></li></ol></li></ol>
       </div>
       <div class="related panel pjax" data-title="Related">
       </div>
@@ -314,13 +333,13 @@ LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the questio
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">4</span>
+        <span class="count">5</span>
         <span class="name">posts</span>
       </a>
     </div>
     <div class="item tags">
       <a href="/tags/">
-        <span class="count">3</span>
+        <span class="count">4</span>
         <span class="name">tags</span>
       </a>
     </div>
@@ -369,10 +388,12 @@ LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the questio
 
   <ul id="quick">
     <li class="prev pjax">
+        <a href="/2025/08/07/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAHEXO%E5%8D%9A%E5%AE%A2/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
+        <a href="/2025/08/13/%E5%BF%AB%E9%80%9F%E5%AD%A6%E4%B9%A0MYSQL/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -396,7 +417,7 @@ LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the questio
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2025/08/07/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%E7%A1%AC%E4%BB%B6%E5%A6%82%E4%BD%95%E9%80%89%E5%9E%8B/" title="机器视觉硬件如何选型">机器视觉硬件如何选型</a></span>
+    <span><a href="/2025/08/07/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAHEXO%E5%8D%9A%E5%AE%A2/" title="如何快速搭建HEXO博客">如何快速搭建HEXO博客</a></span>
   </li>
 
       
@@ -423,7 +444,16 @@ LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the questio
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2025/08/07/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAHEXO%E5%8D%9A%E5%AE%A2/" title="如何快速搭建HEXO博客">如何快速搭建HEXO博客</a></span>
+    <span><a href="/2025/08/07/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%E7%A1%AC%E4%BB%B6%E5%A6%82%E4%BD%95%E9%80%89%E5%9E%8B/" title="机器视觉硬件如何选型">机器视觉硬件如何选型</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2025/08/13/%E5%BF%AB%E9%80%9F%E5%AD%A6%E4%B9%A0MYSQL/" title="快速学习MYSQL">快速学习MYSQL</a></span>
   </li>
 
   </ul>

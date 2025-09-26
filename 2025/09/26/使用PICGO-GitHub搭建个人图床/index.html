@@ -102,12 +102,12 @@ LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the questio
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://lzq-cv.oss-cn-shanghai.aliyuncs.com/IMG_0732.JPG"></li>
+          <li class="item" data-background-image="https://lzq-cv.oss-cn-shanghai.aliyuncs.com/1730167097414173016709761.jpg"></li>
+          <li class="item" data-background-image="https://lzq-cv.oss-cn-shanghai.aliyuncs.com/IMG_0472.JPG"></li>
+          <li class="item" data-background-image="https://lzq-cv.oss-cn-shanghai.aliyuncs.com/1b8fa233c6c74b6e85dfac46067aed32.jpg"></li>
+          <li class="item" data-background-image="https://lzq-cv.oss-cn-shanghai.aliyuncs.com/IMG_0689.JPG"></li>
+          <li class="item" data-background-image="https://lzq-cv.oss-cn-shanghai.aliyuncs.com/IMG_0750.JPG"></li>
           <li class="item" data-background-image="https://lzq-cv.oss-cn-shanghai.aliyuncs.com/56857092_p0.JPG"></li>
-          <li class="item" data-background-image="https://lzq-cv.oss-cn-shanghai.aliyuncs.com/t01da71b24e580d8765.jpg"></li>
-          <li class="item" data-background-image="https://lzq-cv.oss-cn-shanghai.aliyuncs.com/IMG_0661.JPG"></li>
-          <li class="item" data-background-image="https://lzq-cv.oss-cn-shanghai.aliyuncs.com/05bca4a24ba140b8b8e68b7be3cdc18a.jpg"></li>
-          <li class="item" data-background-image="https://lzq-cv.oss-cn-shanghai.aliyuncs.com/IMG_0611.PNG"></li>
         </ul>
       </div>
     </header>
@@ -152,37 +152,31 @@ LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the questio
     
 
     <p>通过 GitHub API 和 jsDelivr CDN 搭建图床，简单说就是<strong>用 GitHub 存图片，用 jsDelivr 加速访问</strong>。这个方案免费、可靠，对开发者尤其友好。</p>
-<h3 id="第一步准备工作"><a class="markdownIt-Anchor" href="#第一步准备工作">#</a> 第一步：准备工作</h3>
-<ol>
-<li><strong>创建 GitHub 仓库</strong>：
-<ul>
+<h3 id="第一步：准备工作"><a href="#第一步：准备工作" class="headerlink" title="第一步：准备工作"></a>第一步：准备工作</h3><ol>
+<li><strong>创建 GitHub 仓库</strong>：<ul>
 <li>登录 GitHub，点击右上角 “+” 号，选择 “New repository”。</li>
-<li>取一个清晰的仓库名（如  <code>my-image-bed</code> ）。</li>
+<li>取一个清晰的仓库名（如 <code>my-image-bed</code>）。</li>
 <li>仓库需设置为 <strong>Public</strong>（公开），因为 jsDelivr 无法加速私有仓库的资源。</li>
 <li>其他设置保持默认，点击 “Create repository”。</li>
 </ul>
 </li>
-<li><strong>生成 GitHub Personal Access Token (PAT)</strong>：
-<ul>
+<li><strong>生成 GitHub Personal Access Token (PAT)</strong>：<ul>
 <li>点击右上角头像 -&gt; “Settings” -&gt; 左侧 “Developer settings” -&gt; “Personal access tokens” -&gt; “Tokens (classic)” -&gt; “Generate new token (classic)”。</li>
-<li>为令牌添加一个<strong>备注</strong>（如  <code>For Image Bed</code> ）。</li>
-<li><strong>选择权限</strong>：务必勾选  <code>repo</code> （完全控制私有仓库）下的所有权限，这样才允许通过 API 管理仓库内的文件。</li>
+<li>为令牌添加一个<strong>备注</strong>（如 <code>For Image Bed</code>）。</li>
+<li><strong>选择权限</strong>：务必勾选 <code>repo</code>（完全控制私有仓库）下的所有权限，这样才允许通过 API 管理仓库内的文件。</li>
 <li>生成后，<strong>务必立即复制并妥善保存</strong>这个令牌字符串，关闭页面后就无法再次查看。</li>
 </ul>
 </li>
 </ol>
-<h3 id="第二步配置上传工具-以-picgo-为例"><a class="markdownIt-Anchor" href="#第二步配置上传工具-以-picgo-为例">#</a> 第二步：配置上传工具 (以 PicGo 为例)</h3>
-<p>手动上传和获取链接比较麻烦，使用工具可以自动化这个过程。<strong>PicGo</strong> 是一个很好的选择。</p>
+<h3 id="第二步：配置上传工具-以-PicGo-为例"><a href="#第二步：配置上传工具-以-PicGo-为例" class="headerlink" title="第二步：配置上传工具 (以 PicGo 为例)"></a>第二步：配置上传工具 (以 PicGo 为例)</h3><p>手动上传和获取链接比较麻烦，使用工具可以自动化这个过程。<strong>PicGo</strong> 是一个很好的选择。</p>
 <ol>
 <li><strong>下载并安装 PicGo</strong>：从其 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL01vbHVuZXJmaW5uL1BpY0dvL3JlbGVhc2Vz">GitHub Releases</span> 页面下载并安装。</li>
-<li><strong>安装 GitHub 图床插件</strong>：
-<ul>
+<li><strong>安装 GitHub 图床插件</strong>：<ul>
 <li>打开 PicGo，在左侧找到 “插件设置”。</li>
-<li>搜索  <code>github-plus</code>  并安装。这个插件功能更丰富。</li>
+<li>搜索 <code>github-plus</code> 并安装。这个插件功能更丰富。</li>
 </ul>
 </li>
-<li><strong>配置图床设置</strong>：
-<ul>
+<li><strong>配置图床设置</strong>：<ul>
 <li>在左侧 “图床设置” 中找到 “GitHubPlus”。</li>
 <li>按下表填写信息：</li>
 </ul>
@@ -191,60 +185,55 @@ LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the questio
 <table>
 <thead>
 <tr>
-<th style="text-align:left">配置项</th>
-<th style="text-align:left">填写说明</th>
-<th style="text-align:left">示例（需替换为你自己的信息）</th>
+<th align="left">配置项</th>
+<th align="left">填写说明</th>
+<th align="left">示例（需替换为你自己的信息）</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left"><strong>仓库名</strong></td>
-<td style="text-align:left">你的 GitHub 用户名 / 仓库名</td>
-<td style="text-align:left"><code>yourusername/my-image-bed</code></td>
+<tbody><tr>
+<td align="left"><strong>仓库名</strong></td>
+<td align="left">你的 GitHub 用户名&#x2F;仓库名</td>
+<td align="left"><code>yourusername/my-image-bed</code></td>
 </tr>
 <tr>
-<td style="text-align:left"><strong>分支名</strong></td>
-<td style="text-align:left">一般为  <code>main</code>  或  <code>master</code></td>
-<td style="text-align:left"><code>main</code></td>
+<td align="left"><strong>分支名</strong></td>
+<td align="left">一般为 <code>main</code> 或 <code>master</code></td>
+<td align="left"><code>main</code></td>
 </tr>
 <tr>
-<td style="text-align:left"><strong>Token</strong></td>
-<td style="text-align:left">粘贴你刚才生成的 Personal Access Token</td>
-<td style="text-align:left"><code>ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</code></td>
+<td align="left"><strong>Token</strong></td>
+<td align="left">粘贴你刚才生成的 Personal Access Token</td>
+<td align="left"><code>ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</code></td>
 </tr>
 <tr>
-<td style="text-align:left"><strong>存储路径</strong></td>
-<td style="text-align:left">可选。图片在仓库中的存放目录，如  <code>images/</code> 。若不填则保存在仓库根目录。</td>
-<td style="text-align:left"><code>images/</code></td>
+<td align="left"><strong>存储路径</strong></td>
+<td align="left">可选。图片在仓库中的存放目录，如 <code>images/</code>。若不填则保存在仓库根目录。</td>
+<td align="left"><code>images/</code></td>
 </tr>
 <tr>
-<td style="text-align:left"><strong>自定义域名</strong></td>
-<td style="text-align:left"><strong>非常重要</strong>！填写 jsDelivr 的加速域名，格式： <code>https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名</code></td>
-<td style="text-align:left"><code>https://cdn.jsdelivr.net/gh/yourusername/my-image-bed</code></td>
+<td align="left"><strong>自定义域名</strong></td>
+<td align="left"><strong>非常重要</strong>！填写 jsDelivr 的加速域名，格式：<code>https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名</code></td>
+<td align="left"><code>https://cdn.jsdelivr.net/gh/yourusername/my-image-bed</code></td>
 </tr>
 <tr>
-<td style="text-align:left"><strong>设置提醒日期</strong></td>
-<td style="text-align:left">可选。由于 PAT 可能有过期时间，建议在此设置提醒，以便及时更新 Token，避免上传失败。</td>
-<td style="text-align:left">在 Token 过期前选择日期</td>
+<td align="left"><strong>设置提醒日期</strong></td>
+<td align="left">可选。由于 PAT 可能有过期时间，建议在此设置提醒，以便及时更新 Token，避免上传失败。</td>
+<td align="left">在 Token 过期前选择日期</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <ol start="4">
 <li><strong>设为默认图床并上传测试</strong>：配置完成后，将其设为默认图床，然后拖拽一张图片上传试试。成功后，PicGo 会自动将<strong>加速后的图片链接</strong>复制到你的剪贴板。</li>
 </ol>
-<h3 id="第三步获取-jsdelivr-加速链接"><a class="markdownIt-Anchor" href="#第三步获取-jsdelivr-加速链接">#</a> 第三步：获取 jsDelivr 加速链接</h3>
-<p>无论你是否使用 PicGo 等工具，图片上传到 GitHub 仓库后，其 jsDelivr 的加速链接都遵循统一的格式：</p>
+<h3 id="第三步：获取-jsDelivr-加速链接"><a href="#第三步：获取-jsDelivr-加速链接" class="headerlink" title="第三步：获取 jsDelivr 加速链接"></a>第三步：获取 jsDelivr 加速链接</h3><p>无论你是否使用 PicGo 等工具，图片上传到 GitHub 仓库后，其 jsDelivr 的加速链接都遵循统一的格式：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://cdn.jsdelivr.net/gh/你的GitHub用户名/你的仓库名@发布的版本号/文件路径</span><br></pre></td></tr></table></figure>
+
 <ul>
-<li><strong> <code>@发布的版本号</code> </strong>：这部分是可选的。可以是分支名（如  <code>@main</code> ）、具体的发布版本号（如  <code>@v1.0</code> ）或提交哈希值。<strong>如果不指定版本，默认会指向最新资源</strong>。
-<ul>
-<li><strong>最佳实践</strong>：对于图床，<strong>通常建议省略  <code>@版本号</code> </strong>，这样总能访问到最新上传的图片。例如：<br>
- <code>https://cdn.jsdelivr.net/gh/yourusername/my-image-bed/images/cat.jpg</code></li>
+<li><strong><code>@发布的版本号</code></strong>：这部分是可选的。可以是分支名（如 <code>@main</code>）、具体的发布版本号（如 <code>@v1.0</code>）或提交哈希值。<strong>如果不指定版本，默认会指向最新资源</strong>。<ul>
+<li><strong>最佳实践</strong>：对于图床，<strong>通常建议省略 <code>@版本号</code></strong>，这样总能访问到最新上传的图片。例如：<br><code>https://cdn.jsdelivr.net/gh/yourusername/my-image-bed/images/cat.jpg</code></li>
 </ul>
 </li>
 </ul>
-<h3 id="注意事项"><a class="markdownIt-Anchor" href="#注意事项">#</a> 注意事项</h3>
-<ul>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
 <li><strong>仓库必须公开</strong>：jsDelivr <strong>无法</strong>加速私有仓库的资源。</li>
 <li><strong>文件大小限制</strong>：jsDelivr 建议文件大小控制在 20MB 以内，这对于绝大多数图片来说足够了。</li>
 <li><strong>缓存问题</strong>：jsDelivr 会对文件进行缓存以提升速度。这意味着如果你更新了 GitHub 仓库中的同名图片，可能需要等待几分钟到几小时缓存刷新后，通过 jsDelivr 链接才能看到变更。<strong>强制更新缓存的方法是在链接后添加特定版本号、分支名或哈希值</strong>。</li>
@@ -320,7 +309,7 @@ LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the questio
     <div class="item left">
       
 
-  <a href="/2025/09/26/%E4%BD%BF%E7%94%A8PICGO-CloudflarR2%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%9B%BE%E5%BA%8A/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;lzq-cv.oss-cn-shanghai.aliyuncs.com&#x2F;079cf572a10db65f8a1bb9875e0b377a.jpg" title="使用PICGO-CloudflarR2搭建个人图床">
+  <a href="/2025/09/26/%E4%BD%BF%E7%94%A8PICGO-CloudflarR2%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%9B%BE%E5%BA%8A/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;lzq-cv.oss-cn-shanghai.aliyuncs.com&#x2F;IMG_3738.JPG" title="使用PICGO-CloudflarR2搭建个人图床">
   <span class="type">Previous Post</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>使用PICGO-CloudflarR2搭建个人图床</h3>
@@ -330,7 +319,7 @@ LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the questio
     <div class="item right">
       
 
-  <a href="/2025/09/26/%E4%BD%BF%E7%94%A8PICGO-%E9%98%BF%E9%87%8C%E4%BA%91OSS%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%9B%BE%E5%BA%8A/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;lzq-cv.oss-cn-shanghai.aliyuncs.com&#x2F;178660-qi_fen-guang-xing_zhi-azure-x750.jpg" title="使用PICGO-阿里云OSS搭建个人图床">
+  <a href="/2025/09/26/%E4%BD%BF%E7%94%A8PICGO-%E9%98%BF%E9%87%8C%E4%BA%91OSS%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%9B%BE%E5%BA%8A/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;lzq-cv.oss-cn-shanghai.aliyuncs.com&#x2F;v2-3601f0565c0c4f1f9d382340e681d511_r.jpg" title="使用PICGO-阿里云OSS搭建个人图床">
   <span class="type">Next Post</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>使用PICGO-阿里云OSS搭建个人图床</h3>
@@ -352,7 +341,7 @@ LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the questio
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="Contents">
-          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-number">1.</span> <span class="toc-text"> 第一步：准备工作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%E9%85%8D%E7%BD%AE%E4%B8%8A%E4%BC%A0%E5%B7%A5%E5%85%B7-%E4%BB%A5-picgo-%E4%B8%BA%E4%BE%8B"><span class="toc-number">2.</span> <span class="toc-text"> 第二步：配置上传工具 (以 PicGo 为例)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%E8%8E%B7%E5%8F%96-jsdelivr-%E5%8A%A0%E9%80%9F%E9%93%BE%E6%8E%A5"><span class="toc-number">3.</span> <span class="toc-text"> 第三步：获取 jsDelivr 加速链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">4.</span> <span class="toc-text"> 注意事项</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-number">1.</span> <span class="toc-text">第一步：准备工作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E9%85%8D%E7%BD%AE%E4%B8%8A%E4%BC%A0%E5%B7%A5%E5%85%B7-%E4%BB%A5-PicGo-%E4%B8%BA%E4%BE%8B"><span class="toc-number">2.</span> <span class="toc-text">第二步：配置上传工具 (以 PicGo 为例)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E8%8E%B7%E5%8F%96-jsDelivr-%E5%8A%A0%E9%80%9F%E9%93%BE%E6%8E%A5"><span class="toc-number">3.</span> <span class="toc-text">第三步：获取 jsDelivr 加速链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">4.</span> <span class="toc-text">注意事项</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="Related">
       </div>
@@ -452,43 +441,7 @@ LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the questio
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2025/09/26/%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A%E8%B8%A9%E5%9D%91/" title="免费图床踩坑">免费图床踩坑</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2025/09/26/%E4%BD%BF%E7%94%A8PICGO-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%9B%BE%E5%BA%8A/" title="使用PICGO-GitHub搭建个人图床">使用PICGO-GitHub搭建个人图床</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2025/09/26/HEXO%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" title="HEXO博客搭建">HEXO博客搭建</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2025/09/26/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%E7%A1%AC%E4%BB%B6%E5%A6%82%E4%BD%95%E9%80%89%E5%9E%8B/" title="机器视觉硬件如何选型">机器视觉硬件如何选型</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2025/09/26/hello-world/" title="Hello World">Hello World</a></span>
+    <span><a href="/2025/09/26/shoka%E4%B8%BB%E9%A2%98%E9%83%A8%E7%BD%B2/" title="shoka主题部署">shoka主题部署</a></span>
   </li>
 
       
@@ -506,7 +459,34 @@ LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the questio
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2025/09/26/shoka%E4%B8%BB%E9%A2%98%E9%83%A8%E7%BD%B2/" title="shoka主题部署">shoka主题部署</a></span>
+    <span><a href="/2025/09/26/HEXO%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" title="HEXO博客搭建">HEXO博客搭建</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2025/09/26/%E4%BD%BF%E7%94%A8PICGO-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%9B%BE%E5%BA%8A/" title="使用PICGO-GitHub搭建个人图床">使用PICGO-GitHub搭建个人图床</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2025/09/26/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%E7%A1%AC%E4%BB%B6%E5%A6%82%E4%BD%95%E9%80%89%E5%9E%8B/" title="机器视觉硬件如何选型">机器视觉硬件如何选型</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2025/09/26/%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A%E8%B8%A9%E5%9D%91/" title="免费图床踩坑">免费图床踩坑</a></span>
   </li>
 
       
@@ -516,6 +496,15 @@ LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the questio
 </div>
 
     <span><a href="/2025/09/26/%E4%BD%BF%E7%94%A8PICGO-CloudflarR2%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%9B%BE%E5%BA%8A/" title="使用PICGO-CloudflarR2搭建个人图床">使用PICGO-CloudflarR2搭建个人图床</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2025/09/26/hello-world/" title="Hello World">Hello World</a></span>
   </li>
 
   </ul>

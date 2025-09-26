@@ -1,0 +1,710 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Learning-Sharing-Recording" href="https://lzq-cv.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Learning-Sharing-Recording" href="https://lzq-cv.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Learning-Sharing-Recording" href="https://lzq-cv.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="机器视觉" />
+
+
+<link rel="canonical" href="https://lzq-cv.github.io/2025/09/26/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%E7%A1%AC%E4%BB%B6%E5%A6%82%E4%BD%95%E9%80%89%E5%9E%8B/">
+
+
+
+  <title>
+机器视觉硬件如何选型 |
+LZQ's Blog = Learning-Sharing-Recording = To be,or not to be,that is the question</title>
+<meta name="generator" content="Hexo 8.0.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">机器视觉硬件如何选型
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="Created: 2025-09-26 18:08:56">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">Posted on</span>
+    <time itemprop="dateCreated datePublished" datetime="2025-09-26T18:08:56+08:00">2025-09-26</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="Toggle navigation bar">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">LZQ's Blog</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://lzq-cv.oss-cn-shanghai.aliyuncs.com/IMG_0598.PNG"></li>
+          <li class="item" data-background-image="https://lzq-cv.oss-cn-shanghai.aliyuncs.com/178660-qi_fen-guang-xing_zhi-azure-x750.jpg"></li>
+          <li class="item" data-background-image="https://lzq-cv.oss-cn-shanghai.aliyuncs.com/2016-12-19%20210736.JPG"></li>
+          <li class="item" data-background-image="https://lzq-cv.oss-cn-shanghai.aliyuncs.com/86e444a8880c11ebb6edd017c2d2eca2.jpg"></li>
+          <li class="item" data-background-image="https://lzq-cv.oss-cn-shanghai.aliyuncs.com/final-fantasy-15-lq.jpg"></li>
+          <li class="item" data-background-image="https://lzq-cv.oss-cn-shanghai.aliyuncs.com/1b6eb5094e78e8e5e02cd8e5e24ffd3336770709.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">Home</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
+  <link itemprop="mainEntityOfPage" href="https://lzq-cv.github.io/2025/09/26/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%E7%A1%AC%E4%BB%B6%E5%A6%82%E4%BD%95%E9%80%89%E5%9E%8B/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="LZQ">
+    <meta itemprop="description" content="To be,or not to be,that is the question, CV Engineer">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Learning-Sharing-Recording">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="机器视觉硬件选型指南"><a class="markdownIt-Anchor" href="#机器视觉硬件选型指南">#</a> 机器视觉硬件选型指南</h1>
+<h2 id="概述"><a class="markdownIt-Anchor" href="#概述">#</a> 概述</h2>
+<p>机器视觉硬件选型是为特定的机器视觉应用需求，从众多硬件组件中科学地挑选出最合适的相机、镜头、光源、处理器及其他辅助设备的过程。其核心目标是构建一套能稳定、精确、高效地完成指定视觉任务（如检测、测量、识别、定位等）的硬件系统。</p>
+<hr>
+<h2 id="核心组件选型"><a class="markdownIt-Anchor" href="#核心组件选型">#</a> 核心组件选型</h2>
+<h3 id="相机"><a class="markdownIt-Anchor" href="#相机">#</a> 相机</h3>
+<h4 id="类型"><a class="markdownIt-Anchor" href="#类型">#</a> 类型</h4>
+<ul>
+<li><strong>面阵相机</strong>：最常用，适用于静止或连续运动的物体成像（如传送带）
+<ul>
+<li>选型重点：分辨率、帧率、传感器尺寸、像元尺寸、快门类型</li>
+</ul>
+</li>
+<li><strong>线阵相机</strong>：适用于高速连续运动物体或需要超高分辨率的场景（如卷材检测、印刷检测）
+<ul>
+<li>选型重点：行频、分辨率（线数）、传感器长度、像元尺寸、行曝光时间控制</li>
+</ul>
+</li>
+<li><strong>区域扫描相机</strong>：即面阵相机</li>
+<li><strong>3D 相机</strong>：用于获取深度信息（如体积测量、引导抓取）
+<ul>
+<li>技术包括：双目立体视觉、结构光、激光三角测量、飞行时间</li>
+<li>选型重点：精度、量程、点云密度、抗环境光能力、速度</li>
+</ul>
+</li>
+</ul>
+<h4 id="传感器技术"><a class="markdownIt-Anchor" href="#传感器技术">#</a> 传感器技术</h4>
+<ul>
+<li><strong>CMOS</strong>：主流技术，性价比高，速度快，功耗低，抗拖影能力好，支持全局快门或卷帘快门</li>
+<li><strong>CCD</strong>：成像质量（尤其是低照度、均一性）通常优于 CMOS，但速度慢、功耗高、成本高、易产生拖影，逐渐被 CMOS 取代</li>
+</ul>
+<h4 id="分辨率"><a class="markdownIt-Anchor" href="#分辨率">#</a> 分辨率</h4>
+<ul>
+<li>根据检测精度要求计算： <code>所需最小像素数 = (待测特征尺寸 / 检测精度要求) × 2</code> （满足奈奎斯特采样定理）</li>
+<li>示例：检测 0.1mm 缺陷，精度要求 0.05mm，则单个特征至少需要  <code>(0.1 / 0.05) × 2 = 4</code>  个像素覆盖</li>
+<li>避免过度追求高分辨率：增加成本、降低帧率、增大数据量</li>
+</ul>
+<h4 id="帧率"><a class="markdownIt-Anchor" href="#帧率">#</a> 帧率</h4>
+<ul>
+<li>计算公式： <code>所需最小帧率 = (物体移动速度 / 相机视野内允许的最大物体位移)</code></li>
+<li>高帧率需求：高速运动物体检测、需要捕捉快速瞬变过程</li>
+</ul>
+<h4 id="快门类型"><a class="markdownIt-Anchor" href="#快门类型">#</a> 快门类型</h4>
+<ul>
+<li><strong>全局快门</strong>：所有像素同时曝光，适合拍摄运动物体，无运动模糊（工业应用首选）</li>
+<li><strong>卷帘快门</strong>：像素逐行曝光，拍摄运动物体时会产生果冻效应</li>
+</ul>
+<h4 id="接口"><a class="markdownIt-Anchor" href="#接口">#</a> 接口</h4>
+<ul>
+<li><strong>GigE Vision</strong>：主流，性价比高，线缆长（可达 100m）</li>
+<li><strong>USB3 Vision</strong>：即插即用方便，带宽高，但线缆短（&lt;5m）</li>
+<li><strong>Camera Link</strong>：传统高速接口，需要专用采集卡</li>
+<li><strong>CoaXPress</strong>：新兴高速接口，带宽极高，线缆长，抗干扰强</li>
+<li><strong>MIPI</strong>：主要用于嵌入式系统</li>
+</ul>
+<h4 id="色彩"><a class="markdownIt-Anchor" href="#色彩">#</a> 色彩</h4>
+<ul>
+<li><strong>黑白</strong>：灵敏度高，分辨率高，速度快，成本低</li>
+<li><strong>彩色</strong>：用于需要区分颜色的应用，需注意拜耳滤镜带来的分辨率和灵敏度损失</li>
+</ul>
+<h4 id="其他特性"><a class="markdownIt-Anchor" href="#其他特性">#</a> 其他特性</h4>
+<ul>
+<li>传感器尺寸：影响视野和景深</li>
+<li>像元尺寸：影响分辨率和灵敏度</li>
+<li>灵敏度 / 量子效率：在低光照条件下尤其重要</li>
+<li>动态范围：反映相机同时捕捉亮部和暗部细节的能力</li>
+</ul>
+<hr>
+<h3 id="镜头"><a class="markdownIt-Anchor" href="#镜头">#</a> 镜头</h3>
+<h4 id="焦距"><a class="markdownIt-Anchor" href="#焦距">#</a> 焦距</h4>
+<ul>
+<li>计算公式： <code>焦距 f ≈ (传感器尺寸 × 工作距离) / 视野</code></li>
+<li>根据视野和工作距离计算所需焦距范围</li>
+</ul>
+<h4 id="光圈"><a class="markdownIt-Anchor" href="#光圈">#</a> 光圈</h4>
+<ul>
+<li><strong>大光圈</strong>：进光量大，适合低照度环境，但景深小</li>
+<li><strong>小光圈</strong>：景深大，适合有一定厚度或不在同一平面的物体</li>
+<li>F 值越小，光圈越大</li>
+</ul>
+<h4 id="接口-2"><a class="markdownIt-Anchor" href="#接口-2">#</a> 接口</h4>
+<ul>
+<li>必须与相机接口匹配</li>
+<li>常见工业接口：C 口（最普遍）、CS 口、F 口、M42、M58 等</li>
+</ul>
+<h4 id="分辨率-2"><a class="markdownIt-Anchor" href="#分辨率-2">#</a> 分辨率</h4>
+<ul>
+<li>镜头的解析能力必须匹配相机的分辨率</li>
+<li>镜头分辨率用 MTF 曲线表示，应略高于传感器需求</li>
+</ul>
+<h4 id="畸变"><a class="markdownIt-Anchor" href="#畸变">#</a> 畸变</h4>
+<ul>
+<li>高精度测量应用需选择低畸变镜头（&lt;0.1%）</li>
+</ul>
+<h4 id="类型-2"><a class="markdownIt-Anchor" href="#类型-2">#</a> 类型</h4>
+<ul>
+<li><strong>定焦镜头</strong>：最常见，性价比高</li>
+<li><strong>变焦镜头</strong>：焦距可调，灵活性高</li>
+<li><strong>远心镜头</strong>：精密测量必备，消除透视误差</li>
+<li><strong>微距镜头</strong>：专为高倍率、短工作距离设计</li>
+<li><strong>液态镜头</strong>：通过电压控制焦距，实现毫秒级自动对焦</li>
+</ul>
+<hr>
+<h3 id="光源"><a class="markdownIt-Anchor" href="#光源">#</a> 光源</h3>
+<h4 id="目的"><a class="markdownIt-Anchor" href="#目的">#</a> 目的</h4>
+<p>突出被测特征，抑制背景干扰，提高对比度，保证成像稳定性和一致性</p>
+<h4 id="类型led光源为主"><a class="markdownIt-Anchor" href="#类型led光源为主">#</a> 类型（LED 光源为主）</h4>
+<ul>
+<li><strong>环形光</strong>：通用性好，提供漫射光，减少阴影</li>
+<li><strong>条形光</strong>：用于长条状物体或需要定向照明</li>
+<li><strong>背光源</strong>：轮廓检测、透明物体杂质检测</li>
+<li><strong>同轴光</strong>：检测光滑平面上的划痕、凹凸</li>
+<li><strong>穹顶光</strong>：提供均匀漫射光，消除反光</li>
+<li><strong>点光源 / 线光源</strong>：用于特殊角度照明</li>
+<li><strong>结构光</strong>：投射特定图案用于 3D 测量</li>
+</ul>
+<h4 id="颜色选择"><a class="markdownIt-Anchor" href="#颜色选择">#</a> 颜色选择</h4>
+<ul>
+<li>选择能最大化目标特征与背景对比度的颜色</li>
+<li>互补色原理：物体颜色与光源颜色互为补色时对比度最高</li>
+<li>单色光常能提高对比度</li>
+</ul>
+<h4 id="照明方式"><a class="markdownIt-Anchor" href="#照明方式">#</a> 照明方式</h4>
+<ul>
+<li><strong>明场照明</strong>：光线反射进入镜头</li>
+<li><strong>暗场照明</strong>：光线以低角度照射，用于检测划痕、凹凸、纹理</li>
+<li><strong>透射照明</strong>：即背光</li>
+</ul>
+<hr>
+<h3 id="图像采集卡"><a class="markdownIt-Anchor" href="#图像采集卡">#</a> 图像采集卡</h3>
+<h4 id="作用"><a class="markdownIt-Anchor" href="#作用">#</a> 作用</h4>
+<p>对于需要 Camera Link 或 CoaXPress 接口的相机，采集卡负责将高速图像数据传输到 PC 内存</p>
+<h4 id="选型要点"><a class="markdownIt-Anchor" href="#选型要点">#</a> 选型要点</h4>
+<ul>
+<li>接口类型和带宽必须匹配相机</li>
+<li>通道数：支持单相机或多相机</li>
+<li>内存：板载内存大小影响传输稳定性</li>
+<li>I/O 支持：触发输入 / 输出、编码器输入等</li>
+<li>软件兼容性</li>
+</ul>
+<hr>
+<h3 id="处理器工控机"><a class="markdownIt-Anchor" href="#处理器工控机">#</a> 处理器 / 工控机</h3>
+<h4 id="cpu"><a class="markdownIt-Anchor" href="#cpu">#</a> CPU</h4>
+<p>选择性能强劲的多核处理器（Intel Core i5/i7/i9, Xeon）</p>
+<h4 id="内存"><a class="markdownIt-Anchor" href="#内存">#</a> 内存</h4>
+<ul>
+<li>推荐 16GB 起步</li>
+<li>复杂应用需要 32GB 甚至更多</li>
+</ul>
+<h4 id="存储"><a class="markdownIt-Anchor" href="#存储">#</a> 存储</h4>
+<p>SSD 固态硬盘（NVMe 更好）用于快速启动和存储</p>
+<h4 id="gpu"><a class="markdownIt-Anchor" href="#gpu">#</a> GPU</h4>
+<p>对于深度学习应用、复杂的 3D 点云处理非常关键</p>
+<h4 id="操作系统"><a class="markdownIt-Anchor" href="#操作系统">#</a> 操作系统</h4>
+<ul>
+<li>Windows 10/11 IoT Enterprise LTSC（工业推荐）</li>
+<li>Linux（开源，定制性强）</li>
+</ul>
+<hr>
+<h3 id="其他硬件"><a class="markdownIt-Anchor" href="#其他硬件">#</a> 其他硬件</h3>
+<h4 id="光学滤镜"><a class="markdownIt-Anchor" href="#光学滤镜">#</a> 光学滤镜</h4>
+<ul>
+<li><strong>偏振片</strong>：消除眩光、反光</li>
+<li><strong>带通 / 窄带滤光片</strong>：抑制环境光干扰</li>
+<li><strong>中性密度滤光片</strong>：防止过曝</li>
+</ul>
+<h4 id="传感器编码器"><a class="markdownIt-Anchor" href="#传感器编码器">#</a> 传感器 / 编码器</h4>
+<p>用于提供物体位置信号触发相机 / 光源</p>
+<h4 id="io模块"><a class="markdownIt-Anchor" href="#io模块">#</a> I/O 模块</h4>
+<p>连接 PLC、传感器、执行器等自动化设备</p>
+<h4 id="防护罩机械支架"><a class="markdownIt-Anchor" href="#防护罩机械支架">#</a> 防护罩 / 机械支架</h4>
+<p>保护设备，确保安装稳固</p>
+<hr>
+<h2 id="关键选型考量因素"><a class="markdownIt-Anchor" href="#关键选型考量因素">#</a> 关键选型考量因素</h2>
+<h3 id="应用需求"><a class="markdownIt-Anchor" href="#应用需求">#</a> 应用需求</h3>
+<ul>
+<li>检测目标（尺寸、缺陷、有无、定位等）</li>
+<li>精度要求（亚像素级？微米级？毫米级？）</li>
+<li>速度要求（产线节拍）</li>
+<li>视野大小和工作距离</li>
+<li>被测物体特性（材质、颜色、表面反光性等）</li>
+<li>环境条件（温度、湿度、粉尘、振动等）</li>
+</ul>
+<h3 id="性能指标"><a class="markdownIt-Anchor" href="#性能指标">#</a> 性能指标</h3>
+<p>基于应用需求推导出的具体参数：分辨率、帧率、景深、曝光时间等</p>
+<h3 id="成本预算"><a class="markdownIt-Anchor" href="#成本预算">#</a> 成本预算</h3>
+<p>在满足性能要求的前提下，平衡各组件成本</p>
+<h3 id="系统集成与兼容性"><a class="markdownIt-Anchor" href="#系统集成与兼容性">#</a> 系统集成与兼容性</h3>
+<ul>
+<li>各组件之间的兼容性</li>
+<li>与现有自动化设备的通信接口</li>
+<li>视觉软件的选择</li>
+</ul>
+<h3 id="可靠性与维护"><a class="markdownIt-Anchor" href="#可靠性与维护">#</a> 可靠性与维护</h3>
+<p>工业环境要求硬件具有高可靠性和长寿命</p>
+<h3 id="供应商支持与服务"><a class="markdownIt-Anchor" href="#供应商支持与服务">#</a> 供应商支持与服务</h3>
+<p>良好的技术支持和售后服务至关重要</p>
+<hr>
+<h2 id="选型流程建议"><a class="markdownIt-Anchor" href="#选型流程建议">#</a> 选型流程建议</h2>
+<ol>
+<li><strong>明确定义需求</strong>：详细列出所有应用要求、目标和约束条件</li>
+<li><strong>计算核心参数</strong>：分辨率、帧率、工作距离和景深</li>
+<li><strong>初步选择相机</strong>：基于分辨率、帧率、接口等筛选</li>
+<li><strong>选择镜头</strong>：基于相机传感器尺寸、工作距离、视野计算焦距</li>
+<li><strong>设计光源方案</strong>：确定光源类型、颜色、照明方式</li>
+<li><strong>选择处理器 / 工控机</strong>：根据算法复杂度、图像数据量选择配置</li>
+<li><strong>选择其他组件</strong>：采集卡、光源控制器、滤镜等</li>
+<li><strong>验证与测试</strong>：搭建原型系统进行实际测试</li>
+<li><strong>评估供应商与成本</strong>：综合评估技术指标、价格、服务等</li>
+<li><strong>最终决策与采购</strong></li>
+</ol>
+<hr>
+<h2 id="选型案例手机屏缺陷检测"><a class="markdownIt-Anchor" href="#选型案例手机屏缺陷检测">#</a> 选型案例：手机屏缺陷检测</h2>
+<h3 id="需求"><a class="markdownIt-Anchor" href="#需求">#</a> 需求</h3>
+<ul>
+<li>检测 6 英寸手机屏表面划痕、脏污、亮点 / 暗点</li>
+<li>精度要求：0.05mm 缺陷</li>
+<li>产线速度：1 秒 / 片</li>
+</ul>
+<h3 id="计算"><a class="markdownIt-Anchor" href="#计算">#</a> 计算</h3>
+<ul>
+<li><strong>视野</strong>：略大于屏幕尺寸，约 180mm × 90mm</li>
+<li><strong>精度</strong>：0.05mm 缺陷 → 至少需要 4 个像素覆盖
+<ul>
+<li>单方向最小像素数 = (180mm / 0.05mm) × 2 = 7200 像素</li>
+<li>选择 800 万像素以上相机</li>
+</ul>
+</li>
+<li><strong>帧率</strong>：检测时间 &lt; 1 秒，选择 30fps 相机较宽裕</li>
+</ul>
+<h3 id="选型方案"><a class="markdownIt-Anchor" href="#选型方案">#</a> 选型方案</h3>
+<ul>
+<li><strong>相机</strong>：高分辨率面阵 CMOS 全局快门相机，800 万像素以上，GigE 或 USB3 接口，黑白</li>
+<li><strong>镜头</strong>：远心镜头或低畸变定焦镜头，高分辨率</li>
+<li><strong>光源</strong>：同轴光或低角度条形光（暗场）突出划痕、脏污</li>
+<li><strong>处理器</strong>：性能较强的工控机（i7 CPU, 32GB RAM），配备 GPU</li>
+<li><strong>其他</strong>：编码器触发相机抓拍，I/O 与 PLC 通信</li>
+</ul>
+
+      <div class="tags">
+          <a href="/tags/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/" rel="tag"><i class="ic i-tag"></i> 机器视觉</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">Edited on</span>
+    <time title="Modified: 2025-09-26 18:09:24" itemprop="dateModified" datetime="2025-09-26T18:09:24+08:00">2025-09-26</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> Donate</button>
+  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="LZQ WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="LZQ Alipay">
+        <p>Alipay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="LZQ PayPal">
+        <p>PayPal</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>Post author:  </strong>LZQ <i class="ic i-at"><em>@</em></i>Learning-Sharing-Recording
+  </li>
+  <li class="link">
+    <strong>Post link: </strong>
+    <a href="https://lzq-cv.github.io/2025/09/26/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%E7%A1%AC%E4%BB%B6%E5%A6%82%E4%BD%95%E9%80%89%E5%9E%8B/" title="机器视觉硬件如何选型">https://lzq-cv.github.io/2025/09/26/机器视觉硬件如何选型/</a>
+  </li>
+  <li class="license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2025/09/26/%E4%BD%BF%E7%94%A8PICGO-%E9%98%BF%E9%87%8C%E4%BA%91OSS%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%9B%BE%E5%BA%8A/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;lzq-cv.oss-cn-shanghai.aliyuncs.com&#x2F;t01da71b24e580d8765.jpg" title="使用PICGO-阿里云OSS搭建个人图床">
+  <span class="type">Previous Post</span>
+  <span class="category"><i class="ic i-flag"></i> </span>
+  <h3>使用PICGO-阿里云OSS搭建个人图床</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%E7%A1%AC%E4%BB%B6%E9%80%89%E5%9E%8B%E6%8C%87%E5%8D%97"><span class="toc-number">1.</span> <span class="toc-text"> 机器视觉硬件选型指南</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-number">1.1.</span> <span class="toc-text"> 概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6%E9%80%89%E5%9E%8B"><span class="toc-number">1.2.</span> <span class="toc-text"> 核心组件选型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B8%E6%9C%BA"><span class="toc-number">1.2.1.</span> <span class="toc-text"> 相机</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.2.1.1.</span> <span class="toc-text"> 类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%A0%E6%84%9F%E5%99%A8%E6%8A%80%E6%9C%AF"><span class="toc-number">1.2.1.2.</span> <span class="toc-text"> 传感器技术</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E8%BE%A8%E7%8E%87"><span class="toc-number">1.2.1.3.</span> <span class="toc-text"> 分辨率</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%A7%E7%8E%87"><span class="toc-number">1.2.1.4.</span> <span class="toc-text"> 帧率</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BF%AB%E9%97%A8%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.2.1.5.</span> <span class="toc-text"> 快门类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3"><span class="toc-number">1.2.1.6.</span> <span class="toc-text"> 接口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%89%B2%E5%BD%A9"><span class="toc-number">1.2.1.7.</span> <span class="toc-text"> 色彩</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E7%89%B9%E6%80%A7"><span class="toc-number">1.2.1.8.</span> <span class="toc-text"> 其他特性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%95%9C%E5%A4%B4"><span class="toc-number">1.2.2.</span> <span class="toc-text"> 镜头</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%84%A6%E8%B7%9D"><span class="toc-number">1.2.2.1.</span> <span class="toc-text"> 焦距</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%89%E5%9C%88"><span class="toc-number">1.2.2.2.</span> <span class="toc-text"> 光圈</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3-2"><span class="toc-number">1.2.2.3.</span> <span class="toc-text"> 接口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E8%BE%A8%E7%8E%87-2"><span class="toc-number">1.2.2.4.</span> <span class="toc-text"> 分辨率</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%95%B8%E5%8F%98"><span class="toc-number">1.2.2.5.</span> <span class="toc-text"> 畸变</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B-2"><span class="toc-number">1.2.2.6.</span> <span class="toc-text"> 类型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%89%E6%BA%90"><span class="toc-number">1.2.3.</span> <span class="toc-text"> 光源</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9B%AE%E7%9A%84"><span class="toc-number">1.2.3.1.</span> <span class="toc-text"> 目的</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8Bled%E5%85%89%E6%BA%90%E4%B8%BA%E4%B8%BB"><span class="toc-number">1.2.3.2.</span> <span class="toc-text"> 类型（LED 光源为主）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%9C%E8%89%B2%E9%80%89%E6%8B%A9"><span class="toc-number">1.2.3.3.</span> <span class="toc-text"> 颜色选择</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%85%A7%E6%98%8E%E6%96%B9%E5%BC%8F"><span class="toc-number">1.2.3.4.</span> <span class="toc-text"> 照明方式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E5%83%8F%E9%87%87%E9%9B%86%E5%8D%A1"><span class="toc-number">1.2.4.</span> <span class="toc-text"> 图像采集卡</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%9C%E7%94%A8"><span class="toc-number">1.2.4.1.</span> <span class="toc-text"> 作用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%89%E5%9E%8B%E8%A6%81%E7%82%B9"><span class="toc-number">1.2.4.2.</span> <span class="toc-text"> 选型要点</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%84%E7%90%86%E5%99%A8%E5%B7%A5%E6%8E%A7%E6%9C%BA"><span class="toc-number">1.2.5.</span> <span class="toc-text"> 处理器 &#x2F; 工控机</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#cpu"><span class="toc-number">1.2.5.1.</span> <span class="toc-text"> CPU</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%86%85%E5%AD%98"><span class="toc-number">1.2.5.2.</span> <span class="toc-text"> 内存</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AD%98%E5%82%A8"><span class="toc-number">1.2.5.3.</span> <span class="toc-text"> 存储</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#gpu"><span class="toc-number">1.2.5.4.</span> <span class="toc-text"> GPU</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.2.5.5.</span> <span class="toc-text"> 操作系统</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E7%A1%AC%E4%BB%B6"><span class="toc-number">1.2.6.</span> <span class="toc-text"> 其他硬件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%89%E5%AD%A6%E6%BB%A4%E9%95%9C"><span class="toc-number">1.2.6.1.</span> <span class="toc-text"> 光学滤镜</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BC%A0%E6%84%9F%E5%99%A8%E7%BC%96%E7%A0%81%E5%99%A8"><span class="toc-number">1.2.6.2.</span> <span class="toc-text"> 传感器 &#x2F; 编码器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#io%E6%A8%A1%E5%9D%97"><span class="toc-number">1.2.6.3.</span> <span class="toc-text"> I&#x2F;O 模块</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%98%B2%E6%8A%A4%E7%BD%A9%E6%9C%BA%E6%A2%B0%E6%94%AF%E6%9E%B6"><span class="toc-number">1.2.6.4.</span> <span class="toc-text"> 防护罩 &#x2F; 机械支架</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E9%80%89%E5%9E%8B%E8%80%83%E9%87%8F%E5%9B%A0%E7%B4%A0"><span class="toc-number">1.3.</span> <span class="toc-text"> 关键选型考量因素</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E9%9C%80%E6%B1%82"><span class="toc-number">1.3.1.</span> <span class="toc-text"> 应用需求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87"><span class="toc-number">1.3.2.</span> <span class="toc-text"> 性能指标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%90%E6%9C%AC%E9%A2%84%E7%AE%97"><span class="toc-number">1.3.3.</span> <span class="toc-text"> 成本预算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E4%B8%8E%E5%85%BC%E5%AE%B9%E6%80%A7"><span class="toc-number">1.3.4.</span> <span class="toc-text"> 系统集成与兼容性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AF%E9%9D%A0%E6%80%A7%E4%B8%8E%E7%BB%B4%E6%8A%A4"><span class="toc-number">1.3.5.</span> <span class="toc-text"> 可靠性与维护</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%9B%E5%BA%94%E5%95%86%E6%94%AF%E6%8C%81%E4%B8%8E%E6%9C%8D%E5%8A%A1"><span class="toc-number">1.3.6.</span> <span class="toc-text"> 供应商支持与服务</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E5%9E%8B%E6%B5%81%E7%A8%8B%E5%BB%BA%E8%AE%AE"><span class="toc-number">1.4.</span> <span class="toc-text"> 选型流程建议</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E5%9E%8B%E6%A1%88%E4%BE%8B%E6%89%8B%E6%9C%BA%E5%B1%8F%E7%BC%BA%E9%99%B7%E6%A3%80%E6%B5%8B"><span class="toc-number">1.5.</span> <span class="toc-text"> 选型案例：手机屏缺陷检测</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9C%80%E6%B1%82"><span class="toc-number">1.5.1.</span> <span class="toc-text"> 需求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97"><span class="toc-number">1.5.2.</span> <span class="toc-text"> 计算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%89%E5%9E%8B%E6%96%B9%E6%A1%88"><span class="toc-number">1.5.3.</span> <span class="toc-text"> 选型方案</span></a></li></ol></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="Related">
+      </div>
+      <div class="overview panel" data-title="Overview">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="LZQ"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">LZQ</p>
+  <div class="description" itemprop="description">CV Engineer</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">8</span>
+        <span class="name">posts</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">4</span>
+        <span class="name">tags</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item bilibili" data-url="aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vODI2ODE4NDY/c3BtX2lkX2Zyb209MzMzLjEwMDcuMC4w" title="https:&#x2F;&#x2F;space.bilibili.com&#x2F;82681846?spm_id_from&#x3D;333.1007.0.0"><i class="ic i-bilibili"></i></span>
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL0xaUS1DVg==" title="https:&#x2F;&#x2F;github.com&#x2F;LZQ-CV"><i class="ic i-github"></i></span>
+      <span class="exturl item zhihu" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS9tYW8tcWl1LWNoYW5nLWx6cQ==" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;mao-qiu-chang-lzq"><i class="ic i-zhihu"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTMzNjM5NDU5MTA=" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;3363945910"><i class="ic i-cloud-music"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>Posts</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>Archives</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>Categories</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>Tags</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>Random Posts</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2025/09/26/%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A%E8%B8%A9%E5%9D%91/" title="免费图床踩坑">免费图床踩坑</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2025/09/26/HEXO%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" title="HEXO博客搭建">HEXO博客搭建</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2025/09/26/%E4%BD%BF%E7%94%A8PICGO-CloudflarR2%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%9B%BE%E5%BA%8A/" title="使用PICGO-CloudflarR2搭建个人图床">使用PICGO-CloudflarR2搭建个人图床</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2025/09/26/%E4%BD%BF%E7%94%A8PICGO-%E9%98%BF%E9%87%8C%E4%BA%91OSS%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%9B%BE%E5%BA%8A/" title="使用PICGO-阿里云OSS搭建个人图床">使用PICGO-阿里云OSS搭建个人图床</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2025/09/26/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%E7%A1%AC%E4%BB%B6%E5%A6%82%E4%BD%95%E9%80%89%E5%9E%8B/" title="机器视觉硬件如何选型">机器视觉硬件如何选型</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2025/09/26/shoka%E4%B8%BB%E9%A2%98%E9%83%A8%E7%BD%B2/" title="shoka主题部署">shoka主题部署</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2025/09/26/%E4%BD%BF%E7%94%A8PICGO-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%9B%BE%E5%BA%8A/" title="使用PICGO-GitHub搭建个人图床">使用PICGO-GitHub搭建个人图床</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2025/09/26/hello-world/" title="Hello World">Hello World</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>Recent Comments</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2024 – 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">LZQ @ LZQ's Blog</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2025/09/26/机器视觉硬件如何选型/',
+    favicon: {
+      show: "（●´3｀●）Nice to meet you.",
+      hide: "(´Д｀)You'll be back !!!"
+    },
+    search : {
+      placeholder: "Search for Posts",
+      empty: "We didn't find any results for the search: ${query}",
+      stats: "${hits} results found in ${time} ms"
+    },
+    valine: true,fancybox: true,
+    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

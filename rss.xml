@@ -1,0 +1,749 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Learning-Sharing-Recording</title>
+        <link>https://LZQ-CV.github.io</link>
+        <description>CV Engineer</description>
+        <language>en</language>
+        <pubDate>Fri, 26 Sep 2025 18:08:56 +0800</pubDate>
+        <lastBuildDate>Fri, 26 Sep 2025 18:08:56 +0800</lastBuildDate>
+        <category>HEXO</category>
+        <category>shoka</category>
+        <category>图床</category>
+        <category>机器视觉</category>
+        <item>
+            <guid isPermalink="true">https://lzq-cv.github.io/2025/09/26/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%E7%A1%AC%E4%BB%B6%E5%A6%82%E4%BD%95%E9%80%89%E5%9E%8B/</guid>
+            <title>机器视觉硬件如何选型</title>
+            <link>https://lzq-cv.github.io/2025/09/26/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%E7%A1%AC%E4%BB%B6%E5%A6%82%E4%BD%95%E9%80%89%E5%9E%8B/</link>
+            <category>机器视觉</category>
+            <pubDate>Fri, 26 Sep 2025 18:08:56 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;机器视觉硬件选型指南&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#机器视觉硬件选型指南&#34;&gt;#&lt;/a&gt; 机器视觉硬件选型指南&lt;/h1&gt;
+&lt;h2 id=&#34;概述&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#概述&#34;&gt;#&lt;/a&gt; 概述&lt;/h2&gt;
+&lt;p&gt;机器视觉硬件选型是为特定的机器视觉应用需求，从众多硬件组件中科学地挑选出最合适的相机、镜头、光源、处理器及其他辅助设备的过程。其核心目标是构建一套能稳定、精确、高效地完成指定视觉任务（如检测、测量、识别、定位等）的硬件系统。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;核心组件选型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#核心组件选型&#34;&gt;#&lt;/a&gt; 核心组件选型&lt;/h2&gt;
+&lt;h3 id=&#34;相机&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#相机&#34;&gt;#&lt;/a&gt; 相机&lt;/h3&gt;
+&lt;h4 id=&#34;类型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#类型&#34;&gt;#&lt;/a&gt; 类型&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;面阵相机&lt;/strong&gt;：最常用，适用于静止或连续运动的物体成像（如传送带）
+&lt;ul&gt;
+&lt;li&gt;选型重点：分辨率、帧率、传感器尺寸、像元尺寸、快门类型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;线阵相机&lt;/strong&gt;：适用于高速连续运动物体或需要超高分辨率的场景（如卷材检测、印刷检测）
+&lt;ul&gt;
+&lt;li&gt;选型重点：行频、分辨率（线数）、传感器长度、像元尺寸、行曝光时间控制&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;区域扫描相机&lt;/strong&gt;：即面阵相机&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;3D 相机&lt;/strong&gt;：用于获取深度信息（如体积测量、引导抓取）
+&lt;ul&gt;
+&lt;li&gt;技术包括：双目立体视觉、结构光、激光三角测量、飞行时间&lt;/li&gt;
+&lt;li&gt;选型重点：精度、量程、点云密度、抗环境光能力、速度&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;传感器技术&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#传感器技术&#34;&gt;#&lt;/a&gt; 传感器技术&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;CMOS&lt;/strong&gt;：主流技术，性价比高，速度快，功耗低，抗拖影能力好，支持全局快门或卷帘快门&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CCD&lt;/strong&gt;：成像质量（尤其是低照度、均一性）通常优于 CMOS，但速度慢、功耗高、成本高、易产生拖影，逐渐被 CMOS 取代&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;分辨率&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#分辨率&#34;&gt;#&lt;/a&gt; 分辨率&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;根据检测精度要求计算： &lt;code&gt;所需最小像素数 = (待测特征尺寸 / 检测精度要求) × 2&lt;/code&gt; （满足奈奎斯特采样定理）&lt;/li&gt;
+&lt;li&gt;示例：检测 0.1mm 缺陷，精度要求 0.05mm，则单个特征至少需要  &lt;code&gt;(0.1 / 0.05) × 2 = 4&lt;/code&gt;  个像素覆盖&lt;/li&gt;
+&lt;li&gt;避免过度追求高分辨率：增加成本、降低帧率、增大数据量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;帧率&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#帧率&#34;&gt;#&lt;/a&gt; 帧率&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;计算公式： &lt;code&gt;所需最小帧率 = (物体移动速度 / 相机视野内允许的最大物体位移)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;高帧率需求：高速运动物体检测、需要捕捉快速瞬变过程&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;快门类型&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#快门类型&#34;&gt;#&lt;/a&gt; 快门类型&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;全局快门&lt;/strong&gt;：所有像素同时曝光，适合拍摄运动物体，无运动模糊（工业应用首选）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;卷帘快门&lt;/strong&gt;：像素逐行曝光，拍摄运动物体时会产生果冻效应&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;接口&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#接口&#34;&gt;#&lt;/a&gt; 接口&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;GigE Vision&lt;/strong&gt;：主流，性价比高，线缆长（可达 100m）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;USB3 Vision&lt;/strong&gt;：即插即用方便，带宽高，但线缆短（&amp;lt;5m）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Camera Link&lt;/strong&gt;：传统高速接口，需要专用采集卡&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CoaXPress&lt;/strong&gt;：新兴高速接口，带宽极高，线缆长，抗干扰强&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MIPI&lt;/strong&gt;：主要用于嵌入式系统&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;色彩&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#色彩&#34;&gt;#&lt;/a&gt; 色彩&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;黑白&lt;/strong&gt;：灵敏度高，分辨率高，速度快，成本低&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;彩色&lt;/strong&gt;：用于需要区分颜色的应用，需注意拜耳滤镜带来的分辨率和灵敏度损失&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;其他特性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#其他特性&#34;&gt;#&lt;/a&gt; 其他特性&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;传感器尺寸：影响视野和景深&lt;/li&gt;
+&lt;li&gt;像元尺寸：影响分辨率和灵敏度&lt;/li&gt;
+&lt;li&gt;灵敏度 / 量子效率：在低光照条件下尤其重要&lt;/li&gt;
+&lt;li&gt;动态范围：反映相机同时捕捉亮部和暗部细节的能力&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;镜头&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#镜头&#34;&gt;#&lt;/a&gt; 镜头&lt;/h3&gt;
+&lt;h4 id=&#34;焦距&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#焦距&#34;&gt;#&lt;/a&gt; 焦距&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;计算公式： &lt;code&gt;焦距 f ≈ (传感器尺寸 × 工作距离) / 视野&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;根据视野和工作距离计算所需焦距范围&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;光圈&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#光圈&#34;&gt;#&lt;/a&gt; 光圈&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;大光圈&lt;/strong&gt;：进光量大，适合低照度环境，但景深小&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;小光圈&lt;/strong&gt;：景深大，适合有一定厚度或不在同一平面的物体&lt;/li&gt;
+&lt;li&gt;F 值越小，光圈越大&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;接口-2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#接口-2&#34;&gt;#&lt;/a&gt; 接口&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;必须与相机接口匹配&lt;/li&gt;
+&lt;li&gt;常见工业接口：C 口（最普遍）、CS 口、F 口、M42、M58 等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;分辨率-2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#分辨率-2&#34;&gt;#&lt;/a&gt; 分辨率&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;镜头的解析能力必须匹配相机的分辨率&lt;/li&gt;
+&lt;li&gt;镜头分辨率用 MTF 曲线表示，应略高于传感器需求&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;畸变&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#畸变&#34;&gt;#&lt;/a&gt; 畸变&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;高精度测量应用需选择低畸变镜头（&amp;lt;0.1%）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;类型-2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#类型-2&#34;&gt;#&lt;/a&gt; 类型&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;定焦镜头&lt;/strong&gt;：最常见，性价比高&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;变焦镜头&lt;/strong&gt;：焦距可调，灵活性高&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;远心镜头&lt;/strong&gt;：精密测量必备，消除透视误差&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;微距镜头&lt;/strong&gt;：专为高倍率、短工作距离设计&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;液态镜头&lt;/strong&gt;：通过电压控制焦距，实现毫秒级自动对焦&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;光源&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#光源&#34;&gt;#&lt;/a&gt; 光源&lt;/h3&gt;
+&lt;h4 id=&#34;目的&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#目的&#34;&gt;#&lt;/a&gt; 目的&lt;/h4&gt;
+&lt;p&gt;突出被测特征，抑制背景干扰，提高对比度，保证成像稳定性和一致性&lt;/p&gt;
+&lt;h4 id=&#34;类型led光源为主&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#类型led光源为主&#34;&gt;#&lt;/a&gt; 类型（LED 光源为主）&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;环形光&lt;/strong&gt;：通用性好，提供漫射光，减少阴影&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;条形光&lt;/strong&gt;：用于长条状物体或需要定向照明&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;背光源&lt;/strong&gt;：轮廓检测、透明物体杂质检测&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;同轴光&lt;/strong&gt;：检测光滑平面上的划痕、凹凸&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;穹顶光&lt;/strong&gt;：提供均匀漫射光，消除反光&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;点光源 / 线光源&lt;/strong&gt;：用于特殊角度照明&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;结构光&lt;/strong&gt;：投射特定图案用于 3D 测量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;颜色选择&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#颜色选择&#34;&gt;#&lt;/a&gt; 颜色选择&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;选择能最大化目标特征与背景对比度的颜色&lt;/li&gt;
+&lt;li&gt;互补色原理：物体颜色与光源颜色互为补色时对比度最高&lt;/li&gt;
+&lt;li&gt;单色光常能提高对比度&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;照明方式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#照明方式&#34;&gt;#&lt;/a&gt; 照明方式&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;明场照明&lt;/strong&gt;：光线反射进入镜头&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;暗场照明&lt;/strong&gt;：光线以低角度照射，用于检测划痕、凹凸、纹理&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;透射照明&lt;/strong&gt;：即背光&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;图像采集卡&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#图像采集卡&#34;&gt;#&lt;/a&gt; 图像采集卡&lt;/h3&gt;
+&lt;h4 id=&#34;作用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#作用&#34;&gt;#&lt;/a&gt; 作用&lt;/h4&gt;
+&lt;p&gt;对于需要 Camera Link 或 CoaXPress 接口的相机，采集卡负责将高速图像数据传输到 PC 内存&lt;/p&gt;
+&lt;h4 id=&#34;选型要点&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#选型要点&#34;&gt;#&lt;/a&gt; 选型要点&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;接口类型和带宽必须匹配相机&lt;/li&gt;
+&lt;li&gt;通道数：支持单相机或多相机&lt;/li&gt;
+&lt;li&gt;内存：板载内存大小影响传输稳定性&lt;/li&gt;
+&lt;li&gt;I/O 支持：触发输入 / 输出、编码器输入等&lt;/li&gt;
+&lt;li&gt;软件兼容性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;处理器工控机&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#处理器工控机&#34;&gt;#&lt;/a&gt; 处理器 / 工控机&lt;/h3&gt;
+&lt;h4 id=&#34;cpu&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#cpu&#34;&gt;#&lt;/a&gt; CPU&lt;/h4&gt;
+&lt;p&gt;选择性能强劲的多核处理器（Intel Core i5/i7/i9, Xeon）&lt;/p&gt;
+&lt;h4 id=&#34;内存&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#内存&#34;&gt;#&lt;/a&gt; 内存&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;推荐 16GB 起步&lt;/li&gt;
+&lt;li&gt;复杂应用需要 32GB 甚至更多&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;存储&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#存储&#34;&gt;#&lt;/a&gt; 存储&lt;/h4&gt;
+&lt;p&gt;SSD 固态硬盘（NVMe 更好）用于快速启动和存储&lt;/p&gt;
+&lt;h4 id=&#34;gpu&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#gpu&#34;&gt;#&lt;/a&gt; GPU&lt;/h4&gt;
+&lt;p&gt;对于深度学习应用、复杂的 3D 点云处理非常关键&lt;/p&gt;
+&lt;h4 id=&#34;操作系统&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#操作系统&#34;&gt;#&lt;/a&gt; 操作系统&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows 10/11 IoT Enterprise LTSC（工业推荐）&lt;/li&gt;
+&lt;li&gt;Linux（开源，定制性强）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;其他硬件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#其他硬件&#34;&gt;#&lt;/a&gt; 其他硬件&lt;/h3&gt;
+&lt;h4 id=&#34;光学滤镜&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#光学滤镜&#34;&gt;#&lt;/a&gt; 光学滤镜&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;偏振片&lt;/strong&gt;：消除眩光、反光&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;带通 / 窄带滤光片&lt;/strong&gt;：抑制环境光干扰&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;中性密度滤光片&lt;/strong&gt;：防止过曝&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;传感器编码器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#传感器编码器&#34;&gt;#&lt;/a&gt; 传感器 / 编码器&lt;/h4&gt;
+&lt;p&gt;用于提供物体位置信号触发相机 / 光源&lt;/p&gt;
+&lt;h4 id=&#34;io模块&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#io模块&#34;&gt;#&lt;/a&gt; I/O 模块&lt;/h4&gt;
+&lt;p&gt;连接 PLC、传感器、执行器等自动化设备&lt;/p&gt;
+&lt;h4 id=&#34;防护罩机械支架&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#防护罩机械支架&#34;&gt;#&lt;/a&gt; 防护罩 / 机械支架&lt;/h4&gt;
+&lt;p&gt;保护设备，确保安装稳固&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;关键选型考量因素&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#关键选型考量因素&#34;&gt;#&lt;/a&gt; 关键选型考量因素&lt;/h2&gt;
+&lt;h3 id=&#34;应用需求&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#应用需求&#34;&gt;#&lt;/a&gt; 应用需求&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;检测目标（尺寸、缺陷、有无、定位等）&lt;/li&gt;
+&lt;li&gt;精度要求（亚像素级？微米级？毫米级？）&lt;/li&gt;
+&lt;li&gt;速度要求（产线节拍）&lt;/li&gt;
+&lt;li&gt;视野大小和工作距离&lt;/li&gt;
+&lt;li&gt;被测物体特性（材质、颜色、表面反光性等）&lt;/li&gt;
+&lt;li&gt;环境条件（温度、湿度、粉尘、振动等）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;性能指标&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#性能指标&#34;&gt;#&lt;/a&gt; 性能指标&lt;/h3&gt;
+&lt;p&gt;基于应用需求推导出的具体参数：分辨率、帧率、景深、曝光时间等&lt;/p&gt;
+&lt;h3 id=&#34;成本预算&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#成本预算&#34;&gt;#&lt;/a&gt; 成本预算&lt;/h3&gt;
+&lt;p&gt;在满足性能要求的前提下，平衡各组件成本&lt;/p&gt;
+&lt;h3 id=&#34;系统集成与兼容性&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#系统集成与兼容性&#34;&gt;#&lt;/a&gt; 系统集成与兼容性&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;各组件之间的兼容性&lt;/li&gt;
+&lt;li&gt;与现有自动化设备的通信接口&lt;/li&gt;
+&lt;li&gt;视觉软件的选择&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;可靠性与维护&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#可靠性与维护&#34;&gt;#&lt;/a&gt; 可靠性与维护&lt;/h3&gt;
+&lt;p&gt;工业环境要求硬件具有高可靠性和长寿命&lt;/p&gt;
+&lt;h3 id=&#34;供应商支持与服务&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#供应商支持与服务&#34;&gt;#&lt;/a&gt; 供应商支持与服务&lt;/h3&gt;
+&lt;p&gt;良好的技术支持和售后服务至关重要&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;选型流程建议&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#选型流程建议&#34;&gt;#&lt;/a&gt; 选型流程建议&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;明确定义需求&lt;/strong&gt;：详细列出所有应用要求、目标和约束条件&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;计算核心参数&lt;/strong&gt;：分辨率、帧率、工作距离和景深&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;初步选择相机&lt;/strong&gt;：基于分辨率、帧率、接口等筛选&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;选择镜头&lt;/strong&gt;：基于相机传感器尺寸、工作距离、视野计算焦距&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;设计光源方案&lt;/strong&gt;：确定光源类型、颜色、照明方式&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;选择处理器 / 工控机&lt;/strong&gt;：根据算法复杂度、图像数据量选择配置&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;选择其他组件&lt;/strong&gt;：采集卡、光源控制器、滤镜等&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;验证与测试&lt;/strong&gt;：搭建原型系统进行实际测试&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;评估供应商与成本&lt;/strong&gt;：综合评估技术指标、价格、服务等&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;最终决策与采购&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;选型案例手机屏缺陷检测&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#选型案例手机屏缺陷检测&#34;&gt;#&lt;/a&gt; 选型案例：手机屏缺陷检测&lt;/h2&gt;
+&lt;h3 id=&#34;需求&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#需求&#34;&gt;#&lt;/a&gt; 需求&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;检测 6 英寸手机屏表面划痕、脏污、亮点 / 暗点&lt;/li&gt;
+&lt;li&gt;精度要求：0.05mm 缺陷&lt;/li&gt;
+&lt;li&gt;产线速度：1 秒 / 片&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;计算&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#计算&#34;&gt;#&lt;/a&gt; 计算&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;视野&lt;/strong&gt;：略大于屏幕尺寸，约 180mm × 90mm&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;精度&lt;/strong&gt;：0.05mm 缺陷 → 至少需要 4 个像素覆盖
+&lt;ul&gt;
+&lt;li&gt;单方向最小像素数 = (180mm / 0.05mm) × 2 = 7200 像素&lt;/li&gt;
+&lt;li&gt;选择 800 万像素以上相机&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;帧率&lt;/strong&gt;：检测时间 &amp;lt; 1 秒，选择 30fps 相机较宽裕&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;选型方案&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#选型方案&#34;&gt;#&lt;/a&gt; 选型方案&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;相机&lt;/strong&gt;：高分辨率面阵 CMOS 全局快门相机，800 万像素以上，GigE 或 USB3 接口，黑白&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;镜头&lt;/strong&gt;：远心镜头或低畸变定焦镜头，高分辨率&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;光源&lt;/strong&gt;：同轴光或低角度条形光（暗场）突出划痕、脏污&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;处理器&lt;/strong&gt;：性能较强的工控机（i7 CPU, 32GB RAM），配备 GPU&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;其他&lt;/strong&gt;：编码器触发相机抓拍，I/O 与 PLC 通信&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://lzq-cv.github.io/2025/09/26/%E4%BD%BF%E7%94%A8PICGO-%E9%98%BF%E9%87%8C%E4%BA%91OSS%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%9B%BE%E5%BA%8A/</guid>
+            <title>使用PICGO-阿里云OSS搭建个人图床</title>
+            <link>https://lzq-cv.github.io/2025/09/26/%E4%BD%BF%E7%94%A8PICGO-%E9%98%BF%E9%87%8C%E4%BA%91OSS%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%9B%BE%E5%BA%8A/</link>
+            <category>图床</category>
+            <pubDate>Fri, 26 Sep 2025 18:06:31 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;使用阿里云 OSS 和 PicGo 搭建图床，可以让你非常方便地将本地图片自动上传到云端，并直接获取可用于博客、文档等处的图片链接。阿里云 OSS 还可以申请 3 个月免费试用。&lt;/p&gt;
+&lt;h3 id=&#34;配置阿里云oss&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#配置阿里云oss&#34;&gt;#&lt;/a&gt; 配置阿里云 OSS&lt;/h3&gt;
+&lt;p&gt;首先，我们需要在阿里云上创建存储空间（Bucket）并配置访问权限。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;创建 Bucket&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;登录阿里云控制台，进入&lt;strong&gt;对象存储 OSS&lt;/strong&gt; 服务。&lt;/li&gt;
+&lt;li&gt;点击&lt;strong&gt;创建 Bucket&lt;/strong&gt;，填写 Bucket 名称（全局唯一），选择离你较近的&lt;strong&gt;地域&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;读写权限&lt;/strong&gt;务必设置为&lt;strong&gt;公共读&lt;/strong&gt;，这样图片才能被外部访问。其他选项如存储类型等，保持 “标准存储” 默认值即可。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;创建 RAM 子用户并授权&lt;/strong&gt;（为了安全，不建议直接使用主账号 AccessKey）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;进入&lt;strong&gt;访问控制 RAM&lt;/strong&gt; 控制台。&lt;/li&gt;
+&lt;li&gt;创建一个子用户（例如命名为  &lt;code&gt;picgo-user&lt;/code&gt; ），&lt;strong&gt;访问方式&lt;/strong&gt;请勾选 &lt;strong&gt;“OpenAPI 调用访问”&lt;/strong&gt; 。系统会自动为该子用户创建 AccessKey（即 AccessKey ID 和 AccessKey Secret），请务必妥善保存这两项信息，后续配置 PicGo 时需要用到。&lt;/li&gt;
+&lt;li&gt;为这个子用户&lt;strong&gt;添加权限&lt;/strong&gt;。建议直接授权系统策略  &lt;code&gt;AliyunOSSFullAccess&lt;/code&gt; （管理对象存储服务 OSS 的权限），或者按需授予更小粒度的权限。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;安装与配置picgo&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装与配置picgo&#34;&gt;#&lt;/a&gt; 安装与配置 PicGo&lt;/h3&gt;
+&lt;p&gt;接下来，我们在电脑上配置 PicGo 客户端来连接 OSS。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;安装 PicGo&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;请前往 PicGo 的 GitHub Releases 页面&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL01vbHVuZXJmaW5uL1BpY0dvL3JlbGVhc2Vz&#34;&gt; https://github.com/Molunerfinn/PicGo/releases&lt;/span&gt; 下载并安装适合你操作系统的版本。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;配置阿里云 OSS 图床&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;打开 PicGo 应用，在左侧&lt;strong&gt;图床设置&lt;/strong&gt;中，找到并点击&lt;strong&gt;阿里云 OSS&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;根据获取的信息填写以下配置项：
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;AccessKey ID&lt;/code&gt;  和  &lt;code&gt;AccessKey Secret&lt;/code&gt; ：填入之前保存的子用户的 AccessKey 信息。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Bucket&lt;/code&gt; ：填写你创建的 Bucket 名称。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;存储区域&lt;/code&gt; ：填写 Bucket 所在地域的&lt;strong&gt; Endpoint（访问域名）中的 “节点” 部分&lt;/strong&gt;。例如，如果你的 Endpoint 是  &lt;code&gt;oss-cn-hangzhou.aliyuncs.com&lt;/code&gt; ，这里就填  &lt;code&gt;oss-cn-hangzhou&lt;/code&gt; 。你可以在 Bucket 的概览页面找到这个信息。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;存储路径&lt;/code&gt; （可选）：可以指定一个文件夹来存放图片，例如  &lt;code&gt;blog/img/&lt;/code&gt; 。如果不填，图片会保存在 Bucket 根目录。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;自定义域名&lt;/code&gt; （可选）：如果你为 Bucket 配置了自定义加速域名（CNAME），可以在这里填写，例如  &lt;code&gt;https://img.example.com&lt;/code&gt; 。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;填写完毕后，点击&lt;strong&gt;确定&lt;/strong&gt;或&lt;strong&gt;设为默认图床&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;验证上传与高级集成&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#验证上传与高级集成&#34;&gt;#&lt;/a&gt; 验证上传与高级集成&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;验证图床是否正常工作&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在 PicGo 的&lt;strong&gt;上传区&lt;/strong&gt;，拖拽一张图片或点击选择文件，然后点击&lt;strong&gt;上传&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;上传成功后，PicGo 会自动将图片的 URL 链接复制到你的剪贴板，并会在相册中显示记录。你可以将链接粘贴到浏览器地址栏中访问，确认图片可以正常显示。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;在 Typora 中集成 PicGo（实现自动上传）&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果你使用 Typora 编写 Markdown 文档，可以将其与 PicGo 无缝集成。打开 Typora，进入&lt;strong&gt;文件&lt;/strong&gt; &amp;gt; &lt;strong&gt;偏好设置&lt;/strong&gt; &amp;gt; &lt;strong&gt;图像&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;在上传服务设置中，选择 &lt;strong&gt;PicGo (app)&lt;/strong&gt;，并在下方指定 PicGo 的安装路径。&lt;/li&gt;
+&lt;li&gt;点击&lt;strong&gt;验证图片上传选项&lt;/strong&gt;，如果提示成功，说明配置正确。之后在 Typora 中插入的本地图片在保存时便会自动上传到 OSS 并替换为网络链接。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;实用技巧与注意事项&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#实用技巧与注意事项&#34;&gt;#&lt;/a&gt; 💡 实用技巧与注意事项&lt;/h3&gt;
+&lt;p&gt;为了让你的图床更安全、经济地运行，这里还有一些建议：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;安全建议&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;防盗链&lt;/strong&gt;：在 OSS Bucket 的&lt;strong&gt;权限管理&lt;/strong&gt; &amp;gt; &lt;strong&gt;防盗链&lt;/strong&gt;设置中，可以添加允许访问你图片的域名白名单（如你的博客域名、 &lt;code&gt;*.console.aliyun.com&lt;/code&gt;  等），防止图片被其他网站盗用。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;权限最小化&lt;/strong&gt;：授予子用户的权限遵循最小权限原则，仅授予其必要的 OSS 管理权限。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;成本优化&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;阿里云 OSS 的费用主要包括存储容量、流量和请求次数。对于个人博客或小规模使用，消耗通常很低，甚至可以购买资源包来进一步降低成本。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;故障排查&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;上传失败&lt;/strong&gt;：首先检查 AccessKey、Bucket 名称、存储区域（尤其是区域后缀是否正确）是否填写无误。确保子用户已被正确授权。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;图片无法访问&lt;/strong&gt;：检查 Bucket 的读写权限是否为 “公共读”。如果使用了防盗链，请确认当前访问域名是否在白名单中。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://lzq-cv.github.io/2025/09/26/%E4%BD%BF%E7%94%A8PICGO-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%9B%BE%E5%BA%8A/</guid>
+            <title>使用PICGO-GitHub搭建个人图床</title>
+            <link>https://lzq-cv.github.io/2025/09/26/%E4%BD%BF%E7%94%A8PICGO-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%9B%BE%E5%BA%8A/</link>
+            <category>图床</category>
+            <pubDate>Fri, 26 Sep 2025 17:55:51 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;通过 GitHub API 和 jsDelivr CDN 搭建图床，简单说就是&lt;strong&gt;用 GitHub 存图片，用 jsDelivr 加速访问&lt;/strong&gt;。这个方案免费、可靠，对开发者尤其友好。&lt;/p&gt;
+&lt;h3 id=&#34;第一步准备工作&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#第一步准备工作&#34;&gt;#&lt;/a&gt; 第一步：准备工作&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;创建 GitHub 仓库&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;登录 GitHub，点击右上角 “+” 号，选择 “New repository”。&lt;/li&gt;
+&lt;li&gt;取一个清晰的仓库名（如  &lt;code&gt;my-image-bed&lt;/code&gt; ）。&lt;/li&gt;
+&lt;li&gt;仓库需设置为 &lt;strong&gt;Public&lt;/strong&gt;（公开），因为 jsDelivr 无法加速私有仓库的资源。&lt;/li&gt;
+&lt;li&gt;其他设置保持默认，点击 “Create repository”。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;生成 GitHub Personal Access Token (PAT)&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;点击右上角头像 -&amp;gt; “Settings” -&amp;gt; 左侧 “Developer settings” -&amp;gt; “Personal access tokens” -&amp;gt; “Tokens (classic)” -&amp;gt; “Generate new token (classic)”。&lt;/li&gt;
+&lt;li&gt;为令牌添加一个&lt;strong&gt;备注&lt;/strong&gt;（如  &lt;code&gt;For Image Bed&lt;/code&gt; ）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;选择权限&lt;/strong&gt;：务必勾选  &lt;code&gt;repo&lt;/code&gt; （完全控制私有仓库）下的所有权限，这样才允许通过 API 管理仓库内的文件。&lt;/li&gt;
+&lt;li&gt;生成后，&lt;strong&gt;务必立即复制并妥善保存&lt;/strong&gt;这个令牌字符串，关闭页面后就无法再次查看。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;第二步配置上传工具-以-picgo-为例&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#第二步配置上传工具-以-picgo-为例&#34;&gt;#&lt;/a&gt; 第二步：配置上传工具 (以 PicGo 为例)&lt;/h3&gt;
+&lt;p&gt;手动上传和获取链接比较麻烦，使用工具可以自动化这个过程。&lt;strong&gt;PicGo&lt;/strong&gt; 是一个很好的选择。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;下载并安装 PicGo&lt;/strong&gt;：从其 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL01vbHVuZXJmaW5uL1BpY0dvL3JlbGVhc2Vz&#34;&gt;GitHub Releases&lt;/span&gt; 页面下载并安装。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;安装 GitHub 图床插件&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;打开 PicGo，在左侧找到 “插件设置”。&lt;/li&gt;
+&lt;li&gt;搜索  &lt;code&gt;github-plus&lt;/code&gt;  并安装。这个插件功能更丰富。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;配置图床设置&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;在左侧 “图床设置” 中找到 “GitHubPlus”。&lt;/li&gt;
+&lt;li&gt;按下表填写信息：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;配置项&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;填写说明&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;示例（需替换为你自己的信息）&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;仓库名&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;你的 GitHub 用户名 / 仓库名&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;yourusername/my-image-bed&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;分支名&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;一般为  &lt;code&gt;main&lt;/code&gt;  或  &lt;code&gt;master&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;main&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Token&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;粘贴你刚才生成的 Personal Access Token&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;存储路径&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;可选。图片在仓库中的存放目录，如  &lt;code&gt;images/&lt;/code&gt; 。若不填则保存在仓库根目录。&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;images/&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;自定义域名&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;非常重要&lt;/strong&gt;！填写 jsDelivr 的加速域名，格式： &lt;code&gt;https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;https://cdn.jsdelivr.net/gh/yourusername/my-image-bed&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;设置提醒日期&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;可选。由于 PAT 可能有过期时间，建议在此设置提醒，以便及时更新 Token，避免上传失败。&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;在 Token 过期前选择日期&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;&lt;strong&gt;设为默认图床并上传测试&lt;/strong&gt;：配置完成后，将其设为默认图床，然后拖拽一张图片上传试试。成功后，PicGo 会自动将&lt;strong&gt;加速后的图片链接&lt;/strong&gt;复制到你的剪贴板。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;第三步获取-jsdelivr-加速链接&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#第三步获取-jsdelivr-加速链接&#34;&gt;#&lt;/a&gt; 第三步：获取 jsDelivr 加速链接&lt;/h3&gt;
+&lt;p&gt;无论你是否使用 PicGo 等工具，图片上传到 GitHub 仓库后，其 jsDelivr 的加速链接都遵循统一的格式：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;https://cdn.jsdelivr.net/gh/你的GitHub用户名/你的仓库名@发布的版本号/文件路径&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt; &lt;code&gt;@发布的版本号&lt;/code&gt; &lt;/strong&gt;：这部分是可选的。可以是分支名（如  &lt;code&gt;@main&lt;/code&gt; ）、具体的发布版本号（如  &lt;code&gt;@v1.0&lt;/code&gt; ）或提交哈希值。&lt;strong&gt;如果不指定版本，默认会指向最新资源&lt;/strong&gt;。
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;最佳实践&lt;/strong&gt;：对于图床，&lt;strong&gt;通常建议省略  &lt;code&gt;@版本号&lt;/code&gt; &lt;/strong&gt;，这样总能访问到最新上传的图片。例如：&lt;br&gt;
+ &lt;code&gt;https://cdn.jsdelivr.net/gh/yourusername/my-image-bed/images/cat.jpg&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;注意事项&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#注意事项&#34;&gt;#&lt;/a&gt; 注意事项&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;仓库必须公开&lt;/strong&gt;：jsDelivr &lt;strong&gt;无法&lt;/strong&gt;加速私有仓库的资源。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;文件大小限制&lt;/strong&gt;：jsDelivr 建议文件大小控制在 20MB 以内，这对于绝大多数图片来说足够了。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;缓存问题&lt;/strong&gt;：jsDelivr 会对文件进行缓存以提升速度。这意味着如果你更新了 GitHub 仓库中的同名图片，可能需要等待几分钟到几小时缓存刷新后，通过 jsDelivr 链接才能看到变更。&lt;strong&gt;强制更新缓存的方法是在链接后添加特定版本号、分支名或哈希值&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Token 安全&lt;/strong&gt;：你的 GitHub Token 相当于密码，&lt;strong&gt;切勿泄露&lt;/strong&gt;。一旦泄露，应立即到 GitHub 设置中撤销它。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;API 速率限制&lt;/strong&gt;：GitHub API 有调用频率限制。对于个人使用通常不会触限，但如果是极高频率调用，需要注意。&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://lzq-cv.github.io/2025/09/26/%E4%BD%BF%E7%94%A8PICGO-CloudflarR2%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%9B%BE%E5%BA%8A/</guid>
+            <title>使用PICGO-CloudflarR2搭建个人图床</title>
+            <link>https://lzq-cv.github.io/2025/09/26/%E4%BD%BF%E7%94%A8PICGO-CloudflarR2%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%9B%BE%E5%BA%8A/</link>
+            <category>图床</category>
+            <pubDate>Fri, 26 Sep 2025 17:54:33 +0800</pubDate>
+            <description><![CDATA[ &lt;h3 id=&#34;cloudflare-r2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#cloudflare-r2&#34;&gt;#&lt;/a&gt; Cloudflare R2&lt;/h3&gt;
+&lt;p&gt;自己搭建图床既能掌控数据，又能在长期节省成本。Cloudflare R2 因其&lt;strong&gt;免费额度慷慨&lt;/strong&gt;（每月 10GB 存储、100 万次 A 类操作、1000 万次 B 类操作）且&lt;strong&gt;出口流量全免&lt;/strong&gt;，成为了一个非常不错的选择。&lt;/p&gt;
+&lt;h3 id=&#34;cloudflare-r2-免费额度&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#cloudflare-r2-免费额度&#34;&gt;#&lt;/a&gt; Cloudflare R2 免费额度&lt;/h3&gt;
+&lt;p&gt;首先，我们来了解一下 Cloudflare R2 的免费计划：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;资源类型&lt;/th&gt;
+&lt;th&gt;每月免费额度&lt;/th&gt;
+&lt;th&gt;超额费率 (截至 2025 年)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;存储空间&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;10 GB&lt;/td&gt;
+&lt;td&gt;$0.015 / GB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;A 类操作&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;100 万次请求 (写入、列举等)&lt;/td&gt;
+&lt;td&gt;$4.50 / 100 万次请求&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;B 类操作&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;1000 万次请求 (读取等)&lt;/td&gt;
+&lt;td&gt;$0.36 / 100 万次请求&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;出口流量&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;完全免费&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;完全免费&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：A 类操作通常包括上传、列举文件等写入操作，而 B 类操作主要是下载、获取文件等读取操作。免费额度对于个人博客或小规模网站通常足够。&lt;/p&gt;
+&lt;h3 id=&#34;搭建步骤&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#搭建步骤&#34;&gt;#&lt;/a&gt; 搭建步骤&lt;/h3&gt;
+&lt;h3 id=&#34;第一步准备工作&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#第一步准备工作&#34;&gt;#&lt;/a&gt; 第一步：准备工作&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;注册 Cloudflare 账号&lt;/strong&gt;：访问 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kYXNoLmNsb3VkZmxhcmUuY29tL3NpZ24tdXA=&#34;&gt;Cloudflare 官网&lt;/span&gt; 并注册账号。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;准备域名&lt;/strong&gt;：需要一个&lt;strong&gt;已托管在 Cloudflare 上&lt;/strong&gt;的域名（作为图床的最终访问域名）。你可以在 Cloudflare 添加现有的域名，或者注册新域名后将其 DNS 服务器改为 Cloudflare 指定的。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;验证支付方式&lt;/strong&gt;：虽然 R2 有免费额度，但 Cloudflare 仍需要你绑定一种支付方式（如信用卡或 PayPal）以验证身份。&lt;strong&gt;只要用量不超额，就不会产生费用&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;第二步配置-cloudflare-r2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#第二步配置-cloudflare-r2&#34;&gt;#&lt;/a&gt; 第二步：配置 Cloudflare R2&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;开通 R2 服务&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;登录 Cloudflare 仪表板，在侧边栏找到 &lt;strong&gt;“R2”&lt;/strong&gt; 并点击。&lt;/li&gt;
+&lt;li&gt;按照提示完成支付方式的绑定以开通 R2。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;创建存储桶（Bucket）&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;在 R2 页面点击 &lt;strong&gt;“创建存储桶”&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;填写存储桶名称（例如  &lt;code&gt;my-image-bed&lt;/code&gt; ）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;地区（Region）&lt;/strong&gt; 选择离你的目标用户较近的区域，例如  &lt;code&gt;亚太地区 (APAC)&lt;/code&gt;  对国内访问更友好。&lt;/li&gt;
+&lt;li&gt;其他设置保持默认，点击创建。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;启用公共访问权限&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;创建成功后，进入该存储桶的 &lt;strong&gt;“设置”&lt;/strong&gt; 页。&lt;/li&gt;
+&lt;li&gt;找到 &lt;strong&gt;“公共访问”&lt;/strong&gt; 选项，点击 &lt;strong&gt;“启用”&lt;/strong&gt; 并确认。这将生成一个临时的  &lt;code&gt;r2.dev&lt;/code&gt;  子域名用于访问文件。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;（强烈推荐）使用自定义域名&lt;/strong&gt;：临时的  &lt;code&gt;r2.dev&lt;/code&gt;  域名有速率限制。在存储桶设置的 &lt;strong&gt;“自定义域”&lt;/strong&gt; 部分，添加你已托管在 CF 的域名（例如  &lt;code&gt;img.yourdomain.com&lt;/code&gt; ）。Cloudflare 会自动为你配置 DNS 记录。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;获取 API 凭证&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;在仪表板左侧栏找到 &lt;strong&gt;“R2” &amp;gt; “API 令牌”&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;点击 &lt;strong&gt;“创建 API 令牌”&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;选择 &lt;strong&gt;“编辑”&lt;/strong&gt; 权限，并指定到你刚创建的存储桶。&lt;/li&gt;
+&lt;li&gt;安全起见，可以设置令牌的 TTL（生存时间），对于长期使用的图床，可选择永久。&lt;/li&gt;
+&lt;li&gt;创建成功后，&lt;strong&gt;务必妥善保存&lt;/strong&gt;显示的  &lt;code&gt;访问密钥 ID&lt;/code&gt;  和  &lt;code&gt;秘密访问密钥&lt;/code&gt; ，它们只会显示一次。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;第三步配置图床管理工具以-picgo-为例&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#第三步配置图床管理工具以-picgo-为例&#34;&gt;#&lt;/a&gt; 第三步：配置图床管理工具（以 PicGo 为例）&lt;/h3&gt;
+&lt;p&gt;PicGo 是一个开源图床客户端，可以简化上传操作。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;下载并安装 PicGo&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;访问 PicGo 的 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL01vbHVuZXJmaW5uL1BpY0dvL3JlbGVhc2Vz&#34;&gt;GitHub Releases 页面&lt;/span&gt;，下载并安装适合你操作系统的最新版本。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;安装 S3 插件&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;由于 Cloudflare R2 兼容 S3 API，我们需要在 PicGo 中安装 S3 插件。&lt;/li&gt;
+&lt;li&gt;打开 PicGo，进入 &lt;strong&gt;“插件设置”&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;搜索并安装  &lt;code&gt;picgo-plugin-s3&lt;/code&gt;  插件。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;配置 PicGo&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;安装插件后，在 &lt;strong&gt;“图床设置”&lt;/strong&gt; 中找到 &lt;strong&gt;“Amazon S3”&lt;/strong&gt; 进行配置。&lt;/li&gt;
+&lt;li&gt;关键配置项如下（请根据你的实际情况填写）：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;配置项&lt;/th&gt;
+&lt;th&gt;填写值说明&lt;/th&gt;
+&lt;th&gt;示例（请替换为你自己的信息）&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;应用密钥 ID&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;填写你刚才保存的  &lt;code&gt;访问密钥 ID&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;1a2b3c4d5e6f7g8h9i0j&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;应用密钥&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;填写你刚才保存的  &lt;code&gt;秘密访问密钥&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;z0y1x2w3v4u5t6s7r8q9p...&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;存储桶名&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;你创建的存储桶名称&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;my-image-bed&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;存储区域&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;R2 无需填写特定区域，可填写  &lt;code&gt;auto&lt;/code&gt;  或留空&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;auto&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;自定义节点&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;填写你的 S3 API 端点（可在 R2 的 API 令牌页面找到）&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;https://xxx.r2.cloudflarestorage.com&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;自定义域名&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;填写你连接到存储桶的自定义域名&lt;/strong&gt;，用于生成图片链接&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;https://img.yourdomain.com&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;文件路径&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;定义图片在存储桶中的存储路径结构（可选，但建议设置以保持整洁）&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;{year}/{month}/{day}/{fileName}&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;ACL 访问控制列表&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;必须设置为  &lt;code&gt;public-read&lt;/code&gt; ，这样图片链接才能被公开访问&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;public-read&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;提示&lt;/strong&gt;： &lt;code&gt;{year}&lt;/code&gt; ,  &lt;code&gt;{month}&lt;/code&gt; ,  &lt;code&gt;{day}&lt;/code&gt; ,  &lt;code&gt;{fileName}&lt;/code&gt;  是 PicGo 的&lt;strong&gt;变量&lt;/strong&gt;，会自动替换为实际值。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;设为默认图床并上传测试&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;配置完成后，可以点击 &lt;strong&gt;“设为默认图床”&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;在 &lt;strong&gt;“上传区”&lt;/strong&gt; 拖拽或选择一张图片进行上传。&lt;/li&gt;
+&lt;li&gt;上传成功后，PicGo 会自动将图片的 Markdown 链接复制到剪贴板。你可以粘贴到文本编辑器中测试一下是否能正常访问。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;第四步访问优化与安全设置可选但重要&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#第四步访问优化与安全设置可选但重要&#34;&gt;#&lt;/a&gt; 第四步：访问优化与安全设置（可选但重要）&lt;/h3&gt;
+&lt;p&gt;为了让图床更高效、安全，建议进行如下设置：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;配置缓存规则&lt;/strong&gt;：利用 Cloudflare CDN 缓存图片，减少回源请求，提升速度并节省操作次数。
+&lt;ul&gt;
+&lt;li&gt;在 Cloudflare 仪表板中，进入你的&lt;strong&gt;域名&lt;/strong&gt;（而非 R2）。&lt;/li&gt;
+&lt;li&gt;转到 &lt;strong&gt;“规则” &amp;gt; “缓存规则”&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;创建一条新规则，URL 填写  &lt;code&gt;img.yourdomain.com/*&lt;/code&gt; （你的图床域名）。&lt;/li&gt;
+&lt;li&gt;添加设置：&lt;strong&gt;缓存级别&lt;/strong&gt; - 缓存所有内容。&lt;/li&gt;
+&lt;li&gt;添加设置：&lt;strong&gt;边缘缓存 TTL&lt;/strong&gt; - 设置为一个较长的时间，例如 “1 个月”。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;设置防盗链（WAF）&lt;/strong&gt;：防止其他网站直接链接你的图片，消耗你的流量和请求次数。
+&lt;ul&gt;
+&lt;li&gt;在域名的 &lt;strong&gt;“安全性” &amp;gt; “WAF”&lt;/strong&gt; 中创建自定义规则。&lt;/li&gt;
+&lt;li&gt;编写规则，例如： &lt;code&gt;(http.referer does not contain &amp;quot;yourdomain.com&amp;quot;) and (http.request.uri.path contains &amp;quot;/images/&amp;quot;)&lt;/code&gt; ，操作选择 “阻止”。这表示仅允许来自你自己域名（ &lt;code&gt;yourdomain.com&lt;/code&gt; ）的请求访问图片目录。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;配置 CORS（跨域资源共享）&lt;/strong&gt;：如果你的图床图片需要被不同域名的网站引用（例如你的主站、CDN 等），需要在存储桶设置中配置 CORS。
+&lt;ul&gt;
+&lt;li&gt;在存储桶的 &lt;strong&gt;“设置”&lt;/strong&gt; 中找到 &lt;strong&gt;“CORS 策略”&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;添加策略，允许所需域名的  &lt;code&gt;GET&lt;/code&gt;  请求。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;总结与提醒&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#总结与提醒&#34;&gt;#&lt;/a&gt; 总结与提醒&lt;/h3&gt;
+&lt;p&gt;通过以上步骤，你应该已经成功搭建了一个基于 Cloudflare R2 的免费图床。它&lt;strong&gt;免费额度充足&lt;/strong&gt;、&lt;strong&gt;性能可靠&lt;/strong&gt;，并且通过 PicGo 可以&lt;strong&gt;非常便捷地上传和管理图片&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;最后请注意：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;保管好 API 令牌&lt;/strong&gt;：如同密码，切勿泄露。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;关注用量&lt;/strong&gt;：定期在 Cloudflare 仪表板检查 R2 的使用情况，确保在免费额度内。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;备份重要图片&lt;/strong&gt;：虽然 R2 很可靠，但对于极其重要的图片，建议额外备份。&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://lzq-cv.github.io/2025/09/26/%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A%E8%B8%A9%E5%9D%91/</guid>
+            <title>免费图床踩坑</title>
+            <link>https://lzq-cv.github.io/2025/09/26/%E5%85%8D%E8%B4%B9%E5%9B%BE%E5%BA%8A%E8%B8%A9%E5%9D%91/</link>
+            <category>图床</category>
+            <pubDate>Fri, 26 Sep 2025 17:52:04 +0800</pubDate>
+            <description><![CDATA[ &lt;h3 id=&#34;踩坑&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#踩坑&#34;&gt;#&lt;/a&gt; 踩坑&lt;/h3&gt;
+&lt;p&gt;免费的图床是真的不稳定，上传的图片随时都有被清除的可能，想要长期使用还是需要自己搭建图床。但是，我对图床需求又不是特别多，只为博客网站提供图片源仅此而已。花钱去买阿里云 OSS 和腾讯云 COS 的云存储服务，又不太值。查了一些免费图床搭建方法，目前就 2 种比较推荐的：&lt;/p&gt;
+&lt;p&gt;方法 1：CloudflareR2+PICGO&lt;/p&gt;
+&lt;p&gt;方法 2：Github+PICGO&lt;/p&gt;
+&lt;h3 id=&#34;临时使用的免费图床&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#临时使用的免费图床&#34;&gt;#&lt;/a&gt; 临时使用的免费图床：&lt;/h3&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9pbWcuMTMxMjEzLnh5ei8=&#34;&gt;图床&lt;/span&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://lzq-cv.github.io/2025/09/26/shoka%E4%B8%BB%E9%A2%98%E9%83%A8%E7%BD%B2/</guid>
+            <title>shoka主题部署</title>
+            <link>https://lzq-cv.github.io/2025/09/26/shoka%E4%B8%BB%E9%A2%98%E9%83%A8%E7%BD%B2/</link>
+            <category>shoka</category>
+            <pubDate>Fri, 26 Sep 2025 17:48:44 +0800</pubDate>
+            <description><![CDATA[ &lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;先要搭建好HEXO博客框架&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# cd your-blog&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git clone https://github.com/amehime/hexo-theme-shoka.git ./themes/shoka&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;1.&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubnBtanMuY29tL3BhY2thZ2UvaGV4by1yZW5kZXJlci1tdWx0aS1tYXJrZG93bi1pdA==&#34;&gt;https://www.npmjs.com/package/hexo-renderer-multi-markdown-it&lt;/span&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm un hexo-renderer-marked --save&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;npm i hexo-renderer-multi-markdown-it --save&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;npm un hexo-renderer-multi-markdown-it --save&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 1. 卸载旧渲染器 (如果已安装)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;npm uninstall hexo-renderer-marked --save&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 2. 设置跳过 Chromium 下载&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;set PUPPETEER_SKIP_DOWNLOAD=1  # Windows CMD&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 3. 安装插件&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;npm i hexo-renderer-multi-markdown-it --save&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;# 4. 验证安装&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;npm list hexo-renderer-multi-markdown-it&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;2.&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubnBtanMuY29tL3BhY2thZ2UvaGV4by1hdXRvcHJlZml4ZXI=&#34;&gt;https://www.npmjs.com/package/hexo-autoprefixer&lt;/span&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm install hexo-autoprefixer --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;3.&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubnBtanMuY29tL3BhY2thZ2UvaGV4by1hbGdvbGlhc2VhcmNo&#34;&gt;https://www.npmjs.com/package/hexo-algoliasearch&lt;/span&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm install hexo-algoliasearch --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;4.&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubnBtanMuY29tL3BhY2thZ2UvaGV4by1zeW1ib2xzLWNvdW50LXRpbWU=&#34;&gt;https://www.npmjs.com/package/hexo-symbols-count-time&lt;/span&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm install hexo-symbols-count-time&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;5.&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubnBtanMuY29tL3BhY2thZ2UvaGV4by1mZWVk&#34;&gt;https://www.npmjs.com/package/hexo-feed&lt;/span&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm install hexo-feed --save-dev&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://lzq-cv.github.io/2025/09/26/HEXO%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</guid>
+            <title>HEXO博客搭建</title>
+            <link>https://lzq-cv.github.io/2025/09/26/HEXO%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
+            <category>HEXO</category>
+            <pubDate>Fri, 26 Sep 2025 17:43:28 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;hexo博客搭建&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#hexo博客搭建&#34;&gt;#&lt;/a&gt; HEXO 博客搭建&lt;/h2&gt;
+&lt;h4 id=&#34;1-hexo&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1-hexo&#34;&gt;#&lt;/a&gt; 1. HEXO&lt;/h4&gt;
+&lt;p&gt;Hexo 是一个基于 Node.js 的快速、简洁的静态博客框架，适合通过 Markdown 编写内容并生成静态网页。有以下优点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;** 支持 Markdown：** 文章以 Markdown 格式编写，简单易用。&lt;/li&gt;
+&lt;li&gt;** 部署简单：** 一键部署到 GitHub Pages、Netlify 等平台，与 GitHub Pages 无缝集成。&lt;/li&gt;
+&lt;li&gt;** 主题丰富：** 社区活跃，主题和插件丰富。&lt;/li&gt;
+&lt;li&gt;** 高效快速：** 利用 Node.js 高效渲染，快速生成静态页面。轻量快速，适合博客和文档。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;2-环境搭建&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2-环境搭建&#34;&gt;#&lt;/a&gt; 2. 环境搭建&lt;/h4&gt;
+&lt;p&gt;首先在官网下载并安装好 node.js 和 git。&lt;/p&gt;
+&lt;p&gt;node.js 官网：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ub2RlanMub3JnL3poLWNuL2Rvd25sb2Fk&#34;&gt;https://nodejs.org/zh-cn/download&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;git 官网：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXQtc2NtLmNvbS9kb3dubG9hZHM=&#34;&gt;https://git-scm.com/downloads&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;然后，打开 cmd 或者鼠标右键 git bash here，搭建本地 HEXO 博客。&lt;/p&gt;
+&lt;p&gt;HEXO 官网：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL3poLWNuLw==&#34;&gt;https://hexo.io/zh-cn/&lt;/span&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm install hexo-cli -g &lt;span class=&#34;comment&#34;&gt;#安装hexo命令行工具&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;#包管理工具&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;npm install -g pnpm &lt;span class=&#34;comment&#34;&gt;#安装pnpm&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;pnpm config &lt;span class=&#34;built_in&#34;&gt;set&lt;/span&gt; registry https://registry.npmmirror.com/&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;npm install -g yarn &lt;span class=&#34;comment&#34;&gt;#安装yarn&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;yarn config &lt;span class=&#34;built_in&#34;&gt;set&lt;/span&gt; registry https://registry.npmmirror.com/&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo init LZQ-CV.github.io &lt;span class=&#34;comment&#34;&gt;#初始化创建&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; LZQ-CV.github.io  &lt;span class=&#34;comment&#34;&gt;#进入创建的项目目录&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;npm install &lt;span class=&#34;comment&#34;&gt;#安装依赖&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo new &lt;span class=&#34;built_in&#34;&gt;test&lt;/span&gt; &lt;span class=&#34;comment&#34;&gt;#生成test.md文件&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo clean &lt;span class=&#34;comment&#34;&gt;#清除缓存&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo generate &lt;span class=&#34;comment&#34;&gt;#生成禁态页面&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo server &lt;span class=&#34;comment&#34;&gt;#启动本地服务器&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo deploy &lt;span class=&#34;comment&#34;&gt;#远程部署&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;npm install hexo-deployer-git --save&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;pnpm install hexo-deployer-git --save &lt;span class=&#34;comment&#34;&gt;#安装git部署插件&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git init &lt;span class=&#34;comment&#34;&gt;#git初始化&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;node_modules用于放置NPM包,无需注意&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;scaffolds储存文章模板,hexo new时会用到&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;source&lt;/span&gt;储存文章和部分资源&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;themes储存主题&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;_config.xxx.yml是主题的plus版配置文件(xxx须更改为主题名)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;_config.yml是hexo的配置文件&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;package.jsonNPM的包json,无需注意&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;打开项目文件夹，找到_config.yml 并修改。&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;deploy:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  type: git&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  repo: https://LZQ-CV:填入token开发者令牌@github.com/LZQ-CV/LZQ-CV.github.io.git&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  #远程仓库路径有HTTPs和SSH的区别，这里使用的是https。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  repo: git@github.com:LZQ-CV/LZQ-CV.github.io.git&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  #远程仓库路径有HTTPs和SSH的区别，这里使用的是SSH。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  branch: main #GitHub仓库默认分支&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;安装 HEXO 的主题&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;clone&lt;/span&gt; https://github.com/theme-next/hexo-theme-next themes/next&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;修改  &lt;code&gt;_config.yml&lt;/code&gt;  中的  &lt;code&gt;theme: next&lt;/code&gt; 。&lt;/p&gt;
+&lt;p&gt;也可以直接把下载好的主题放到项目文件夹的 themes 文件夹中。&lt;/p&gt;
+&lt;h4 id=&#34;3远程部署到github&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3远程部署到github&#34;&gt;#&lt;/a&gt; 3. 远程部署到 GitHub&lt;/h4&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git config --global user.email &lt;span class=&#34;string&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git config --global user.name &lt;span class=&#34;string&#34;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git config --global --list &lt;span class=&#34;comment&#34;&gt;#查看是否配置成功&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;ssh-keygen -t rsa -C &lt;span class=&#34;string&#34;&gt;&amp;quot;email&amp;quot;&lt;/span&gt; &lt;span class=&#34;comment&#34;&gt;#生成ssh公钥&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;ssh -T git@github.com &lt;span class=&#34;comment&#34;&gt;#验证是否链接成功&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;hexo deploy &lt;span class=&#34;comment&#34;&gt;#部署&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://lzq-cv.github.io/2025/09/26/hello-world/</guid>
+            <title>Hello World</title>
+            <link>https://lzq-cv.github.io/2025/09/26/hello-world/</link>
+            <pubDate>Fri, 26 Sep 2025 16:47:49 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;Welcome to &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvLw==&#34;&gt;Hexo&lt;/span&gt;! This is your very first post. Check &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mv&#34;&gt;documentation&lt;/span&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdHJvdWJsZXNob290aW5nLmh0bWw=&#34;&gt;troubleshooting&lt;/span&gt; or you can ask me on &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==&#34;&gt;GitHub&lt;/span&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;quick-start&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#quick-start&#34;&gt;#&lt;/a&gt; Quick Start&lt;/h2&gt;
+&lt;h3 id=&#34;create-a-new-post&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#create-a-new-post&#34;&gt;#&lt;/a&gt; Create a new post&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo new &lt;span class=&#34;string&#34;&gt;&amp;quot;My New Post&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvd3JpdGluZy5odG1s&#34;&gt;Writing&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&#34;run-server&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#run-server&#34;&gt;#&lt;/a&gt; Run server&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvc2VydmVyLmh0bWw=&#34;&gt;Server&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&#34;generate-static-files&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#generate-static-files&#34;&gt;#&lt;/a&gt; Generate static files&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3MvZ2VuZXJhdGluZy5odG1s&#34;&gt;Generating&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&#34;deploy-to-remote-sites&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#deploy-to-remote-sites&#34;&gt;#&lt;/a&gt; Deploy to remote sites&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvb25lLWNvbW1hbmQtZGVwbG95bWVudC5odG1s&#34;&gt;Deployment&lt;/span&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

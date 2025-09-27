@@ -1,0 +1,215 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Learning-Sharing-Recording • Posts by &#34;服务器&#34; tag</title>
+        <link>https://LZQ-CV.github.io</link>
+        <description>CV Engineer</description>
+        <language>en</language>
+        <pubDate>Sat, 27 Sep 2025 08:51:01 +0800</pubDate>
+        <lastBuildDate>Sat, 27 Sep 2025 08:51:01 +0800</lastBuildDate>
+        <category>服务器</category>
+        <category>HEXO</category>
+        <category>图床</category>
+        <category>shoka</category>
+        <category>机器视觉</category>
+        <item>
+            <guid isPermalink="true">https://lzq-cv.github.io/2025/09/27/LAMP%E5%92%8CLNMP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%9E%B6%E6%9E%84%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+            <title>LAMP和LNMP服务器架构的区别</title>
+            <link>https://lzq-cv.github.io/2025/09/27/LAMP%E5%92%8CLNMP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%9E%B6%E6%9E%84%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+            <category>服务器</category>
+            <pubDate>Sat, 27 Sep 2025 08:51:01 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;好的，这是一个非常经典的问题。LAMP 和 LNMP 是两种最流行的传统网站服务器架构组合。它们的核心区别在于 &lt;strong&gt;Web 服务器&lt;/strong&gt; 的不同。&lt;/p&gt;
+&lt;p&gt;首先，做一个关键的澄清：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;LAMP&lt;/strong&gt;: Linux + &lt;strong&gt;A&lt;/strong&gt;pache + MySQL/MariaDB + PHP/Python/Perl&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LNMP&lt;/strong&gt;: Linux + &lt;strong&gt;N&lt;/strong&gt;ginx + MySQL/MariaDB + PHP/Python/Perl
+&lt;ul&gt;
+&lt;li&gt;有时也被称为 &lt;strong&gt;LEMP&lt;/strong&gt;（因为 Nginx 读作 “engine-x”，所以取首字母 “E”）。&lt;strong&gt;LNMP 和 LEMP 指的是同一个架构&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;下面我们从多个维度进行详细对比。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;一-核心组件对比&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-核心组件对比&#34;&gt;#&lt;/a&gt; 一、核心组件对比&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;组件&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;LAMP 栈&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;LNMP 栈&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;操作系统 (L)&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;L&lt;/strong&gt;inux&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;L&lt;/strong&gt;inux&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;Web 服务器&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;A&lt;/strong&gt;pache HTTP Server&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;N&lt;/strong&gt;ginx&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;数据库 (M)&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;M&lt;/strong&gt;ySQL / MariaDB&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;M&lt;/strong&gt;ySQL / MariaDB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;编程语言 §&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;P&lt;/strong&gt;HP, Python, Perl（PHP 最经典）&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;P&lt;/strong&gt;HP, Python, Perl（PHP 最经典）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;二-核心区别apache-vs-nginx&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二-核心区别apache-vs-nginx&#34;&gt;#&lt;/a&gt; 二、核心区别：Apache vs. Nginx&lt;/h3&gt;
+&lt;p&gt;这是两个技术栈最根本的差异，其他区别都源于此。&lt;/p&gt;
+&lt;h4 id=&#34;apachelamp-的核心&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#apachelamp-的核心&#34;&gt;#&lt;/a&gt; Apache（LAMP 的核心）&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;工作模型&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;传统上采用 &lt;strong&gt;多进程 / 多线程预生成（MPM Prefork/Worker）模型&lt;/strong&gt;。每个并发连接都会由一个独立的进程或线程处理。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;优点&lt;/strong&gt;： 模型简单稳定，与各种 PHP 模块兼容性好。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;缺点&lt;/strong&gt;： 当面对成千上万的并发连接时，创建和管理大量进程 / 线程会消耗大量的内存和 CPU 资源，成为性能瓶颈。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;配置方式&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;支持通过目录下的 &lt;strong&gt;.htaccess&lt;/strong&gt; 文件进行分布式配置。这意味着可以在网站根目录下的任何文件夹里放置一个 &lt;code&gt;.htaccess&lt;/code&gt;  文件来重写主配置（如 URL 重写、访问控制等）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;优点&lt;/strong&gt;： 对共享主机环境极其友好，用户无需重启 Apache 即可修改配置，非常灵活。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;缺点&lt;/strong&gt;： 带来性能损失，因为 Apache 需要遍历目录树来查找和解析 &lt;code&gt;.htaccess&lt;/code&gt;  文件。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;特性&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;模块化程度极高，功能全面，拥有一个巨大的模块生态。任何需求（如认证、缓存、重写等）几乎都能找到对应模块。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;nginxlnmp-的核心&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#nginxlnmp-的核心&#34;&gt;#&lt;/a&gt; Nginx（LNMP 的核心）&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;工作模型&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;采用 &lt;strong&gt;事件驱动、异步非阻塞&lt;/strong&gt; 的架构。它使用一个（或少量）工作进程，每个进程可以高效地处理数千个并发连接。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;优点&lt;/strong&gt;： 资源占用（尤其是内存）极低，在高并发场景下性能远超 Apache，特别适合静态内容处理、反向代理和负载均衡。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;缺点&lt;/strong&gt;： 架构相对复杂。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;配置方式&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;不支持  &lt;code&gt;.htaccess&lt;/code&gt; &lt;/strong&gt;。所有配置都必须集中在主配置文件或 &lt;code&gt;/etc/nginx/sites-available/&lt;/code&gt;  这样的虚拟主机文件中，然后重载 Nginx 服务才能生效。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;优点&lt;/strong&gt;： 配置更集中，性能更高，因为不需要遍历目录查找配置文件。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;缺点&lt;/strong&gt;： 对共享主机用户不友好，修改配置需要服务器权限和重载服务。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;处理 PHP 的方式（关键区别）&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Nginx &lt;strong&gt;自身不能直接处理 PHP 等动态语言&lt;/strong&gt;。它需要一个额外的处理器（如 PHP-FPM）。&lt;/li&gt;
+&lt;li&gt;当用户请求一个 PHP 文件时，Nginx 会将请求&lt;strong&gt;反向代理&lt;/strong&gt;给 PHP-FPM 进程进行处理，PHP-FPM 处理完毕后将结果返回给 Nginx，再由 Nginx 发送给用户。&lt;/li&gt;
+&lt;li&gt;这种 “各司其职” 的架构反而更清晰、高效。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;三-详细对比表格&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#三-详细对比表格&#34;&gt;#&lt;/a&gt; 三、详细对比表格&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;特性&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;LAMP (Apache)&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;LNMP (Nginx)&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;性能&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;处理动态内容稳定，但&lt;strong&gt;高并发下性能较差&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;高并发性能极佳&lt;/strong&gt;，尤其擅长处理静态文件&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Nginx 的事件驱动模型在并发性能上具有先天优势&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;资源占用&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;相对较高（进程 / 线程模型）&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;非常低&lt;/strong&gt;（事件驱动模型）&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;对于内存有限的 VPS 服务器，LNMP 优势明显&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;配置灵活性&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;高&lt;/strong&gt;（支持.htaccess）&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;较低（需修改主配置并重载）&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;对于需要频繁修改.htaccess 的 CMS（如 WordPress），LAMP 更方便&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;静态内容处理&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;良好&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;极快&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Nginx 设计之初就是为解决 C10K 问题，静态文件响应速度一流&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;动态内容处理&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;直接通过模块（如 mod_php）处理&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;需通过 PHP-FPM 等外部处理器&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;LAMP 方式更 “一体化”，LNMP 方式更 “解耦”&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;安全性&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;良好，历史悠久，问题暴露充分&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;良好，因设计简单，攻击面相对较小&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;两者都非常安全，安全更多取决于运维人员的技术&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;学习曲线&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;较为简单，资料丰富&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;配置语法独特，需要理解其工作流程&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;有 Apache 基础的人需要适应 Nginx 的配置思维&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;适用场景&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;传统虚拟主机、共享主机、中小型网站、需要.htaccess 功能的项目&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;strong&gt;高并发网站&lt;/strong&gt;、API 服务器、静态资源服务器、反向代理 / 负载均衡器、VPS / 云服务器&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;四-如何选择&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#四-如何选择&#34;&gt;#&lt;/a&gt; 四、如何选择？&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;选择 LAMP 的情况：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;你使用的是传统的共享虚拟主机（cPanel 等面板通常内置 Apache）。&lt;/li&gt;
+&lt;li&gt;你的网站严重依赖 &lt;code&gt;.htaccess&lt;/code&gt;  文件（例如，使用了复杂的 WordPress 重写规则插件）。&lt;/li&gt;
+&lt;li&gt;项目规模不大，并发用户数不高，更追求配置的便捷性。&lt;/li&gt;
+&lt;li&gt;你对 Apache 非常熟悉。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;选择 LNMP 的情况：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;你使用的是 VPS、独立服务器或云服务器，拥有 root 权限。&lt;/li&gt;
+&lt;li&gt;你的网站&lt;strong&gt;预期有高并发访问量&lt;/strong&gt;（如新闻门户、电商平台等）。&lt;/li&gt;
+&lt;li&gt;服务器资源（内存）有限，需要尽可能优化性能。&lt;/li&gt;
+&lt;li&gt;你需要将服务器同时用作 Web 服务器和反向代理 / 负载均衡器。&lt;/li&gt;
+&lt;li&gt;你的网站有大量静态资源（图片、CSS、JS）需要快速响应。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;总结&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#总结&#34;&gt;#&lt;/a&gt; 总结&lt;/h3&gt;
+&lt;p&gt;简单来说，可以这样理解：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;LAMP&lt;/strong&gt; 像一个&lt;strong&gt;全能型选手&lt;/strong&gt;，开箱即用，配置灵活，非常成熟稳定，但在极限压力下（高并发）会显得吃力。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LNMP&lt;/strong&gt; 像一个&lt;strong&gt;专项冠军&lt;/strong&gt;，它在高并发和低资源消耗方面表现卓越，尤其适合现代 Web 架构，但需要更多的配置工作，灵活性稍差。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如今，随着 Nginx 的普及，&lt;strong&gt;LNMP 架构已经成为大多数新项目和追求性能的运维人员的首选&lt;/strong&gt;。甚至出现了一种混合架构：用 Nginx 作为前端反向代理处理静态请求，并将动态请求转发给后端的 Apache，结合两者的优点。但对于绝大多数场景，直接使用完整的 LNMP 栈是更优的选择。&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

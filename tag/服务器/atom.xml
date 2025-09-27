@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://LZQ-CV.github.io</id>
-    <title>Learning-Sharing-Recording • Posts by &#34;lamp lnmp&#34; tag</title>
+    <title>Learning-Sharing-Recording • Posts by &#34;服务器&#34; tag</title>
     <link href="https://LZQ-CV.github.io" />
     <updated>2025-09-27T00:51:01.000Z</updated>
     <category term="CV" />
     <category term="HEXO" />
-    <category term="LAMP LNMP" />
-    <category term="shoka" />
+    <category term="服务器" />
     <category term="图床" />
+    <category term="shoka" />
     <category term="机器视觉" />
     <entry>
         <id>https://lzq-cv.github.io/2025/09/27/LAMP%E5%92%8CLNMP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%9E%B6%E6%9E%84%E7%9A%84%E5%8C%BA%E5%88%AB/</id>
@@ -204,7 +204,7 @@
 &lt;/ul&gt;
 &lt;p&gt;如今，随着 Nginx 的普及，&lt;strong&gt;LNMP 架构已经成为大多数新项目和追求性能的运维人员的首选&lt;/strong&gt;。甚至出现了一种混合架构：用 Nginx 作为前端反向代理处理静态请求，并将动态请求转发给后端的 Apache，结合两者的优点。但对于绝大多数场景，直接使用完整的 LNMP 栈是更优的选择。&lt;/p&gt;
 </content>
-        <category term="LAMP LNMP" />
+        <category term="服务器" />
         <updated>2025-09-27T00:51:01.000Z</updated>
     </entry>
 </feed>

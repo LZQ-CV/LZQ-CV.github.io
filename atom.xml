@@ -6,9 +6,9 @@
     <updated>2025-09-27T01:45:29.000Z</updated>
     <category term="CV" />
     <category term="HEXO" />
-    <category term="LAMP LNMP" />
-    <category term="shoka" />
+    <category term="服务器" />
     <category term="图床" />
+    <category term="shoka" />
     <category term="机器视觉" />
     <entry>
         <id>https://lzq-cv.github.io/2025/09/27/2D%E8%A7%86%E8%A7%89%E7%9A%84%E4%B8%BB%E6%B5%81%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF/</id>
@@ -776,7 +776,7 @@
 &lt;/ul&gt;
 &lt;p&gt;如今，随着 Nginx 的普及，&lt;strong&gt;LNMP 架构已经成为大多数新项目和追求性能的运维人员的首选&lt;/strong&gt;。甚至出现了一种混合架构：用 Nginx 作为前端反向代理处理静态请求，并将动态请求转发给后端的 Apache，结合两者的优点。但对于绝大多数场景，直接使用完整的 LNMP 栈是更优的选择。&lt;/p&gt;
 </content>
-        <category term="LAMP LNMP" />
+        <category term="服务器" />
         <updated>2025-09-27T00:51:01.000Z</updated>
     </entry>
     <entry>

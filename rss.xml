@@ -9,9 +9,9 @@
         <lastBuildDate>Sat, 27 Sep 2025 09:45:29 +0800</lastBuildDate>
         <category>CV</category>
         <category>HEXO</category>
-        <category>LAMP LNMP</category>
-        <category>shoka</category>
+        <category>服务器</category>
         <category>图床</category>
+        <category>shoka</category>
         <category>机器视觉</category>
         <item>
             <guid isPermalink="true">https://lzq-cv.github.io/2025/09/27/2D%E8%A7%86%E8%A7%89%E7%9A%84%E4%B8%BB%E6%B5%81%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF/</guid>
@@ -589,7 +589,7 @@
             <guid isPermalink="true">https://lzq-cv.github.io/2025/09/27/LAMP%E5%92%8CLNMP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%9E%B6%E6%9E%84%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
             <title>LAMP和LNMP服务器架构的区别</title>
             <link>https://lzq-cv.github.io/2025/09/27/LAMP%E5%92%8CLNMP%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%9E%B6%E6%9E%84%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
-            <category>LAMP LNMP</category>
+            <category>服务器</category>
             <pubDate>Sat, 27 Sep 2025 08:51:01 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;LAMP 和 LNMP 是两种最流行的传统网站服务器架构组合。它们的核心区别在于 &lt;strong&gt;Web 服务器&lt;/strong&gt; 的不同。&lt;/p&gt;
 &lt;ul&gt;

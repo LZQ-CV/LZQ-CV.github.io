@@ -8,10 +8,179 @@
     <author>
       <name>LZQ</name>
     </author>
-    <updated>2025-09-29T13:15:52.000Z</updated>
+    <updated>2025-09-30T11:30:42.000Z</updated>
     <category term="人工智能" />
     <category term="计算机视觉" />
     <category term="技术博客" />
+    <entry>
+        <id>https://lzq-cv.github.io/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%92%8C%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9A%84%E4%B8%BB%E8%A6%81%E6%9C%AF%E8%AF%AD/</id>
+        <title>机器学习和深度学习的主要术语</title>
+        <link rel="alternate" href="https://lzq-cv.github.io/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%92%8C%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9A%84%E4%B8%BB%E8%A6%81%E6%9C%AF%E8%AF%AD/"/>
+        <content type="html">&lt;h1 id=&#34;机器学习和深度学习的主要术语&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#机器学习和深度学习的主要术语&#34;&gt;#&lt;/a&gt; 机器学习和深度学习的主要术语&lt;/h1&gt;
+&lt;p&gt;机器学习和深度学习是当前人工智能领域的两个重要分支。这些术语通常在讨论该领域时使用，因此了解这些术语对于理解相关概念和技术非常重要。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;机器学习（Machine Learning）&lt;br /&gt;
+机器学习是人工智能的一个子领域，它让计算机系统从数据中学习并自主地进行决策和预测。它包括监督学习、无监督学习和强化学习等多种类型。&lt;/li&gt;
+&lt;li&gt;深度学习（Deep Learning）&lt;br /&gt;
+深度学习是机器学习的一个子领域，它利用人工神经网络进行学习和预测。深度学习可以处理包含多层抽象概念的复杂数据，例如图像、语音和自然语言文本。&lt;/li&gt;
+&lt;li&gt;监督学习（Supervised Learning）&lt;br /&gt;
+监督学习是一种机器学习技术，它在有标签数据集上进行训练，以预测某个结果或输出。例如，训练一个分类器来识别图像中的猫。&lt;/li&gt;
+&lt;li&gt;无监督学习（Unsupervised Learning）&lt;br /&gt;
+无监督学习是一种机器学习技术，它在没有标签的数据集上进行训练，以发现数据的结构和特征。例如，聚类分析可以将相似的数据点分组在一起。&lt;/li&gt;
+&lt;li&gt;强化学习（Reinforcement Learning）&lt;br /&gt;
+强化学习是一种机器学习技术，它通过让智能体在环境中执行一系列行动并获得奖励或惩罚来学习最优行为策略。例如，训练一个自动驾驶汽车在行驶过程中遵循交通规则并避免事故。&lt;/li&gt;
+&lt;li&gt;人工神经网络（Artificial Neural Network）&lt;br /&gt;
+人工神经网络是一种模拟人脑神经元网络的计算模型，它通过模拟神经元之间的复杂交互关系来处理和分析数据。深度学习使用多层人工神经网络来提取数据中的特征并建立复杂模型。&lt;/li&gt;
+&lt;li&gt;卷积神经网络（Convolutional Neural Network）&lt;br /&gt;
+卷积神经网络是一种特殊的人工神经网络，它专门用于处理具有网格结构的数据，如图像。它在图像识别、语音识别和自然语言处理等领域得到了广泛应用。&lt;/li&gt;
+&lt;li&gt;循环神经网络（Recurrent Neural Network）&lt;br /&gt;
+循环神经网络是一种人工神经网络，它使用循环结构来处理序列数据，如时间序列、文本和语音。它可以处理具有顺序和时间依赖性的数据，因此在自然语言处理和语音识别等领域很受欢迎。&lt;/li&gt;
+&lt;li&gt;迁移学习（Transfer Learning）&lt;br /&gt;
+迁移学习是一种利用已经在一个领域或任务上训练过的模型来处理另一个相关领域或任务的技术。这种技术可以大大减少在新任务上训练模型所需的时间和数据量。&lt;/li&gt;
+&lt;li&gt;过拟合（Overfitting）&lt;br /&gt;
+过拟合是指模型在训练数据上表现良好，但在测试数据上表现不佳的现象。这是由于模型对训练数据进行了过度拟合，导致其对新数据的泛化能力下降。&lt;/li&gt;
+&lt;li&gt;欠拟合（Underfitting）&lt;br /&gt;
+欠拟合是指模型在训练数据上和测试数据上都表现不佳的现象。这是由于模型过于简单，无法捕捉到数据中的复杂模式或特征。&lt;br /&gt;
+以上是一些常用的机器学习和深度学习术语及其英文表达。这些术语在讨论相关领域时经常使用，因此掌握这些术语对于理解机器学习和深度学习的最新发展非常有帮助。&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+        <category term="Artificial-Intelligence" scheme="https://lzq-cv.github.io/categories/Artificial-Intelligence/" />
+        <category term="Deep-Learning" scheme="https://lzq-cv.github.io/categories/Artificial-Intelligence/Deep-Learning/" />
+        <category term="深度学习" scheme="https://lzq-cv.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" />
+        <category term="机器学习" scheme="https://lzq-cv.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" />
+        <updated>2025-09-30T11:30:42.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://lzq-cv.github.io/100%E4%B8%AA%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%9C%AF%E8%AF%AD/</id>
+        <title>100个深度学习术语</title>
+        <link rel="alternate" href="https://lzq-cv.github.io/100%E4%B8%AA%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%9C%AF%E8%AF%AD/"/>
+        <content type="html">&lt;h1 id=&#34;100-个深度学习术语&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#100-个深度学习术语&#34;&gt;#&lt;/a&gt; 100 个深度学习术语&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;1. 人工神经网络 (ANN)&lt;/strong&gt; ANN 代表 Artificial Neural Network（人工神经网络）。在数据科学中，它指的是一种计算模型，其灵感大致来源于人脑的结构和功能。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. 激活函数 (Activation Function)&lt;/strong&gt; 激活函数计算加权总和，然后添加偏置，以决定神经元是否应该被激活。它的目的是在神经元的输出中引入非线性。示例包括 Sigmoid、ReLU（Rectified Linear Unit，修正线性单元）和 Tanh。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. 反向传播 (Backpropagation)&lt;/strong&gt; 在神经网络中，如果估计的输出与实际输出相差甚远（误差较大），我们会根据误差更新偏置和权重。这种权重和偏置更新过程被称为反向传播 (Back Propagation)。反向传播 (BP) 算法确定输出端的损失（或误差），然后将其反向传播到网络中。权重被更新以最小化每个神经元产生的误差。减少误差的第一步是确定每个节点相对于最终输出的梯度（导数）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4. 卷积神经网络 (CNN)&lt;/strong&gt; 卷积神经网络 (CNNs) 是一种强大的深度学习模型，擅长处理具有网格状结构的数据，主要是图像。它们的灵感来自人类视觉皮层的功能方式，尤其擅长图像识别、物体检测和图像分割等任务。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;5. 深度学习 (Deep Learning)&lt;/strong&gt; 深度学习与一种机器学习算法（人工神经网络，ANN）相关联，该算法使用人脑概念来促进任意函数的建模。 ANN 需要大量数据，并且这种算法在同时建模多个输出时非常灵活）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;6. 轮次 (Epoch)&lt;/strong&gt; 这个深度学习术语 —— 轮次 (epoch)，指的是训练数据集在机器学习模型中完成一次完整传递。想象一个循环，您在其中对模型进行一次数据集中所有数据点的训练。每次完成该循环都被视为一个轮次。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;7. 特征提取 (Feature Extraction)&lt;/strong&gt; 特征提取指的是将原始数据转换为可以处理的数值特征，同时保留原始数据集中的信息。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;8. 梯度下降 (Gradient Descent)&lt;/strong&gt; 梯度下降是一种一阶迭代优化算法，用于寻找函数的最小值。我们在机器学习算法中使用梯度下降算法来最小化成本函数。它找出我们算法的最佳参数集。梯度下降可以分为以下几类：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;基于数据摄取：
+&lt;ul&gt;
+&lt;li&gt;全批量梯度下降算法 (Full Batch Gradient Descent Algorithm)&lt;/li&gt;
+&lt;li&gt;随机梯度下降算法 (Stochastic Gradient Descent Algorithm)&lt;/li&gt;
+&lt;li&gt;在全批量梯度下降算法中，我们一次使用所有数据来计算梯度，而在随机梯度下降算法中，我们在计算梯度时抽取一个样本。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;基于微分技术：
+&lt;ul&gt;
+&lt;li&gt;一阶微分 (First order Differentiation)&lt;/li&gt;
+&lt;li&gt;二阶微分 (Second order Differentiation)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;9. 损失函数 (Loss Function)&lt;/strong&gt; 一种衡量神经网络对预期结果建模效果的函数。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;10. 循环神经网络 (RNN)&lt;/strong&gt; RNN 代表 Recurrent Neural Network（循环神经网络）。与逐点处理数据的传统 ANN 不同，RNN 专门设计用于处理顺序数据，其中信息的顺序很重要。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;11. 迁移学习 (Transfer Learning)&lt;/strong&gt; 迁移学习是将预训练模型应用于全新的数据集。预训练模型是由他人创建的用于解决问题的模型。该模型可以应用于解决具有相似数据的类似问题。&lt;/p&gt;
+&lt;p&gt;在这里，您可以查看一些最广泛使用的预训练模型 (&lt;em&gt;请替换为实际链接&lt;/em&gt;)。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;12. 权重 (Weight)&lt;/strong&gt; 神经网络中的一个参数，用于转换网络层内的输入数据。它在训练期间进行调整，以便网络预测正确的输出。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;13. 偏置 (Bias)&lt;/strong&gt; 添加到模型输出中的一个项，使模型能够表示不通过原点的模式。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;14. 过拟合 (Overfitting)&lt;/strong&gt; 当模型在训练数据集上表现良好，但在测试集上失败时，就说模型过拟合。当模型过于敏感并捕获仅存在于训练数据集中的随机模式时，就会发生这种情况。有两种方法可以克服过拟合：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;降低模型复杂度 (Reduce the model complexity)&lt;/li&gt;
+&lt;li&gt;正则化 (Regularization)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;15. 欠拟合 (Underfitting)&lt;/strong&gt; 当统计模型或机器学习算法无法捕获数据的潜在趋势时，就会发生欠拟合。它指的是一个既不能对训练数据进行建模，也不能推广到新数据的模型。欠拟合模型是不合适的，因为它在训练数据上的表现会很差。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;16. 正则化 (Regularization)&lt;/strong&gt; 正则化是一种用于解决统计模型中过拟合问题的技术。在机器学习中，正则化会惩罚系数，以便模型可以更好地泛化。不同的回归技术使用正则化，例如岭回归 (Ridge regression) 和 Lasso 回归 (lasso regression)。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;17. Dropout&lt;/strong&gt; 一种用于神经网络的正则化技术，通过在训练期间的每次更新时随机将一部分输入单元设置为零来防止过拟合。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;18. 批归一化 (Batch Normalization)&lt;/strong&gt; 一种改进深度神经网络训练的技术，它对每个小批量 (mini-batch) 的层输入进行归一化。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;19. 自编码器 (Autoencoder)&lt;/strong&gt; 一种用于学习未标记数据的高效编码的神经网络，通常用于降维。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;20. 生成对抗网络 (GAN)&lt;/strong&gt; 生成对抗网络 (GAN)：Ian Goodfellow 及其同事设计了一类机器学习框架，其中两个神经网络在一个游戏中竞争。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;21. 注意力机制 (Attention Mechanism)&lt;/strong&gt; 复杂神经网络中的一个组件，尤其是在序列到序列模型中，它允许网络顺序关注输入的不同部分，而不是同时考虑整个输入，从而提高机器翻译等任务的性能。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;22. 嵌入层 (Embedding Layer)&lt;/strong&gt; 这个深度学习术语主要用于神经网络中处理文本数据，嵌入层将稀疏的分类数据（通常是单词的索引）转换为密集且连续的向量空间，其中相似的值彼此接近，从而促进更有效的学习。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;23. 多层感知器 (MLP)&lt;/strong&gt; 一种神经网络，至少包含三层节点：输入层、一个或多个隐藏层和输出层。与 CNN 或 RNN 不同，MLP 是完全连接的，这意味着一层中的每个神经元都连接到下一层中的每个神经元。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;24. 归一化 (Normalization)&lt;/strong&gt; 数据准备中的一个过程，它改变像素强度值的范围，以确保它们更加一致，通常通过确保输入的均值和标准差分别为 0 和 1。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;25. 池化层 (Pooling Layer)&lt;/strong&gt; 这个深度学习术语通常用于卷积神经网络中。池化（或子采样或下采样）通过将一层中神经元簇的输出组合到下一层中的单个神经元中来减小数据的维度，通常使用最大池化 (max pooling) 或平均池化 (average pooling) 方法。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;26. 序列到序列模型 (Sequence-to-Sequence Model)&lt;/strong&gt; 一种模型，包含两个部分：处理输入的编码器和生成输出的解码器。它在输入和输出都是序列的应用中很有用，例如机器翻译或语音识别。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;27. 张量 (Tensor)&lt;/strong&gt; 一种广义矩阵，用作 TensorFlow 和其他深度学习框架中的基本数据结构，用于表示所有数据：标量是零维张量，向量是一维张量，矩阵是二维张量。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;28. 主干网络 (Backbone Network)&lt;/strong&gt; 一种预训练网络，用作另一个特定任务架构的基础，通常用于物体检测等任务中的特征提取，其中来自主干网络的高级特征用于进行预测。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;29. 微调 (Fine-tuning)&lt;/strong&gt; 获取预训练深度学习模型（网络已经针对相关任务进行了训练）并在特定于第二个任务的新数据集上继续训练的过程，该数据集的大小可能较小，但可以利用已学习的特征。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;30. 超参数 (Hyperparameters)&lt;/strong&gt; 定义网络架构（如层数、每层节点数、学习率）和训练过程的各个方面的参数（如批量大小、轮次数），这些参数在训练之前设置，并直接控制训练算法的行为。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;31. 学习率 (Learning Rate)&lt;/strong&gt; 训练算法在损失曲面上的步长大小。较小的学习率可能会使训练更可靠，但也可能使其收敛速度变慢。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;32. Softmax 函数 (Softmax Function)&lt;/strong&gt; 这个深度学习术语是在用于多分类的神经网络中的最终激活函数，它通过将每个输出的指数除以所有输出的指数之和，将输出 logits 转换为概率。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;33. 长短期记忆网络 (LSTM)&lt;/strong&gt; 一种特殊的 RNN，能够学习长期依赖关系，包括调节信息流的门控。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;34. 梯度消失问题 (Vanishing Gradient Problem)&lt;/strong&gt; 训练深度神经网络中的一个挑战是，在反向传播期间，梯度在通过层反向传播时变得越来越小，导致靠近输入层的层学习非常缓慢或停滞。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;35. 梯度爆炸问题 (Exploding Gradient Problem)&lt;/strong&gt; 一个问题，其中大的误差梯度累积，并导致在训练期间对神经网络模型权重进行非常大的更新，这可能会导致模型无法收敛甚至发散。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;36. 数据增强 (Data Augmentation)&lt;/strong&gt; 用于增加数据量的技术，通过添加已存在数据的略微修改的副本或从现有数据新创建的合成数据，例如在图像处理的上下文中旋转、翻转、缩放或裁剪图像。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;37. 批量大小 (Batch Size)&lt;/strong&gt; 在模型训练的一次迭代（单个批次）中使用的训练样本数。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;38. 优化器 (Optimizer)&lt;/strong&gt; 用于更改神经网络属性（如权重和学习率）以减少损失的算法或方法。常见的优化器包括 SGD（Stochastic Gradient Descent，随机梯度下降）、Adam 和 RMSprop。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;39. F1 分数 (F1 Score)&lt;/strong&gt; 衡量测试准确性的指标，并考虑测试的精度 (precision) 和召回率 (recall) 来计算分数：2 * (精度 * 召回率) / (精度 + 召回率)。当类别分布不均匀时，它特别有用。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;40. 精度 (Precision)&lt;/strong&gt; 量化正确正面预测数量的指标。它定义为真阳性 (true positives) 的数量除以真阳性加上假阳性 (false positives) 的数量。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;41. 召回率 (Recall)&lt;/strong&gt; 这个深度学习术语也称为灵敏度 (sensitivity) 和召回率 (recall)，它量化了在所有可能做出的正面预测中，正确正面预测的数量。它的计算方法是真阳性的数量除以真阳性加上假阴性 (false negatives) 的数量。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;42. ROC 曲线 (ROC Curve)&lt;/strong&gt; 一个图形图，通过绘制真阳性率（召回率）与假阳性率，来说明二元分类器系统在其判别阈值变化时的诊断能力。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;43. 曲线下面积 (AUC)&lt;/strong&gt; 在机器学习中，AUC 确定哪些模型最能预测类别。它是 ROC 曲线下的面积；较高的 AUC 表明模型性能更好。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;44. 早停法 (Early Stopping)&lt;/strong&gt; 正则化用于避免在使用迭代方法（如梯度下降）训练学习器时发生过拟合。一旦验证数据集上的性能开始下降，训练就会停止。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;45. 特征缩放 (Feature Scaling)&lt;/strong&gt; 一种用于标准化数据中自变量或特征范围的方法。数据处理也称为数据归一化，通常在数据预处理阶段执行。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;46. 生成模型 (Generative Model)&lt;/strong&gt; 一种统计模型，用于生成数据分布中的所有值，包括观察到的和未观察到的值。深度学习中常见的例子包括生成对抗网络 (GAN) 和变分自编码器 (VAE)。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;47. 判别模型 (Discriminative Model)&lt;/strong&gt; 一种对输入数据进行分类的模型；也就是说，它根据训练数据预测给定输入的标签。常见的例子包括大多数监督学习模型，例如逻辑回归和神经网络。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;48. 数据不平衡 (Data Imbalance)&lt;/strong&gt; 数据集中每个类别的观察数量分布不均的情况。通常，这对预测建模构成挑战，因为大多数算法都旨在最大化总体准确率。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;49. 降维 (Dimensionality Reduction)&lt;/strong&gt; 通过获得一组主要变量来减少考虑中的随机变量的数量。经常使用的技术包括 PCA（Principal Component Analysis，主成分分析）、t-SNE 和自编码器。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;50. 主成分分析 (PCA)&lt;/strong&gt; 一种统计程序，它使用正交变换将一组可能相关的变量的观测值转换为一组线性不相关的变量值，称为主成分。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;51. 非线性激活函数 (Nonlinear Activation Functions)&lt;/strong&gt; 神经网络中使用的函数，帮助模型学习复杂的数据模式，包括 Sigmoid、Tanh 和 ReLU（Rectified Linear Unit，修正线性单元）函数。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;52. 批量训练 (Batch Training)&lt;/strong&gt; 神经网络中的一种训练方法，其中模型权重在处理完整个数据集后更新，而不是在处理单个数据点或小批量后更新。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;53. 随机梯度下降 (SGD)&lt;/strong&gt; 一种简单但非常有效的方法，用于拟合凸损失函数（如（线性）支持向量机和逻辑回归）下的线性分类器和回归器。与从整个数据集计算梯度的批量梯度下降不同，SGD 每次仅使用一个数据点更新参数。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;54. 激活图 (Activation Maps)&lt;/strong&gt; 深度学习模型（通常在 CNN 中）各个层内特定激活的可视化表示。这些图可以帮助理解输入数据的哪些特征正在激活某些滤波器或神经元。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;55. 零样本学习 (Zero-Shot Learning)&lt;/strong&gt; 一个分类问题，其中测试集中的类别在训练期间都未见过；模型必须从已看到的类别推广到未看到的类别。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;56. 一次性学习 (One-Shot Learning)&lt;/strong&gt; 一个分类任务，其中学习算法在对新实例进行预测之前，仅给出每个类别的一个示例。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;57. 少样本学习 (Few-Shot Learning)&lt;/strong&gt; 一种机器学习方法，其中模型使用极少量标记数据进行训练，通常每个类别一到五个示例。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;58. 对抗样本 (Adversarial Examples)&lt;/strong&gt; 稍微修改的输入，旨在欺骗机器学习模型。这些通常用于评估图像分类等任务中模型的鲁棒性。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;59. 胶囊网络 (CapsNets)&lt;/strong&gt; 一种深度神经网络，试图通过胶囊（神经元组）捕捉特征之间的空间层次结构，这些胶囊学习识别物体及其在空间中的相对关系，从而可能克服 CNN 的一些局限性。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;60. 注意力层 (Attention Layers)&lt;/strong&gt; 常用于序列预测问题的层，帮助模型关注输入序列的特定部分，提高模型记忆长序列而不会丢失数据的能力。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;61. 跳跃连接 (Skip Connections)&lt;/strong&gt; 一种用于设计深度神经网络以减轻梯度消失问题的技术，方法是跳过一层或多层。常见于 ResNet 等架构中，其中来自较早层的输出被添加到稍后层的输出中，以帮助保留梯度。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;62. Siamese 网络 (Siamese Networks)&lt;/strong&gt; 一种神经网络架构，包含两个或多个相同的子网络。 Siamese 网络非常适合用于查找两个可比较事物之间相似性或关系的任务，例如在人脸验证系统中。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;63. Triplet 损失 (Triplet Loss)&lt;/strong&gt; 一种损失函数，用于通过将基线输入与正输入（相似）和负输入（不相似）进行比较来学习有用的嵌入。它确保基线输入比负输入更接近正输入一定的边距。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;64. 自监督学习 (Self-Supervised Learning)&lt;/strong&gt; 一种机器学习类型，其中训练数据提供监督，因为输入数据本身用于生成标签。这通常用于标记数据稀缺或昂贵的场景中。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;65. 交叉熵损失 (Cross-Entropy Loss)&lt;/strong&gt; 一种损失函数，常用于分类任务。它衡量分类模型的性能，其输出是介于 0 和 1 之间的概率值。交叉熵损失随着预测概率偏离实际标签而增加。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;66. 序列建模 (Sequence Modeling)&lt;/strong&gt; 一种深度学习模型，旨在处理顺序数据，例如时间序列或文本。示例包括 RNN、LSTM 和 GRU，它们可以从数据的时间结构中学习。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;67. 空间变换网络 (Spatial Transformer Networks)&lt;/strong&gt; 一个 CNN 模块，明确允许在网络内对数据进行空间操作。这可以提高模型的几何不变性，因为它可以空间变换特征图以关注数据中的相关区域。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;68. 教师强制 (Teacher Forcing)&lt;/strong&gt; 一种用于训练 RNN 的技术，其中来自先前时间步的目标输出用作当前输入，而不是网络生成的输出。此方法有助于稳定和加速训练。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;69. 神经风格迁移 (Neural Style Transfer)&lt;/strong&gt; 一种算法，使用卷积神经网络混合两张图像 —— 一张图像的内容和另一张图像的艺术风格。此过程允许模型学习并将一张图像的风格元素应用于另一张图像的内容。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;70. 标签平滑 (Label Smoothing)&lt;/strong&gt; 一种用于降低模型对其预测的信心的技术，通过改变标签的表示方式。标签平滑不是使用硬标签（1 和 0），而是使用略小于 1 和大于 0 的值，通常会导致模型泛化能力的提高。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;71. Lookahead 优化器 (Lookahead Optimizer)&lt;/strong&gt; 一种优化器，它通过在当前权重和几个步骤之前的权重之间进行插值来定期更新模型权重，从而帮助稳定优化轨迹。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;72. 集束搜索 (Beam Search)&lt;/strong&gt; 一种用于提高序列建模中预测质量的算法，尤其是在自然语言处理中。它不是在每一步预测最可能的下一步，而是跟踪 k 个最可能的序列路径。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;73. 知识蒸馏 (Knowledge Distillation)&lt;/strong&gt; 一种方法，其中训练一个较小的模型（称为 “学生”）来重现更大的预训练模型（或 “教师”）的行为。这项技术允许在资源受限的环境中部署强大的模型。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;74. T-SNE (t-Distributed Stochastic Neighbor Embedding，t - 分布随机邻域嵌入)&lt;/strong&gt; 一种用于降维的机器学习算法，特别适用于高维数据集的可视化。它将数据点的亲和力转换为概率，并最小化低维嵌入的联合概率与高维数据的联合概率之间的 Kullback-Leibler 散度。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;75. 梯度裁剪 (Gradient Clipping)&lt;/strong&gt; 一种用于对抗训练期间梯度爆炸问题的技术。它涉及在反向传播期间裁剪梯度，以防止它们超过定义的阈值。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;76. 元学习 (Meta-Learning)&lt;/strong&gt; 有时称为 “学习如何学习”，它涉及在各种学习任务上训练模型，使其可以使用少量训练样本来解决新的学习任务。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;77. 神经架构搜索 (NAS)&lt;/strong&gt; 机器学习的一个领域，专注于自动化人工神经网络的设计。 NAS 使用强化学习、进化算法或基于梯度的方法来为给定任务生成最佳架构。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;78. 量化 (Quantization)&lt;/strong&gt; 减少神经网络中表示数字的位数的过程。量化减小了模型大小并提高了推理速度，使其适用于在计算资源有限的移动设备上部署。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;79. 自注意力 (Self-Attention) (续)&lt;/strong&gt; Transformer 架构已证明在许多 NLP 任务中有效，因为它使模型能够权衡句子或文档中不同单词相对于彼此的重要性。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;80. Transformer 模型 (Transformer Models)&lt;/strong&gt; 一种神经网络架构，它避开了循环，而是完全依赖自注意力机制来绘制输入和输出之间的全局依赖关系，这在翻译和文本生成等任务中具有革命性意义。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;81. BERT (Bidirectional Encoder Representations from Transformers，来自 Transformers 的双向编码器表示)&lt;/strong&gt; 谷歌的一种方法，通过在所有层中联合调节左右上下文，从无标签文本中预训练深度双向表示。因此，预训练的 BERT 模型只需一个额外的输出层即可进行微调，从而为各种任务创建最先进的模型。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;82. 分词 (Tokenization)&lt;/strong&gt; 在 NLP 中，分词是将一段文本分割成更小的单元（称为标记），标记可以是单词、字符或子词。这通常是处理要由神经网络使用的文本的第一步之一。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;83. 词嵌入 (Word Embeddings)&lt;/strong&gt; 一种词表示类型，允许含义相似的词具有相似的表示。它们是 NLP 中的一组语言建模和特征学习技术，其中词汇表中的单词或短语被映射到实数向量。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;84. 位置编码 (Positional Encoding)&lt;/strong&gt; 在 Transformer 模型架构中，由于自注意力机制本身不捕捉序列顺序，因此将位置编码添加到输入嵌入中，以提供有关序列中标记的相对或绝对位置的一些信息。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;85. 图神经网络 (GNNs)&lt;/strong&gt; 一种直接在图结构上运行的神经网络。这些网络通过图中节点之间的消息传递来捕获图的依赖关系。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;86. 强化学习 (Reinforcement Learning)&lt;/strong&gt; 一种机器学习类型，其中智能体通过执行某些动作并接收奖励或惩罚来学习在环境中表现。这种学习方法基于游戏化的概念，特别用于游戏和自动驾驶汽车等场景。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;87. 经验回放 (Experience Replay)&lt;/strong&gt; 在强化学习中，经验回放涉及存储智能体在每个时间步的经验，而不是在状态 - 动作对发生时运行 Q 学习。稍后，可以在批次中将这些经验重放给智能体，打破时间相关性并平滑数据分布的变化。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;88. 课程学习 (Curriculum Learning)&lt;/strong&gt; 一种训练策略，从学习任务的较容易的方面或复杂任务的早期阶段开始，并逐渐增加难度级别。这种方法的灵感来自人类的学习方式，可以加快收敛速度并提高性能。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;89. 模型剪枝 (Model Pruning)&lt;/strong&gt; 从现有神经网络中算法地移除参数的过程，而不会显着影响其性能。剪枝有助于降低部署模型的计算成本，还可以减小模型大小。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;90. 持续学习 (Continuous Learning)&lt;/strong&gt; 这个深度学习术语也称为终身学习 (lifelong learning)；这是一种机器学习形式，其中算法不断学习和适应新数据，而不会忘记以前的知识。这对于在动态环境中运行的应用程序至关重要。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;91. 偏差 - 方差权衡 (Bias-Variance Tradeoff)&lt;/strong&gt; 监督学习中的一个基本问题是，增加偏差会减少方差，反之亦然。偏差 - 方差权衡是一个属性，它定义了任何模型在给定训练集上可达到的准确率的限制。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;92. 灾难性遗忘 (Catastrophic Forgetting)&lt;/strong&gt; 一种现象，其中神经网络在学习新信息后会忘记先前学习的信息，这是持续学习中的一个重大挑战。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;93. 多模态学习 (Multimodal Learning)&lt;/strong&gt; 这种方法涉及在来自多个模态的数据上训练模型，例如包含图像和文本的数据集。它有助于通过结合来自不同来源的信息来学习更丰富的表示。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;94. 异常检测 (Anomaly Detection)&lt;/strong&gt; 识别罕见的项目、事件或观察结果，这些项目、事件或观察结果因与大多数数据显着不同而引起怀疑。这在欺诈检测、网络安全和故障检测中特别有用。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;95. 分布外检测 (Out-of-Distribution Detection)&lt;/strong&gt; 识别在某些方面与训练分布不同的数据样本。这在自动驾驶等安全关键型应用中至关重要，在这些应用中，模型必须识别和处理它尚未明确训练过的情况。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;96. 卷积 (Convolution)&lt;/strong&gt; 卷积神经网络内部工作中使用的一种数学运算。它涉及取一个小数矩阵（内核）与一个较大矩阵的每个部分的点积，以产生一个新矩阵，有效地过滤原始矩阵。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;97. 池化 (Pooling) (续)&lt;/strong&gt; 具体而言，CNN 中的池化层降低了每个特征图的维度，同时保留了最重要的信息，这有助于检测对尺度和方向变化不变的特征，并减少计算负载。常见的池化类型包括最大池化和平均池化，它们分别取输入区域的最大值和平均值&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;98. 空洞卷积 (Dilated Convolutions)&lt;/strong&gt; 这个深度学习术语也称为 atrous 卷积。这些卷积涉及在卷积层的内核中插入空格，有效地扩大其视野，而无需增加参数数量或计算量。这对于需要理解更大上下文的任务（例如语义图像分割）很有用。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;99. 序列到序列学习 (Sequence-to-Sequence Learning)&lt;/strong&gt; 深度学习中的一个过程，其中模型被训练为将来自一个域（例如，英语句子）的序列转换为另一个域（例如，法语句子）的序列。这种模型架构通常涉及编码器 - 解码器框架，并且是机器翻译和语音识别应用程序的核心。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;100. 注意力机制 (Attention Mechanisms)&lt;/strong&gt; 关于这个概念的进一步阐述，注意力机制允许模型根据需要关注输入序列的不同部分以生成输出序列，从而提高模型处理文本摘要和机器翻译等任务中长序列的能力。多头注意力 (multi-headed attention) 等变体提供了从不同表示子空间的不同位置关注信息的能力。&lt;/p&gt;
+</content>
+        <category term="Artificial-Intelligence" scheme="https://lzq-cv.github.io/categories/Artificial-Intelligence/" />
+        <category term="Deep-Learning" scheme="https://lzq-cv.github.io/categories/Artificial-Intelligence/Deep-Learning/" />
+        <category term="深度学习" scheme="https://lzq-cv.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" />
+        <updated>2025-09-30T11:28:47.000Z</updated>
+    </entry>
     <entry>
         <id>https://lzq-cv.github.io/PyTorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA/</id>
         <title>PyTorch深度学习框架搭建</title>
@@ -52,89 +221,6 @@
         <category term="Deep-Learning" scheme="https://lzq-cv.github.io/categories/Artificial-Intelligence/Deep-Learning/" />
         <category term="PyTorch" scheme="https://lzq-cv.github.io/tags/PyTorch/" />
         <updated>2025-09-29T13:15:52.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://lzq-cv.github.io/Excerpts-from-The-Little-Prince/</id>
-        <title>Excerpts-from-The-Little-Prince</title>
-        <link rel="alternate" href="https://lzq-cv.github.io/Excerpts-from-The-Little-Prince/"/>
-        <content type="html">&lt;h1 id=&#34;excerpts-from-the-little-prince&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#excerpts-from-the-little-prince&#34;&gt;#&lt;/a&gt; Excerpts from &lt;em&gt;The-Little-Prince&lt;/em&gt;&lt;/h1&gt;
-&lt;p&gt;It was then that the fox appeared.&lt;br /&gt;
- 这时来了一只狐狸。&lt;/p&gt;
-&lt;p&gt;“Good morning,” said the fox.&lt;br /&gt;
-“早上好，” 狐狸说。&lt;/p&gt;
-&lt;p&gt;“Good morning,” the little prince responded politely, although when he turned around he saw nothing.&lt;br /&gt;
-“早上好，” 小王子彬彬有礼地回答。他转过身，却没看到什么人。&lt;/p&gt;
-&lt;p&gt;“I am right here,” the voice said, “under the apple tree.”&lt;br /&gt;
-“我在这儿呢，苹果树底下，” 这声音提醒他。&lt;/p&gt;
-&lt;p&gt;“Who are you?” asked the little prince, and added, “You are very pretty to look at.”&lt;br /&gt;
-“你是谁？” 小王子问道，“你长得真漂亮。”&lt;/p&gt;
-&lt;p&gt;“I am a fox,’ said the fox.&lt;br /&gt;
-“我是一只狐狸，” 狐狸回答道。&lt;/p&gt;
-&lt;p&gt;“Come and play with me,” proposed the little prince. “I am so unhappy.”&lt;br /&gt;
-“和我一起玩吧，” 小王子向狐狸建议，“我苦恼极了。”&lt;/p&gt;
-&lt;p&gt;“I cannot play with you,” the fox said. “I am not tamed.”&lt;br /&gt;
-“我不能和你玩，” 狐狸说，“我还没有被你驯养呢。”&lt;/p&gt;
-&lt;p&gt;“Ah! Please excuse me,” said the little prince. But, after some thought, he added: “What does that mean—‘tame’?”&lt;br /&gt;
-“啊！对不起，” 小王子说道。但是他思索了一会儿，又说：“‘驯养’是什么意思？”&lt;/p&gt;
-&lt;p&gt;“You do not live here,” said the fox. “What is it that you are looking for?”&lt;br /&gt;
-“你不是本地人，” 狐狸说道，“你来这儿找寻什么呢？”&lt;/p&gt;
-&lt;p&gt;“I am looking for men,” said the little prince. “What does that mean—‘tame’?”&lt;br /&gt;
-“我正在找人，” 小王子答道，“‘驯养’是什么意思？”&lt;/p&gt;
-&lt;p&gt;“Men,” said the fox. “They have guns, and they hunt. It is very disturbing. They also raise chickens. These are their only interests. Are you looking for chickens?”&lt;br /&gt;
-“人，” 狐狸说道，“人有枪，他们会打猎。这可真讨厌。他们养鸡。这两件事是他们唯一的爱好。你也寻找鸡吗？”&lt;/p&gt;
-&lt;p&gt;“No,” said the little prince. “I am looking for friends. What does that mean—‘tame’?”&lt;br /&gt;
-“不，” 小王子说道，“我是来找朋友的。‘驯养’是什么意思呢？&lt;/p&gt;
-&lt;p&gt;“It is an act too often neglected,” said the fox. “It means to establish ties .”&lt;br /&gt;
-“它是经常被人们遗忘的一种行为，” 狐狸答道，“它的意思是‘建立联系’。”&lt;/p&gt;
-&lt;p&gt;“To establish ties?”&lt;br /&gt;
-“建立联系？”&lt;/p&gt;
-&lt;p&gt;“Just that,” said the fox. “To me, you are still nothing more than a little boy who is just like a hundred thousand other little boys. And I have no need of you. And you, on your part, have no need of me. To you, I am nothing more than a fox like a hundred thousand other foxes. But if you tame me, then we shall need each other. To me, you will be unique in all the world. To you, I shall be unique in all the world...”&lt;br /&gt;
-“当然了，” 狐狸说道，“对我来说，你与其他成千上万个小男孩没什么区别。我不需要你，你也不需要我。对你来说，我与其他成千上万只狐狸毫无差别。但是，如果你驯服了我，我们就谁也离不开谁了。那时候，对我来说，在这个世界上你就是独一无二的。而对你而言，我也是这个世界上独一无二的……”&lt;/p&gt;
-&lt;p&gt;“I am beginning to understand,” said the little prince. “There is a flower... I think that she has tamed me...”&lt;br /&gt;
-“我有点明白了，” 小王子说，“我有一朵花…… 我想，她已经驯服了我……”&lt;/p&gt;
-&lt;p&gt;“It is possible,” said the fox. “On the Earth one sees all sorts of things… ”&lt;br /&gt;
-“这是可能的，” 狐狸说，“在这个地球上，什么千奇百怪的事情都有可能发生……”&lt;/p&gt;
-&lt;p&gt;“My life is very monotonous ,” the fox said. “I hunt chickens; men hunt me. All the chickens are just alike, and all the men are just alike. And, in consequence, I am a little bored. But if you tame me, it will be as if the sun came to shine on my life. I shall know the sound of a step that will be different from all the others. Other steps send me hurrying back underneath the ground. Yours will call me, like music, out of my burrow . And then look: you see the grain-fields down yonder ? I do not eat bread. Wheat is of no use to me. The wheat fields have nothing to say to me. And that is sad. But you have hair that is the colour of gold. Think how wonderful that will be when you have tamed me! The grain, which is also golden, will bring me back the thought of you. And I shall love to listen to the wind in the wheat... ”&lt;br /&gt;
-“我的生活单调乏味，” 狐狸说，“我捉鸡，人捉我。所有的鸡都是一模一样的，所有的人也都是一模一样的。因此，我感到有些厌烦了。但是如果你驯服了我，我的生活将会充满阳光和欢乐。我将会分辨出一种与众不同的脚步声。听到别的脚步声，我会急急忙忙躲进地下洞穴。而唯独你的脚步声会像音乐一样，唤我出洞。再说，你瞧瞧，你看到那边的麦田了吗？我从来不吃面包，小麦也对我毫无用处。麦田也不会使我产生任何联想。这是多么可悲啊！但是，你有一头金黄色的头发。一旦你驯养我，想象一下那该是多美好的事啊：那金黄色的小麦会让我联想起你来。于是，我也会喜欢听穿过麦田的风声……”&lt;/p&gt;
-&lt;p&gt;The fox gazed at the little prince, for a long time. “Please—tame me!” he said.&lt;br /&gt;
- 狐狸盯着小王子看了很久。“请你…… 请你驯养我吧！” 狐狸最后说道。&lt;/p&gt;
-&lt;p&gt;“I want to, very much,” the little prince replied. “But I have not much time. I have friends to discover, and a great many things to understand.”&lt;br /&gt;
-“我很想驯养你，” 小王子回答道，“但是我没有那么多时间。我得去找朋友，还要去学习理解许多许多的事情。”&lt;/p&gt;
-&lt;p&gt;“One only understands the things that one tames,” said the fox. “Men have no more time to understand anything. They buy things all ready made at the shops. But there is no shop anywhere where one can buy friendship, and so men have no friends any more. If you want a friend, tame me... ”&lt;br /&gt;
-“只有被人们驯服了的事物，才能被人们所理解，” 狐狸说道，“人们再也没有时间去认识新的事物了。他们总是到商店里买现成的东西。但是，世界上还没有贩卖友谊的商店，因此人们再也没有朋友了。要是你想交一个朋友，就请驯养我吧……”&lt;/p&gt;
-&lt;p&gt;“What must I do, to tame you?” asked the little prince.&lt;br /&gt;
-“驯养你，那我应该怎么做呢？” 小王子问道。&lt;/p&gt;
-&lt;p&gt;“You must be very patient,” replied the fox. “First you will sit down at a little distance from me—like that—in the grass. I shall look at you out of the corner of my eye, and you will say nothing. Words are the source of misunderstandings. But you will sit a little closer to me, every day... ”&lt;br /&gt;
-“你必须很耐心，” 狐狸答道，“首先，你坐在草地上，离我有一些距离 —— 就像这样。我偷偷地用眼角观察你，你什么也别说。言语是误会的根源。但是，你每天都可以坐得离我更近一些……”&lt;/p&gt;
-&lt;p&gt;The next day the little prince came back.&lt;br /&gt;
- 第二天，小王子又来了。&lt;/p&gt;
-&lt;p&gt;“It would have been better to come back at the same hour,” said the fox. “If, for example, you come at four o’clock in the afternoon, then at three o’clock I shall begin to be happy. I shall feel happier and happier as the hour advances. At four o’clock, I shall already be worrying and jumping about. I shall show you how happy I am! But if you come at just any time, I shall never know at what hour my heart is to be ready to greet you... One must observe the proper rites... ”&lt;br /&gt;
-“你最好每天都在同一个时刻过来，” 狐狸说道，“比如说你下午四点来，那我从三点开始就会感到快乐。离四点越近，我就会越来越快乐。四点一到，我就会坐立不安。我会让你看到我究竟有多快乐！但是如果你来的时间不固定，我就不知道该什么时候开始准备迎接你…… 我们应该遵循正确的仪式……”&lt;/p&gt;
-&lt;p&gt;“What is a rite?” asked the little prince.&lt;br /&gt;
-“什么是仪式？” 小王子问道。&lt;/p&gt;
-&lt;p&gt;“Those also are actions too often neglected,” said the fox. “They are what make one day different from other days, one hour from other hours. There is a rite, for example, among my hunters. Every Thursday they dance with the village girls. So Thursday is a wonderful day for me! I can take a walk as far as the vineyards. But if the hunters danced at just any time, every day would be like every other day, and I should never have any vacation at all.”&lt;br /&gt;
-“这也是经常被人遗忘的行为，” 狐狸说，“所谓仪式，就是使某一天不同于其他日子，使某一时刻不同于其他时刻。比如说，捉我的那些猎人们就有一个仪式。每逢周四，他们都和村里的姑娘们跳舞。因此，周四成为了一个多么美妙的日子啊！我可以外出散步，直到葡萄园边上。如果猎人们随便什么时候都跳舞，每天都如此，那我也就没有休息的时候了。”&lt;/p&gt;
-&lt;p&gt;“Go and look again at the roses. You will understand now that yours is unique in all the world. Then come back to say goodbye to me, and I will make you a present of a secret.”&lt;br /&gt;
-“你再去看看那些玫瑰花吧。你一定会明白，你的那朵花为什么是天下独一无二的玫瑰了。然后再回到我的身边向我告别，那时我将赠予你一个秘密作为离别礼物。”&lt;/p&gt;
-&lt;p&gt;The little prince went away, to look again at the roses. “You are not at all like my rose,” he said. “As yet you are nothing. No one has tamed you, and you have tamed no one. You are like my fox when I first knew him. He was only a fox like a hundred thousand other foxes. But I have made him my friend, and now he is unique in all the world… ”&lt;br /&gt;
- 于是小王子就跑去看那些玫瑰花。“你们一点也不像我的那朵玫瑰花，” 他说道，“对我而言，你们什么都不是。没有人驯养过你们，你们也没有驯养过别人。你们就像我第一次见到狐狸一样，它那时和其他成千上万的狐狸没什么区别。但是，现在它成为了我的朋友，现在它就是世界上独一无二的狐狸了……”&lt;/p&gt;
-&lt;p&gt;And he went back to meet the fox.&lt;br /&gt;
- 说完，小王子回到了狐狸的身边。&lt;/p&gt;
-&lt;p&gt;“Goodbye,” he said.&lt;br /&gt;
-“再见，” 他说道。&lt;/p&gt;
-&lt;p&gt;“Goodbye,” said the fox. “And now here is my secret, a very simple secret: It is only with the heart that one can see rightly; what is essential is invisible to the eye.”&lt;br /&gt;
-“再见，” 狐狸回应道，“这就是我的秘密，它很简单：只有心灵才能洞察一切，事物的本质是肉眼无法看到的。”&lt;/p&gt;
-&lt;p&gt;“What is essential is invisible to the eye,” the little prince repeated, so that he would be sure to remember…&lt;br /&gt;
-“事物的本质是肉眼无法看到的，” 小王子重复着这句话，要把它记在心间。&lt;/p&gt;
-&lt;p&gt;“Men have forgotten this truth,” said the fox. “But you must not forget it. You become responsible, forever, for what you have tamed. You are responsible for your rose... ”&lt;br /&gt;
-“人们已经忘记了这个真理，” 狐狸说，“但是你千万不要忘记：你要对你驯服过的一切永远负责，你要对你的那朵玫瑰花负责……”&lt;/p&gt;
-&lt;p&gt;“I am responsible for my rose,” the little prince repeated, so that he would be sure to remember.&lt;br /&gt;
-“我要对我的那朵玫瑰花负责……” 小王子重复着这句话，要把它记在心间。&lt;/p&gt;
-</content>
-        <category term="English" scheme="https://lzq-cv.github.io/categories/English/" />
-        <category term="Excerpts" scheme="https://lzq-cv.github.io/categories/English/Excerpts/" />
-        <category term="English" scheme="https://lzq-cv.github.io/tags/English/" />
-        <updated>2025-09-28T08:17:17.000Z</updated>
     </entry>
     <entry>
         <id>https://lzq-cv.github.io/2D%E8%A7%86%E8%A7%89%E7%9A%84%E4%B8%BB%E6%B5%81%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF/</id>

@@ -1,0 +1,204 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"><meta name="theme-color" content="#222"><meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1"><meta name="renderer" content="webkit"><link rel="icon" type="image/ico" sizes="32x32" href="/assets/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="alternate" href="/rss.xml" title="Learning-Sharing-Recording" type="application/rss+xml"><link rel="alternate" href="/atom.xml" title="Learning-Sharing-Recording" type="application/atom+xml"><link rel="alternate" type="application/json" title="Learning-Sharing-Recording" href="https://lzq-cv.github.io/feed.json"><link rel="preconnect" href="https://s4.zstatic.net"><link rel="preconnect" href="https://at.alicdn.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CFredericka%20the%20Great:400,400italic,700,700italic%7CNoto%20Serif%20JP:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic%7CInconsolata:400,400italic,700,700italic&amp;display=swap&amp;subset=latin,latin-ext" media="none" onload="this.media='all'"><link rel="modulepreload" href="/js/siteInit.js"><link rel="modulepreload" href="/js/nyx-player-L4UCANZE.js"><link rel="modulepreload" href="/js/copy-tex-VZUECOHL.js"><link rel="modulepreload" href="/js/post-YFW6FCIX.js"><link rel="modulepreload" href="/js/chunk-QWKIEEMS.js"><link rel="modulepreload" href="/js/pagefind-TPQKLWTT.js"><link rel="modulepreload" href="/js/index.esm-OVSDWGAI.js"><link rel="modulepreload" href="/js/chunk-HJSTZ4VX.js"><link rel="modulepreload" href="/js/chunk-O72M4LJ6.js"><link rel="stylesheet" href="/css/siteInit.css" media="none" onload="this.media='all'"><link rel="preload" href="https://lzq-cv.oss-cn-shanghai.aliyuncs.com/t01ec1c702f9fc48b66.jpg" as="image" fetchpriority="high"><link rel="preload" href="https://lzq-cv.oss-cn-shanghai.aliyuncs.com/1148e976d3b516b985ac1d6245e0b12b.jpg" as="image" fetchpriority="high"><link rel="preload" href="https://lzq-cv.oss-cn-shanghai.aliyuncs.com/IMG_0661.JPG" as="image" fetchpriority="high"><link rel="preload" href="https://lzq-cv.oss-cn-shanghai.aliyuncs.com/t011c338eade395b315.jpg" as="image" fetchpriority="high"><link rel="preload" href="https://lzq-cv.oss-cn-shanghai.aliyuncs.com/4ec7d3aca101d9d8e14f2fe8e9977a30.jpg" as="image" fetchpriority="high"><link rel="preload" href="https://lzq-cv.oss-cn-shanghai.aliyuncs.com/149624-tian_kong-xing_neng-yi_shu-yin_le_hui-ren_qun-3840x2160.jpg" as="image" fetchpriority="high"><meta name="keywords" content="CNN"><meta name="description" content="CV Engineer"><link rel="canonical" href="https://lzq-cv.github.io/2026/09/10/%E7%BB%8F%E5%85%B8%E7%9A%84CNN%E6%9E%B6%E6%9E%84/"><link rel="stylesheet" href="/css/post.css?v=0.5.4"><link rel="stylesheet" href="/css/mermaid.css?v=0.5.4"><!-- 临时处理--><link rel="stylesheet" media="none" onload="this.media='all'" href="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.css"><title>经典的CNN架构</title><meta name="generator" content="Hexo 7.3.0"></head><body itemscope="" itemtype="http://schema.org/WebPage"><div id="loading"><div class="cat"><div class="body"></div><div class="head"><div class="face"></div></div><div class="foot"><div class="tummy-end"></div><div class="bottom"></div><div class="legs left"></div><div class="legs right"></div></div><div class="paw"><div class="hands left"></div><div class="hands right"></div></div></div></div><div id="pagefind_mount"></div><div id="container"><header id="header" itemscope="" itemtype="http://schema.org/WPHeader"><div class="inner"><div id="brand"><div class="pjax"><h1 itemprop="name headline">经典的CNN架构</h1><div class="meta"><span class="item" title="Created: 2026-09-10 17:08:19"><span class="icon"><i class="ic i-calendar"></i></span><span class="text">Posted on</span><time itemprop="dateCreated datePublished" datetime="2026-09-10T17:08:19+08:00">2026-09-10</time></span><span class="item" title="Symbols count in article"><span class="icon"><i class="ic i-pen"></i></span><span class="text">Symbols count in article</span><span>3.2k</span><span class="text">words</span></span><span class="item" title="Reading time"><span class="icon"><i class="ic i-clock"></i></span><span class="text">Reading time</span><span>3 mins.</span></span></div></div></div><nav id="nav"><div class="inner"><div class="toggle"><div class="lines" aria-label="Toggle navigation bar"><span class="line"></span><span class="line"></span><span class="line"></span></div></div><ul class="menu"><li class="item title"><a href="/" rel="start">LZQ's Blog</a></li></ul><ul class="right" id="rightNav"><li class="item theme"><i class="ic i-sun"></i></li><li class="item search"><i class="ic i-search"></i></li></ul></div></nav></div><div class="pjax" id="imgs"><ul><li class="item" style="background-image: url(&quot;https://lzq-cv.oss-cn-shanghai.aliyuncs.com/t01ec1c702f9fc48b66.jpg&quot;);"></li><li class="item" style="background-image: url(&quot;https://lzq-cv.oss-cn-shanghai.aliyuncs.com/1148e976d3b516b985ac1d6245e0b12b.jpg&quot;);"></li><li class="item" style="background-image: url(&quot;https://lzq-cv.oss-cn-shanghai.aliyuncs.com/IMG_0661.JPG&quot;);"></li><li class="item" style="background-image: url(&quot;https://lzq-cv.oss-cn-shanghai.aliyuncs.com/t011c338eade395b315.jpg&quot;);"></li><li class="item" style="background-image: url(&quot;https://lzq-cv.oss-cn-shanghai.aliyuncs.com/4ec7d3aca101d9d8e14f2fe8e9977a30.jpg&quot;);"></li><li class="item" style="background-image: url(&quot;https://lzq-cv.oss-cn-shanghai.aliyuncs.com/149624-tian_kong-xing_neng-yi_shu-yin_le_hui-ren_qun-3840x2160.jpg&quot;);"></li></ul></div></header><div id="waves"><svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path></defs><g class="parallax"><use xlink:href="#gentle-wave" x="48" y="0"></use><use xlink:href="#gentle-wave" x="48" y="3"></use><use xlink:href="#gentle-wave" x="48" y="5"></use><use xlink:href="#gentle-wave" x="48" y="7"></use></g></svg></div><main><div class="inner"><div class="pjax" id="main"><div class="article wrap"><div class="breadcrumb" itemlistelement="" itemscope="" itemtype="https://schema.org/BreadcrumbList"><i class="ic i-home"></i><span><a href="/">Home</a></span></div><article class="post block" itemscope="itemscope" itemtype="http://schema.org/Article" data-pagefind-body="data-pagefind-body" lang="en"><link itemprop="mainEntityOfPage" href="https://lzq-cv.github.io/2026/09/10/%E7%BB%8F%E5%85%B8%E7%9A%84CNN%E6%9E%B6%E6%9E%84/"><span hidden="hidden" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><meta itemprop="image" content="/assets/avatar.jpg"><meta itemprop="name" content="LZQ"><meta itemprop="description" content="To be,or not to be,that is the question, CV Engineer"></span><span hidden="hidden" itemprop="publisher" itemscope="itemscope" itemtype="http://schema.org/Organization"><meta itemprop="name" content="Learning-Sharing-Recording"></span><div class="body md" itemprop="articleBody"><h1 id="经典的cnn架构"><a class="anchor" href="#经典的cnn架构">#</a> 经典的CNN架构</h1>
+<p>参考链接：<a target="_blank" rel="noopener" href="https://blog.51cto.com/u_12197/14561400?">详解CNN五大经典模型:Lenet，Alexnet，Googlenet，VGG，DRL - 好文_jack的技术博客_51CTO博客</a></p>
+<p>LeNet-5的7层结构（不包括输入层）</p>
+<p>创新点：</p>
+<ol>
+<li>使用卷积层：第一次成功应用卷积层提取图像特征</li>
+<li>权重共享：大幅减少参数数量</li>
+<li>下采样层：使用平均池化降低特征图尺寸</li>
+<li>激活函数：使用Tanh激活函数</li>
+<li>输出层：使用RBF激活函数进行分类</li>
+</ol>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-text"><span class="line"><span>输入: 32×32×1（灰度图像）</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>C1: 卷积层（6个5×5卷积核，步长1）→ 28×28×6</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>S2: 下采样层（平均池化2×2，步长2）→ 14×14×6</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>C3: 卷积层（16个5×5卷积核，步长1）→ 10×10×16</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>S4: 下采样层（平均池化2×2，步长2）→ 5×5×16</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>C5: 卷积层（120个5×5卷积核）→ 1×1×120</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>F6: 全连接层（84个神经元）</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>输出: 全连接层（10个神经元，对应10个数字）</span></span></code></pre>
+<p>AlexNet的8层结构（5个卷积层和3个全连接层）</p>
+<p>创新点：</p>
+<ol>
+<li>深度网络：第一个成功训练的深度CNN（8层）</li>
+<li>ReLU激活函数：替代Sigmoid/Tanh，缓解梯度消失</li>
+<li>Dropout：随机丢弃神经元，防止过拟合</li>
+<li>数据增强：通过翻转、裁剪等扩充训练数据</li>
+<li>GPU加速：使用两块GPU并行训练</li>
+<li>局部响应归一化（LRN）：归一化局部特征</li>
+</ol>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-text"><span class="line"><span>输入: 224×224×3</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>Conv1: 96个11×11卷积核，步长4，ReLU → 55×55×96</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>MaxPool: 3×3，步长2 → 27×27×96</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>Conv2: 256个5×5卷积核，ReLU → 27×27×256</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>MaxPool: 3×3，步长2 → 13×13×256</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>Conv3: 384个3×3卷积核，ReLU → 13×13×384</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>Conv4: 384个3×3卷积核，ReLU → 13×13×384</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>Conv5: 256个3×3卷积核，ReLU → 13×13×256</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>MaxPool: 3×3，步长2 → 6×6×256</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>FC6: 全连接层，4096个神经元，ReLU</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>Dropout (p=0.5)</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>FC7: 全连接层，4096个神经元，ReLU</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>Dropout (p=0.5)</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>FC8: 全连接层，1000个神经元（对应1000类）</span></span></code></pre>
+<p>VGG的16层结构（13个卷积层和3个全连接层）</p>
+<p>创新点：</p>
+<ol>
+<li>
+<p>统一使用3×3卷积核：小卷积核堆叠代替大卷积核<br>
+#2个3×3卷积核的感受野 = 1个5×5卷积核<br>
+#3个3×3卷积核的感受野 = 1个7×7卷积核</p>
+<p>#参数量更少，非线性更强</p>
+</li>
+<li>
+<p>深层网络：VGG16有16层，VGG19有19层</p>
+</li>
+<li>
+<p>池化层位置固定：在每组卷积后使用最大池化</p>
+</li>
+</ol>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-text"><span class="line"><span>输入: 224×224×3</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>Conv1-1: 64个3×3卷积核，ReLU → 224×224×64</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>Conv1-2: 64个3×3卷积核，ReLU → 224×224×64</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>MaxPool: 2×2 → 112×112×64</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>Conv2-1: 128个3×3卷积核，ReLU → 112×112×128</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>Conv2-2: 128个3×3卷积核，ReLU → 112×112×128</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>MaxPool: 2×2 → 56×56×128</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>Conv3-1: 256个3×3卷积核，ReLU → 56×56×256</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>Conv3-2: 256个3×3卷积核，ReLU → 56×56×256</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>Conv3-3: 256个3×3卷积核，ReLU → 56×56×256</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>MaxPool: 2×2 → 28×28×256</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>Conv4-1: 512个3×3卷积核，ReLU → 28×28×512</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>Conv4-2: 512个3×3卷积核，ReLU → 28×28×512</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>Conv4-3: 512个3×3卷积核，ReLU → 28×28×512</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>MaxPool: 2×2 → 14×14×512</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>Conv5-1: 512个3×3卷积核，ReLU → 14×14×512</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>Conv5-2: 512个3×3卷积核，ReLU → 14×14×512</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>Conv5-3: 512个3×3卷积核，ReLU → 14×14×512</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>MaxPool: 2×2 → 7×7×512</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>FC6: 全连接层 4096</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>FC7: 全连接层 4096</span></span>
+<span class="line"><span>↓</span></span>
+<span class="line"><span>FC8: 全连接层 1000</span></span></code></pre>
+<p>GoogleNet（Inception模块）</p>
+<p>Inception模块的优势：<br>
+#多尺度特征提取：不同大小的卷积核捕获不同尺度的特征<br>
+#参数效率：1×1卷积降低维度，减少参数量<br>
+#宽度增加：网络变得更宽，增加特征多样性</p>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-text"><span class="line"><span>def choose_architecture(task, data_size, compute_budget):</span></span>
+<span class="line"><span>    """架构选择建议"""</span></span>
+<span class="line"><span>    print("架构选择建议:")</span></span>
+<span class="line"><span>    print("\n1. 根据任务复杂度:")</span></span>
+<span class="line"><span>    print("   - 简单任务（MNIST等）：LeNet-5、VGG11")</span></span>
+<span class="line"><span>    print("   - 中等任务（CIFAR-10）：VGG16、ResNet18")</span></span>
+<span class="line"><span>    print("   - 复杂任务（ImageNet）：ResNet50、EfficientNet")</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    print("\n2. 根据数据量:")</span></span>
+<span class="line"><span>    print("   - 小数据量（&lt;1000）：浅层网络 + 迁移学习")</span></span>
+<span class="line"><span>    print("   - 中等数据量（1000-10000）：VGG16、ResNet18")</span></span>
+<span class="line"><span>    print("   - 大数据量（&gt;10000）：ResNet50+、预训练模型")</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    print("\n3. 根据计算资源:")</span></span>
+<span class="line"><span>    print("   - CPU/低GPU：MobileNet、ShuffleNet")</span></span>
+<span class="line"><span>    print("   - 单GPU：ResNet18、ResNet34")</span></span>
+<span class="line"><span>    print("   - 多GPU：ResNet50+、EfficientNet-B4+")</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>choose_architecture(None, None, None)</span></span></code></pre>
+<pre class="shiki shiki-themes vitesse-light vitesse-dark" style="background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee" tabindex="0"><code class="language-text"><span class="line"><span>def transfer_learning_workflow():</span></span>
+<span class="line"><span>    """迁移学习工作流"""</span></span>
+<span class="line"><span>    print("迁移学习步骤:")</span></span>
+<span class="line"><span>    print("1. 选择预训练模型（如ResNet50预训练在ImageNet）")</span></span>
+<span class="line"><span>    print("2. 冻结大部分层，只训练最后几层")</span></span>
+<span class="line"><span>    print("3. 替换最后的全连接层以适应新任务")</span></span>
+<span class="line"><span>    print("4. 使用较小的学习率微调")</span></span>
+<span class="line"><span>    print("5. 可选：解冻更多层进行端到端微调")</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>transfer_learning_workflow()</span></span></code></pre>
+<p><strong>总结：</strong></p>
+<p>LeNet-5：</p>
+<p>CNN的开山之作<br>
+奠定了CNN的基本结构<br>
+应用于手写数字识别</p>
+<p>AlexNet：</p>
+<p>深度学习革命的开端<br>
+引入ReLU和Dropout<br>
+使用GPU加速训练</p>
+<p>VGG：</p>
+<p>统一使用3×3卷积核<br>
+架构简洁，易于理解<br>
+参数量大，但性能优秀</p>
+<p>GoogLeNet：</p>
+<p>引入Inception模块<br>
+多尺度特征提取<br>
+参数效率高</p>
+<div class="tags"><a href="/tags/CNN/" rel="tag"><i class="ic i-tag"></i>CNN</a></div></div><footer><div class="meta"><span class="item"><span class="icon"><i class="ic i-calendar-check"></i></span><span class="text">Edited on </span><time title="Modified: 2026-09-10 17:09:21" itemprop="dateModified" datetime="2026-09-10T17:09:21+08:00">2026-09-10</time></span></div><div id="copyright"><ul><li class="author"><strong>Post author: </strong>LZQ<i class="ic i-at"><em>@</em></i>Learning-Sharing-Recording</li><li class="link"><strong>Post link: </strong><a href="https://lzq-cv.github.io/2026/09/10/%E7%BB%8F%E5%85%B8%E7%9A%84CNN%E6%9E%B6%E6%9E%84/" title="经典的CNN架构">https://lzq-cv.github.io/2026/09/10/经典的CNN架构/</a></li><li class="license"><strong>Copyright Notice: </strong>All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</a> unless stating additionally.</li></ul></div></footer></article></div><div class="post-nav"><div class="item left"><a href="/2026/09/10/CUDA%E7%8E%AF%E5%A2%83%E4%B8%8D%E5%90%8C%E9%85%8D%E7%BD%AE%E7%9A%84%E9%BB%84%E9%87%91%E6%90%AD%E9%85%8D/" rel="prev" itemprop="url" data-background-image="https://lzq-cv.oss-cn-shanghai.aliyuncs.com/7cce4520c9765098cff8348d4d2081b8.png" title="CUDA环境不同配置的黄金搭配"><span class="type">Previous Post</span><h3>CUDA环境不同配置的黄金搭配</h3></a></div><div class="item right"></div></div><div class="wrap" id="comments"></div></div><div id="sidebar"><div class="inner"><div class="panels"><div class="inner"><div class="contents panel pjax" data-title="Contents"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%8F%E5%85%B8%E7%9A%84cnn%E6%9E%B6%E6%9E%84"><span class="toc-number">1.</span> <span class="toc-text"> 经典的CNN架构</span></a></li></ol></div><div class="related panel pjax" data-title="Related"></div><div class="overview panel" data-title="Overview"><div class="author" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><img class="image" loading="lazy" decoding="async" itemprop="image" alt="LZQ" src="/assets/avatar.avif"><p class="name" itemprop="name">LZQ</p><div class="description" itemprop="description">CV Engineer</div></div><nav class="state"><div class="item posts"><a href="/archives/"><span class="count">12</span><span class="name">posts</span></a></div><div class="item categories"><a href="/categories/"><span class="count">5</span><span class="name">categories</span></a></div><div class="item tags"><a href="/tags/"><span class="count">9</span><span class="name">tags</span></a></div></nav><div class="social"><a target="_blank" rel="noopener" href="https://github.com/LZQ-CV" class="item github" title="https://github.com/LZQ-CV"><i class="ic i-github"></i></a><a target="_blank" rel="noopener" href="https://space.bilibili.com/82681846?spm_id_from=333.1007.0.0" class="item bilibili" title="https://space.bilibili.com/82681846?spm_id_from=333.1007.0.0"><i class="ic i-bilibili"></i></a><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/mao-qiu-chang-lzq" class="item zhihu" title="https://www.zhihu.com/people/mao-qiu-chang-lzq"><i class="ic i-zhihu"></i></a><a target="_blank" rel="noopener" href="https://music.163.com/#/user/home?id=3363945910" class="item music" title="https://music.163.com/#/user/home?id=3363945910"><i class="ic i-cloud-music"></i></a><a target="_blank" rel="noopener" href="https://instagram.com/lzqins_" class="item instagram" title="https://instagram.com/lzqins_"><i class="ic i-instagram"></i></a></div><div class="menu"><li class="item"><a href="/" rel="section"><i class="ic i-home"></i>Home</a></li><li class="item dropdown"><a href="#" onclick="return false;"><i class="ic i-feather"></i>Posts</a><ul class="submenu"><li class="item"><a href="/archives/" rel="section"><i class="ic i-list-alt"></i>Archives</a></li><li class="item"><a href="/categories/" rel="section"><i class="ic i-th"></i>Categories</a></li><li class="item"><a href="/tags/" rel="section"><i class="ic i-tags"></i>Tags</a></li></ul></li></div></div></div></div><ul id="quick"><li class="prev pjax"></li><li class="up"><i class="ic i-arrow-up"></i></li><li class="down"><i class="ic i-arrow-down"></i></li><li class="next pjax"><a href="/2026/09/10/CUDA%E7%8E%AF%E5%A2%83%E4%B8%8D%E5%90%8C%E9%85%8D%E7%BD%AE%E7%9A%84%E9%BB%84%E9%87%91%E6%90%AD%E9%85%8D/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a></li><li class="percent"></li></ul></div></div><div class="dimmer"></div></div><div id="player"></div></main><footer id="footer"><div class="inner"><div class="widgets"><div class="rpost pjax"><h2>Random Posts</h2><ul><li class="item"><div class="breadcrumb"><a href="/categories/Computer-Vision/" title="InComputer-Vision">Computer-Vision</a><i class="ic i-angle-right"></i><a href="/categories/Computer-Vision/Opencv/" title="InOpencv">Opencv</a></div><span><a href="/2025/09/27/2D%E8%A7%86%E8%A7%89%E7%9A%84%E4%B8%BB%E6%B5%81%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF/">2D视觉的主流应用场景</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/Computer-Vision/" title="InComputer-Vision">Computer-Vision</a><i class="ic i-angle-right"></i><a href="/categories/Computer-Vision/Opencv/" title="InOpencv">Opencv</a></div><span><a href="/2025/09/27/2D%E8%A7%86%E8%A7%89%E5%92%8C3D%E8%A7%86%E8%A7%89%E7%9A%84%E4%B8%BB%E6%B5%81%E6%8A%80%E6%9C%AF%E6%A0%88/">2D视觉和3D视觉的主流技术栈</a></span></li><li class="item"><div class="breadcrumb"></div><span><a href="/2026/09/10/%E7%BB%8F%E5%85%B8%E7%9A%84CNN%E6%9E%B6%E6%9E%84/">经典的CNN架构</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/Artificial-Intelligence/" title="InArtificial-Intelligence">Artificial-Intelligence</a><i class="ic i-angle-right"></i><a href="/categories/Artificial-Intelligence/Deep-Learning/" title="InDeep-Learning">Deep-Learning</a></div><span><a href="/2026/03/19/PyTorch%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A1%86%E6%9E%B6%E6%90%AD%E5%BB%BA/">PyTorch深度学习框架搭建</a></span></li><li class="item"><div class="breadcrumb"></div><span><a href="/2025/09/26/%E4%BD%BF%E7%94%A8PICGO-%E9%98%BF%E9%87%8C%E4%BA%91OSS%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%9B%BE%E5%BA%8A/">使用PICGO-阿里云OSS搭建个人图床</a></span></li><li class="item"><div class="breadcrumb"></div><span><a href="/2025/09/26/%E4%BD%BF%E7%94%A8PICGO-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%9B%BE%E5%BA%8A/">使用PICGO-GitHub搭建个人图床</a></span></li><li class="item"><div class="breadcrumb"></div><span><a href="/2026/03/26/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89%E7%A1%AC%E4%BB%B6%E5%A6%82%E4%BD%95%E9%80%89%E5%9E%8B/">机器视觉硬件如何选型</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/Algorithms/" title="InAlgorithms">Algorithms</a></div><span><a href="/2025/09/30/python%E9%81%8D%E5%8E%86%E6%8C%87%E5%AE%9A%E8%B7%AF%E5%BE%84%E7%9A%84%E5%9B%BE%E7%89%87/">python遍历指定路径的图片</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/Artificial-Intelligence/" title="InArtificial-Intelligence">Artificial-Intelligence</a><i class="ic i-angle-right"></i><a href="/categories/Artificial-Intelligence/Deep-Learning/" title="InDeep-Learning">Deep-Learning</a></div><span><a href="/2025/09/30/100%E4%B8%AA%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%9C%AF%E8%AF%AD/">100个深度学习术语</a></span></li><li class="item"><div class="breadcrumb"></div><span><a href="/2025/09/26/%E4%BD%BF%E7%94%A8PICGO-CloudflarR2%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%9B%BE%E5%BA%8A/">使用PICGO-CloudflarR2搭建个人图床</a></span></li></ul></div><div class="rpost pjax"><h2>Recent Comments</h2></div></div><div class="status"><div class="copyright">© 2025 -<span itemprop="copyrightYear">2026</span><span class="with-love"><i class="ic i-sakura rotate"></i></span><span class="author" itemprop="copyrightHolder">LZQ @ LZQ's Blog</span></div><div class="count"><span class="post-meta-item-icon"><i class="ic i-chart-area"></i></span><span title="Symbols count total">48k words</span><span class="post-meta-divider"> | </span><span class="post-meta-item-icon"><i class="ic i-coffee"></i></span><span title="Reading time total">43 mins.</span></div><div class="powered-by">Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> &amp; Theme.<a target="_blank" rel="noopener" href="https://github.com/theme-shoka-x/hexo-theme-shokaX/">ShokaX</a></div></div></div></footer></div><script data-config="" type="text/javascript">var LOCAL = {
+    ispost: true,
+    path: `2026/09/10/经典的CNN架构/`,
+    favicon: {
+        show: `(●´3｀●) Nice to meet you.`,
+        hide: `(´Д｀) You'll be back !!!`
+    },
+    search: {
+        placeholder: "Search for Posts",
+        empty: "We didn't find any results for the search: ${query}",
+        stats: "${hits} results found in ${time} ms"
+    },
+    nocopy: "false",
+    copyright: `Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.`,
+    copy_tex: false,
+    katex: false,
+    mermaid: false,
+    audio: undefined,
+    nocopy: false,
+    outime: true,
+    template: `<div class="note warning"><p><span class="label warning">Article Timeliness Alert</span><br>This is an article published {{publish}} days ago and last updated {{updated}} days ago. Some information may have changed, so please be careful to screen it.</p></div>`,
+    quiz: {
+        choice: `Multiple Choice`,
+        multiple: `Multiple Answer`,
+        true_false: `True/False`,
+        essay: `Questions`,
+        gap_fill: `Gap Filling`,
+        mistake: `Wrong Answer`
+    }
+};
+</script><script src="/js/siteInit.js?v=0.5.4" type="module" fetchpriority="high" defer=""></script></body></html>

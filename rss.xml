@@ -10,11 +10,192 @@
         </author>
         <description>CV Engineer</description>
         <language>en</language>
-        <pubDate>Thu, 10 Sep 2026 15:46:57 +0800</pubDate>
-        <lastBuildDate>Thu, 10 Sep 2026 15:46:57 +0800</lastBuildDate>
+        <pubDate>Thu, 10 Sep 2026 17:08:19 +0800</pubDate>
+        <lastBuildDate>Thu, 10 Sep 2026 17:08:19 +0800</lastBuildDate>
         <category term="人工智能" />
         <category term="计算机视觉" />
         <category term="技术博客" />
+        <item>
+            <guid isPermalink="true">https://lzq-cv.github.io/2026/09/10/%E7%BB%8F%E5%85%B8%E7%9A%84CNN%E6%9E%B6%E6%9E%84/</guid>
+            <title>经典的CNN架构</title>
+            <link>https://lzq-cv.github.io/2026/09/10/%E7%BB%8F%E5%85%B8%E7%9A%84CNN%E6%9E%B6%E6%9E%84/</link>
+            <category term="CNN" scheme="https://lzq-cv.github.io/tags/CNN/" />
+            <pubDate>Thu, 10 Sep 2026 17:08:19 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;经典的cnn架构&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#经典的cnn架构&#34;&gt;#&lt;/a&gt; 经典的CNN架构&lt;/h1&gt;
+&lt;p&gt;参考链接：&lt;a href=&#34;https://blog.51cto.com/u_12197/14561400?&#34;&gt;详解CNN五大经典模型:Lenet，Alexnet，Googlenet，VGG，DRL - 好文_jack的技术博客_51CTO博客&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;LeNet-5的7层结构（不包括输入层）&lt;/p&gt;
+&lt;p&gt;创新点：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;使用卷积层：第一次成功应用卷积层提取图像特征&lt;/li&gt;
+&lt;li&gt;权重共享：大幅减少参数数量&lt;/li&gt;
+&lt;li&gt;下采样层：使用平均池化降低特征图尺寸&lt;/li&gt;
+&lt;li&gt;激活函数：使用Tanh激活函数&lt;/li&gt;
+&lt;li&gt;输出层：使用RBF激活函数进行分类&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;shiki shiki-themes vitesse-light vitesse-dark&#34; style=&#34;background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee&#34; tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span&gt;输入: 32×32×1（灰度图像）&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;C1: 卷积层（6个5×5卷积核，步长1）→ 28×28×6&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;S2: 下采样层（平均池化2×2，步长2）→ 14×14×6&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;C3: 卷积层（16个5×5卷积核，步长1）→ 10×10×16&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;S4: 下采样层（平均池化2×2，步长2）→ 5×5×16&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;C5: 卷积层（120个5×5卷积核）→ 1×1×120&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;F6: 全连接层（84个神经元）&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;输出: 全连接层（10个神经元，对应10个数字）&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;AlexNet的8层结构（5个卷积层和3个全连接层）&lt;/p&gt;
+&lt;p&gt;创新点：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;深度网络：第一个成功训练的深度CNN（8层）&lt;/li&gt;
+&lt;li&gt;ReLU激活函数：替代Sigmoid/Tanh，缓解梯度消失&lt;/li&gt;
+&lt;li&gt;Dropout：随机丢弃神经元，防止过拟合&lt;/li&gt;
+&lt;li&gt;数据增强：通过翻转、裁剪等扩充训练数据&lt;/li&gt;
+&lt;li&gt;GPU加速：使用两块GPU并行训练&lt;/li&gt;
+&lt;li&gt;局部响应归一化（LRN）：归一化局部特征&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;shiki shiki-themes vitesse-light vitesse-dark&#34; style=&#34;background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee&#34; tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span&gt;输入: 224×224×3&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;Conv1: 96个11×11卷积核，步长4，ReLU → 55×55×96&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;MaxPool: 3×3，步长2 → 27×27×96&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;Conv2: 256个5×5卷积核，ReLU → 27×27×256&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;MaxPool: 3×3，步长2 → 13×13×256&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;Conv3: 384个3×3卷积核，ReLU → 13×13×384&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;Conv4: 384个3×3卷积核，ReLU → 13×13×384&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;Conv5: 256个3×3卷积核，ReLU → 13×13×256&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;MaxPool: 3×3，步长2 → 6×6×256&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;FC6: 全连接层，4096个神经元，ReLU&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;Dropout (p=0.5)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;FC7: 全连接层，4096个神经元，ReLU&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;Dropout (p=0.5)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;FC8: 全连接层，1000个神经元（对应1000类）&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;VGG的16层结构（13个卷积层和3个全连接层）&lt;/p&gt;
+&lt;p&gt;创新点：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;统一使用3×3卷积核：小卷积核堆叠代替大卷积核&lt;br /&gt;
+#2个3×3卷积核的感受野 = 1个5×5卷积核&lt;br /&gt;
+#3个3×3卷积核的感受野 = 1个7×7卷积核&lt;/p&gt;
+&lt;p&gt;#参数量更少，非线性更强&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;深层网络：VGG16有16层，VGG19有19层&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;池化层位置固定：在每组卷积后使用最大池化&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;shiki shiki-themes vitesse-light vitesse-dark&#34; style=&#34;background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee&#34; tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span&gt;输入: 224×224×3&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;Conv1-1: 64个3×3卷积核，ReLU → 224×224×64&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;Conv1-2: 64个3×3卷积核，ReLU → 224×224×64&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;MaxPool: 2×2 → 112×112×64&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;Conv2-1: 128个3×3卷积核，ReLU → 112×112×128&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;Conv2-2: 128个3×3卷积核，ReLU → 112×112×128&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;MaxPool: 2×2 → 56×56×128&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;Conv3-1: 256个3×3卷积核，ReLU → 56×56×256&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;Conv3-2: 256个3×3卷积核，ReLU → 56×56×256&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;Conv3-3: 256个3×3卷积核，ReLU → 56×56×256&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;MaxPool: 2×2 → 28×28×256&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;Conv4-1: 512个3×3卷积核，ReLU → 28×28×512&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;Conv4-2: 512个3×3卷积核，ReLU → 28×28×512&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;Conv4-3: 512个3×3卷积核，ReLU → 28×28×512&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;MaxPool: 2×2 → 14×14×512&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;Conv5-1: 512个3×3卷积核，ReLU → 14×14×512&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;Conv5-2: 512个3×3卷积核，ReLU → 14×14×512&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;Conv5-3: 512个3×3卷积核，ReLU → 14×14×512&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;MaxPool: 2×2 → 7×7×512&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;FC6: 全连接层 4096&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;FC7: 全连接层 4096&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;FC8: 全连接层 1000&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;GoogleNet（Inception模块）&lt;/p&gt;
+&lt;p&gt;Inception模块的优势：&lt;br /&gt;
+#多尺度特征提取：不同大小的卷积核捕获不同尺度的特征&lt;br /&gt;
+#参数效率：1×1卷积降低维度，减少参数量&lt;br /&gt;
+#宽度增加：网络变得更宽，增加特征多样性&lt;/p&gt;
+&lt;pre class=&#34;shiki shiki-themes vitesse-light vitesse-dark&#34; style=&#34;background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee&#34; tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span&gt;def choose_architecture(task, data_size, compute_budget):&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;    &#34;&#34;&#34;架构选择建议&#34;&#34;&#34;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;    print(&#34;架构选择建议:&#34;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;    print(&#34;\n1. 根据任务复杂度:&#34;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;    print(&#34;   - 简单任务（MNIST等）：LeNet-5、VGG11&#34;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;    print(&#34;   - 中等任务（CIFAR-10）：VGG16、ResNet18&#34;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;    print(&#34;   - 复杂任务（ImageNet）：ResNet50、EfficientNet&#34;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;    &lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;    print(&#34;\n2. 根据数据量:&#34;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;    print(&#34;   - 小数据量（&amp;#x3C;1000）：浅层网络 + 迁移学习&#34;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;    print(&#34;   - 中等数据量（1000-10000）：VGG16、ResNet18&#34;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;    print(&#34;   - 大数据量（&gt;10000）：ResNet50+、预训练模型&#34;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;    &lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;    print(&#34;\n3. 根据计算资源:&#34;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;    print(&#34;   - CPU/低GPU：MobileNet、ShuffleNet&#34;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;    print(&#34;   - 单GPU：ResNet18、ResNet34&#34;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;    print(&#34;   - 多GPU：ResNet50+、EfficientNet-B4+&#34;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;choose_architecture(None, None, None)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;shiki shiki-themes vitesse-light vitesse-dark&#34; style=&#34;background-color:#ffffff;--shiki-dark-bg:#121212;color:#393a34;--shiki-dark:#dbd7caee&#34; tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span&gt;def transfer_learning_workflow():&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;    &#34;&#34;&#34;迁移学习工作流&#34;&#34;&#34;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;    print(&#34;迁移学习步骤:&#34;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;    print(&#34;1. 选择预训练模型（如ResNet50预训练在ImageNet）&#34;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;    print(&#34;2. 冻结大部分层，只训练最后几层&#34;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;    print(&#34;3. 替换最后的全连接层以适应新任务&#34;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;    print(&#34;4. 使用较小的学习率微调&#34;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;    print(&#34;5. 可选：解冻更多层进行端到端微调&#34;)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&#34;line&#34;&gt;&lt;span&gt;transfer_learning_workflow()&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;总结：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;LeNet-5：&lt;/p&gt;
+&lt;p&gt;CNN的开山之作&lt;br /&gt;
+奠定了CNN的基本结构&lt;br /&gt;
+应用于手写数字识别&lt;/p&gt;
+&lt;p&gt;AlexNet：&lt;/p&gt;
+&lt;p&gt;深度学习革命的开端&lt;br /&gt;
+引入ReLU和Dropout&lt;br /&gt;
+使用GPU加速训练&lt;/p&gt;
+&lt;p&gt;VGG：&lt;/p&gt;
+&lt;p&gt;统一使用3×3卷积核&lt;br /&gt;
+架构简洁，易于理解&lt;br /&gt;
+参数量大，但性能优秀&lt;/p&gt;
+&lt;p&gt;GoogLeNet：&lt;/p&gt;
+&lt;p&gt;引入Inception模块&lt;br /&gt;
+多尺度特征提取&lt;br /&gt;
+参数效率高&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://lzq-cv.github.io/2026/09/10/CUDA%E7%8E%AF%E5%A2%83%E4%B8%8D%E5%90%8C%E9%85%8D%E7%BD%AE%E7%9A%84%E9%BB%84%E9%87%91%E6%90%AD%E9%85%8D/</guid>
             <title>CUDA环境不同配置的黄金搭配</title>
